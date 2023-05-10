@@ -56,45 +56,276 @@
     "text": "1.6 Acknowledgements\nThis is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar."
   },
   {
-    "objectID": "part-1.html",
-    "href": "part-1.html",
-    "title": "Part title",
+    "objectID": "part_apis.html",
+    "href": "part_apis.html",
+    "title": "What do APIs have to do with R?",
     "section": "",
-    "text": "This is an intro to a part."
+    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
-    "objectID": "x1.html#introduction",
-    "href": "x1.html#introduction",
-    "title": "2  First chapter",
+    "objectID": "whole-game.html#introduction",
+    "href": "whole-game.html#introduction",
+    "title": "2  What can I do with web APIs?",
     "section": "2.1 Introduction",
     "text": "2.1 Introduction\nThis is a chapter."
   },
   {
-    "objectID": "x1.html#prerequisites",
-    "href": "x1.html#prerequisites",
-    "title": "2  First chapter",
-    "section": "2.2 Prerequisites",
-    "text": "2.2 Prerequisites\nIt has prerequisites, maybe?"
+    "objectID": "whole-game.html#learning-objectives",
+    "href": "whole-game.html#learning-objectives",
+    "title": "2  What can I do with web APIs?",
+    "section": "2.2 Learning Objectives",
+    "text": "2.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
   },
   {
-    "objectID": "part-2.html",
-    "href": "part-2.html",
-    "title": "Part2 title",
-    "section": "",
-    "text": "This is an intro to a part."
+    "objectID": "whole-game.html#prerequisites",
+    "href": "whole-game.html#prerequisites",
+    "title": "2  What can I do with web APIs?",
+    "section": "2.3 Prerequisites",
+    "text": "2.3 Prerequisites\nIt has prerequisites, maybe?"
   },
   {
-    "objectID": "x2.html#introduction",
-    "href": "x2.html#introduction",
-    "title": "3  Another chapter",
+    "objectID": "rest.html#introduction",
+    "href": "rest.html#introduction",
+    "title": "3  What is a web API?",
     "section": "3.1 Introduction",
     "text": "3.1 Introduction\nThis is a chapter."
   },
   {
-    "objectID": "x2.html#prerequisites",
-    "href": "x2.html#prerequisites",
-    "title": "3  Another chapter",
-    "section": "3.2 Prerequisites",
-    "text": "3.2 Prerequisites\nIt has prerequisites, maybe?"
+    "objectID": "rest.html#learning-objectives",
+    "href": "rest.html#learning-objectives",
+    "title": "3  What is a web API?",
+    "section": "3.2 Learning Objectives",
+    "text": "3.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "rest.html#prerequisites",
+    "href": "rest.html#prerequisites",
+    "title": "3  What is a web API?",
+    "section": "3.3 Prerequisites",
+    "text": "3.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "examples.html#introduction",
+    "href": "examples.html#introduction",
+    "title": "4  What APIs should I know about?",
+    "section": "4.1 Introduction",
+    "text": "4.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "examples.html#learning-objectives",
+    "href": "examples.html#learning-objectives",
+    "title": "4  What APIs should I know about?",
+    "section": "4.2 Learning Objectives",
+    "text": "4.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "examples.html#prerequisites",
+    "href": "examples.html#prerequisites",
+    "title": "4  What APIs should I know about?",
+    "section": "4.3 Prerequisites",
+    "text": "4.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "apis-more.html#introduction",
+    "href": "apis-more.html#introduction",
+    "title": "5  How can I learn more about APIs?",
+    "section": "5.1 Introduction",
+    "text": "5.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "apis-more.html#learning-objectives",
+    "href": "apis-more.html#learning-objectives",
+    "title": "5  How can I learn more about APIs?",
+    "section": "5.2 Learning Objectives",
+    "text": "5.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "apis-more.html#prerequisites",
+    "href": "apis-more.html#prerequisites",
+    "title": "5  How can I learn more about APIs?",
+    "section": "5.3 Prerequisites",
+    "text": "5.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "part_accessing.html",
+    "href": "part_accessing.html",
+    "title": "How can I access web APIs from R?",
+    "section": "",
+    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+  },
+  {
+    "objectID": "httr2.html#introduction",
+    "href": "httr2.html#introduction",
+    "title": "6  What is httr2?",
+    "section": "6.1 Introduction",
+    "text": "6.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "httr2.html#learning-objectives",
+    "href": "httr2.html#learning-objectives",
+    "title": "6  What is httr2?",
+    "section": "6.2 Learning Objectives",
+    "text": "6.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "httr2.html#prerequisites",
+    "href": "httr2.html#prerequisites",
+    "title": "6  What is httr2?",
+    "section": "6.3 Prerequisites",
+    "text": "6.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "authentication.html#introduction",
+    "href": "authentication.html#introduction",
+    "title": "7  How do I prove that I’m me?",
+    "section": "7.1 Introduction",
+    "text": "7.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "authentication.html#learning-objectives",
+    "href": "authentication.html#learning-objectives",
+    "title": "7  How do I prove that I’m me?",
+    "section": "7.2 Learning Objectives",
+    "text": "7.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "authentication.html#prerequisites",
+    "href": "authentication.html#prerequisites",
+    "title": "7  How do I prove that I’m me?",
+    "section": "7.3 Prerequisites",
+    "text": "7.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "automation.html#introduction",
+    "href": "automation.html#introduction",
+    "title": "8  How can I automate web API access?",
+    "section": "8.1 Introduction",
+    "text": "8.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "automation.html#learning-objectives",
+    "href": "automation.html#learning-objectives",
+    "title": "8  How can I automate web API access?",
+    "section": "8.2 Learning Objectives",
+    "text": "8.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "automation.html#prerequisites",
+    "href": "automation.html#prerequisites",
+    "title": "8  How can I automate web API access?",
+    "section": "8.3 Prerequisites",
+    "text": "8.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "packages.html#introduction",
+    "href": "packages.html#introduction",
+    "title": "9  How can I wrap a web API into an R package?",
+    "section": "9.1 Introduction",
+    "text": "9.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "packages.html#learning-objectives",
+    "href": "packages.html#learning-objectives",
+    "title": "9  How can I wrap a web API into an R package?",
+    "section": "9.2 Learning Objectives",
+    "text": "9.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "packages.html#prerequisites",
+    "href": "packages.html#prerequisites",
+    "title": "9  How can I wrap a web API into an R package?",
+    "section": "9.3 Prerequisites",
+    "text": "9.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "accessing-more.html#introduction",
+    "href": "accessing-more.html#introduction",
+    "title": "10  How can I learn more about accessing web APIs?",
+    "section": "10.1 Introduction",
+    "text": "10.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "accessing-more.html#learning-objectives",
+    "href": "accessing-more.html#learning-objectives",
+    "title": "10  How can I learn more about accessing web APIs?",
+    "section": "10.2 Learning Objectives",
+    "text": "10.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "accessing-more.html#prerequisites",
+    "href": "accessing-more.html#prerequisites",
+    "title": "10  How can I learn more about accessing web APIs?",
+    "section": "10.3 Prerequisites",
+    "text": "10.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "part_creating.html",
+    "href": "part_creating.html",
+    "title": "How can I create my own APIs with R?",
+    "section": "",
+    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+  },
+  {
+    "objectID": "plumber.html#introduction",
+    "href": "plumber.html#introduction",
+    "title": "11  What is plumber?",
+    "section": "11.1 Introduction",
+    "text": "11.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "plumber.html#learning-objectives",
+    "href": "plumber.html#learning-objectives",
+    "title": "11  What is plumber?",
+    "section": "11.2 Learning Objectives",
+    "text": "11.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "plumber.html#prerequisites",
+    "href": "plumber.html#prerequisites",
+    "title": "11  What is plumber?",
+    "section": "11.3 Prerequisites",
+    "text": "11.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "deploy.html#introduction",
+    "href": "deploy.html#introduction",
+    "title": "12  How do I deploy a plumber API?",
+    "section": "12.1 Introduction",
+    "text": "12.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "deploy.html#learning-objectives",
+    "href": "deploy.html#learning-objectives",
+    "title": "12  How do I deploy a plumber API?",
+    "section": "12.2 Learning Objectives",
+    "text": "12.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "deploy.html#prerequisites",
+    "href": "deploy.html#prerequisites",
+    "title": "12  How do I deploy a plumber API?",
+    "section": "12.3 Prerequisites",
+    "text": "12.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "creating-more.html#introduction",
+    "href": "creating-more.html#introduction",
+    "title": "13  How can I learn more about creating APIs?",
+    "section": "13.1 Introduction",
+    "text": "13.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "creating-more.html#learning-objectives",
+    "href": "creating-more.html#learning-objectives",
+    "title": "13  How can I learn more about creating APIs?",
+    "section": "13.2 Learning Objectives",
+    "text": "13.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "creating-more.html#prerequisites",
+    "href": "creating-more.html#prerequisites",
+    "title": "13  How can I learn more about creating APIs?",
+    "section": "13.3 Prerequisites",
+    "text": "13.3 Prerequisites\nIt has prerequisites, maybe?"
   }
 ]
