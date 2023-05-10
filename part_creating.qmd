@@ -1,0 +1,11 @@
+# How can I create my own APIs with R? {#sec-creating-intro .unnumbered}
+
+This is an intro to a part.
+
+These are the chapters, introduced with a phrase the encapsulates them:
+
+-   Describe the chapter. Reference it with a tag.
+
+-   Describe another chapter. Reference it with a tag.
+
+And then a sentence or paragraph about any leftovers.

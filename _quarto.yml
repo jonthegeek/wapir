@@ -25,13 +25,26 @@ book:
     - index.qmd
     - intro.qmd
 
-    - part: part-1.qmd
+    - part: part_apis.qmd
       chapters:
-        - x1.qmd
+        - whole-game.qmd
+        - rest.qmd
+        - examples.qmd
+        - apis-more.qmd
 
-    - part: part-2.qmd
+    - part: part_accessing.qmd
       chapters:
-        - x2.qmd
+        - httr2.qmd
+        - authentication.qmd
+        - automation.qmd
+        - packages.qmd
+        - accessing-more.qmd
+
+    - part: part_creating.qmd
+      chapters:
+        - plumber.qmd
+        - deploy.qmd
+        - creating-more.qmd
 
 format:
   html:
@@ -41,4 +54,4 @@ format:
     author-meta: "Jon Harmon"
     callout-appearance: simple
 
-editor: visual
+editor: source

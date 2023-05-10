@@ -1,0 +1,13 @@
+# How can I learn more about APIs? {#sec-apis-more}
+
+## Introduction
+
+This is a chapter.
+
+## Learning Objectives
+
+Do LOs get their own subsection in each chapter?
+
+## Prerequisites
+
+It has prerequisites, maybe?
