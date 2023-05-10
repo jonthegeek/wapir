@@ -1,0 +1,13 @@
+Package: wapir
+Title: Web APIs with R
+Version: 0.1
+Authors@R: c(
+    person("Jon", "Harmon", , "jonthegeek@gmail.com", role = c("aut", "cre"))
+  )
+URL: https://github.com/jonthegeek/wapir
+Depends: 
+    R (>= 3.1.0)
+Encoding: UTF-8
+License: TBD
+Suggests: 
+    knitr

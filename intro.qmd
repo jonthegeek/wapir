@@ -1,5 +1,34 @@
-# Introduction
+# Introduction {#sec-intro}
 
-This is a book created from markdown and executable code.
+<!--# This file is an intro to the *book.* index.qmd is an intro to the *website.* -->
 
-See @knuth84 for additional discussion of literate programming.
+Add a one-paragraph-or-so introduction here.
+For now the general structure is strongly inspired by R4DS.
+I'll likely make many changes as I fill this in.
+
+## What you will learn
+
+Describe the overall goals, and explain the learning objective hierarchy.
+
+## How this book is organized
+
+I'd love to know!
+
+## What you won't learn
+
+I like the idea of this section, but I don't know if it will fit.
+
+## Prerequisites
+
+Describe what we expect people to already know.
+Probably include subsections.
+Note that each part and/or chapter will describe the prerequisites for that part.
+
+## Running R code
+
+Explain what code looks like here vs to the user.
+
+## Acknowledgements
+
+This is the acknowledgement that appears in the actual book.
+RStudio has code to auto-generate it, consider something similar.
