@@ -1,0 +1,41 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Web APIs with R"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      Web APIs with R is being written by Jon Harmon. Join the
+      <a href="https://r4ds.io/join">R4DS Community Slack</a> to
+      discuss the book!
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+  repo-url: https://github.com/jonthegeek/wapir/
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  chapters:
+    - index.qmd
+    - intro.qmd
+
+    - part: part-1.qmd
+      chapters:
+        - x1.qmd
+
+    - part: part-2.qmd
+      chapters:
+        - x2.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+    code-link: true
+    author-meta: "Jon Harmon"
+    callout-appearance: simple
+
+editor: visual
