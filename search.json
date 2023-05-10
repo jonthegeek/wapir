@@ -4,14 +4,56 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to create and utilize web APIs in R."
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
+    "objectID": "index.html#acknowledgemets",
+    "href": "index.html#acknowledgemets",
+    "title": "Web APIs with R",
+    "section": "Acknowledgemets",
+    "text": "Acknowledgemets\nThank you to the R4DS Online Learning Community for giving me the confidence to try this!"
+  },
+  {
+    "objectID": "intro.html#what-you-will-learn",
+    "href": "intro.html#what-you-will-learn",
     "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming."
+    "section": "1.1 What you will learn",
+    "text": "1.1 What you will learn\nDescribe the overall goals, and explain the learning objective hierarchy."
+  },
+  {
+    "objectID": "intro.html#how-this-book-is-organized",
+    "href": "intro.html#how-this-book-is-organized",
+    "title": "1  Introduction",
+    "section": "1.2 How this book is organized",
+    "text": "1.2 How this book is organized\nI’d love to know!"
+  },
+  {
+    "objectID": "intro.html#what-you-wont-learn",
+    "href": "intro.html#what-you-wont-learn",
+    "title": "1  Introduction",
+    "section": "1.3 What you won’t learn",
+    "text": "1.3 What you won’t learn\nI like the idea of this section, but I don’t know if it will fit."
+  },
+  {
+    "objectID": "intro.html#prerequisites",
+    "href": "intro.html#prerequisites",
+    "title": "1  Introduction",
+    "section": "1.4 Prerequisites",
+    "text": "1.4 Prerequisites\nDescribe what we expect people to already know. Probably include subsections. Note that each part and/or chapter will describe the prerequisites for that part."
+  },
+  {
+    "objectID": "intro.html#running-r-code",
+    "href": "intro.html#running-r-code",
+    "title": "1  Introduction",
+    "section": "1.5 Running R code",
+    "text": "1.5 Running R code\nExplain what code looks like here vs to the user."
+  },
+  {
+    "objectID": "intro.html#acknowledgements",
+    "href": "intro.html#acknowledgements",
+    "title": "1  Introduction",
+    "section": "1.6 Acknowledgements",
+    "text": "1.6 Acknowledgements\nThis is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar."
   },
   {
     "objectID": "part-1.html",
