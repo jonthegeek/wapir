@@ -1,0 +1,13 @@
+# How can I wrap a web API into an R package? {#sec-packages}
+
+## Introduction
+
+This is a chapter.
+
+## Learning Objectives
+
+Do LOs get their own subsection in each chapter?
+
+## Prerequisites
+
+It has prerequisites, maybe?

@@ -1,3 +1,0 @@
-# Part title {#sec-part-title-intro .unnumbered}
-
-This is an intro to a part.

@@ -1,0 +1,13 @@
+# What can I do with web APIs? {#sec-whole-game}
+
+## Introduction
+
+This is a chapter.
+
+## Learning Objectives
+
+Do LOs get their own subsection in each chapter?
+
+## Prerequisites
+
+It has prerequisites, maybe?

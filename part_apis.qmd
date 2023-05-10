@@ -1,0 +1,13 @@
+# What do APIs have to do with R? {#sec-apis-intro .unnumbered}
+
+This is an intro to a part.
+
+These are the chapters, introduced with a phrase the encapsulates them:
+
+-   Describe the chapter.
+    Reference it with a tag.
+
+-   Describe another chapter.
+    Reference it with a tag.
+
+And then a sentence or paragraph about any leftovers.

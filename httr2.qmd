@@ -1,0 +1,13 @@
+# What is httr2? {#sec-httr2}
+
+## Introduction
+
+This is a chapter.
+
+## Learning Objectives
+
+Do LOs get their own subsection in each chapter?
+
+## Prerequisites
+
+It has prerequisites, maybe?
