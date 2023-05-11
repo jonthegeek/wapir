@@ -1,4 +1,4 @@
-# How do I deploy my plumber API? {#sec-deploy}
+# How can I test my plumber API? {#sec-test-plumber}
 
 ## Introduction
 
