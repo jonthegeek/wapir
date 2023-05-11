@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jon Harmon">
 
-<title>Web APIs with R - 15&nbsp; How can I learn more about creating APIs?</title>
+<title>Web APIs with R - 14&nbsp; How can I test my plumber API?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./test-plumber.html" rel="prev">
+<link href="./creating-more.html" rel="next">
+<link href="./deploy.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_creating.html">How can I create my own APIs with R?</a></li><li class="breadcrumb-item"><a href="./creating-more.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_creating.html">How can I create my own APIs with R?</a></li><li class="breadcrumb-item"><a href="./test-plumber.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How can I test my plumber API?</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -224,13 +225,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test-plumber.html" class="sidebar-item-text sidebar-link">
+  <a href="./test-plumber.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How can I test my plumber API?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-more.html" class="sidebar-item-text sidebar-link active">
+  <a href="./creating-more.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span></a>
   </div>
 </li>
@@ -246,18 +247,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">15.1</span> Introduction</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">15.2</span> Learning Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">15.3</span> Prerequisites</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">14.1</span> Introduction</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">14.2</span> Learning Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">14.3</span> Prerequisites</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/creating-more.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/test-plumber.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-creating-more" class="quarto-section-identifier"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span></h1>
+<h1 class="title"><span id="sec-test-plumber" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How can I test my plumber API?</span></span></h1>
 </div>
 
 
@@ -272,16 +273,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">15.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">14.1</span> Introduction</h2>
 <p>This is a chapter.</p>
 </section>
-<section id="learning-objectives" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">15.2</span> Learning Objectives</h2>
+<section id="learning-objectives" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">14.2</span> Learning Objectives</h2>
 <p>Do LOs get their own subsection in each chapter?</p>
 </section>
-<section id="prerequisites" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">15.3</span> Prerequisites</h2>
+<section id="prerequisites" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">14.3</span> Prerequisites</h2>
 <p>It has prerequisites, maybe?</p>
 
 
@@ -523,11 +524,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./test-plumber.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How can I test my plumber API?</span></span>
+      <a href="./deploy.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">How do I deploy my plumber API?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./creating-more.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

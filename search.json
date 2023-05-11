@@ -238,25 +238,46 @@
     "text": "9.3 Prerequisites\nIt has prerequisites, maybe?"
   },
   {
-    "objectID": "accessing-more.html#introduction",
-    "href": "accessing-more.html#introduction",
-    "title": "10  How can I learn more about accessing web APIs?",
+    "objectID": "test-access.html#introduction",
+    "href": "test-access.html#introduction",
+    "title": "10  How can I test my web API interface?",
     "section": "10.1 Introduction",
     "text": "10.1 Introduction\nThis is a chapter."
   },
   {
-    "objectID": "accessing-more.html#learning-objectives",
-    "href": "accessing-more.html#learning-objectives",
-    "title": "10  How can I learn more about accessing web APIs?",
+    "objectID": "test-access.html#learning-objectives",
+    "href": "test-access.html#learning-objectives",
+    "title": "10  How can I test my web API interface?",
     "section": "10.2 Learning Objectives",
     "text": "10.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
   },
   {
-    "objectID": "accessing-more.html#prerequisites",
-    "href": "accessing-more.html#prerequisites",
-    "title": "10  How can I learn more about accessing web APIs?",
+    "objectID": "test-access.html#prerequisites",
+    "href": "test-access.html#prerequisites",
+    "title": "10  How can I test my web API interface?",
     "section": "10.3 Prerequisites",
     "text": "10.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "accessing-more.html#introduction",
+    "href": "accessing-more.html#introduction",
+    "title": "11  How can I learn more about accessing web APIs?",
+    "section": "11.1 Introduction",
+    "text": "11.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "accessing-more.html#learning-objectives",
+    "href": "accessing-more.html#learning-objectives",
+    "title": "11  How can I learn more about accessing web APIs?",
+    "section": "11.2 Learning Objectives",
+    "text": "11.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "accessing-more.html#prerequisites",
+    "href": "accessing-more.html#prerequisites",
+    "title": "11  How can I learn more about accessing web APIs?",
+    "section": "11.3 Prerequisites",
+    "text": "11.3 Prerequisites\nIt has prerequisites, maybe?"
   },
   {
     "objectID": "part_creating.html",
@@ -268,64 +289,85 @@
   {
     "objectID": "plumber.html#introduction",
     "href": "plumber.html#introduction",
-    "title": "11  What is plumber?",
-    "section": "11.1 Introduction",
-    "text": "11.1 Introduction\nThis is a chapter."
-  },
-  {
-    "objectID": "plumber.html#learning-objectives",
-    "href": "plumber.html#learning-objectives",
-    "title": "11  What is plumber?",
-    "section": "11.2 Learning Objectives",
-    "text": "11.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
-  },
-  {
-    "objectID": "plumber.html#prerequisites",
-    "href": "plumber.html#prerequisites",
-    "title": "11  What is plumber?",
-    "section": "11.3 Prerequisites",
-    "text": "11.3 Prerequisites\nIt has prerequisites, maybe?"
-  },
-  {
-    "objectID": "deploy.html#introduction",
-    "href": "deploy.html#introduction",
-    "title": "12  How do I deploy a plumber API?",
+    "title": "12  What is plumber?",
     "section": "12.1 Introduction",
     "text": "12.1 Introduction\nThis is a chapter."
   },
   {
-    "objectID": "deploy.html#learning-objectives",
-    "href": "deploy.html#learning-objectives",
-    "title": "12  How do I deploy a plumber API?",
+    "objectID": "plumber.html#learning-objectives",
+    "href": "plumber.html#learning-objectives",
+    "title": "12  What is plumber?",
     "section": "12.2 Learning Objectives",
     "text": "12.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
   },
   {
-    "objectID": "deploy.html#prerequisites",
-    "href": "deploy.html#prerequisites",
-    "title": "12  How do I deploy a plumber API?",
+    "objectID": "plumber.html#prerequisites",
+    "href": "plumber.html#prerequisites",
+    "title": "12  What is plumber?",
     "section": "12.3 Prerequisites",
     "text": "12.3 Prerequisites\nIt has prerequisites, maybe?"
   },
   {
-    "objectID": "creating-more.html#introduction",
-    "href": "creating-more.html#introduction",
-    "title": "13  How can I learn more about creating APIs?",
+    "objectID": "deploy.html#introduction",
+    "href": "deploy.html#introduction",
+    "title": "13  How do I deploy my plumber API?",
     "section": "13.1 Introduction",
     "text": "13.1 Introduction\nThis is a chapter."
   },
   {
-    "objectID": "creating-more.html#learning-objectives",
-    "href": "creating-more.html#learning-objectives",
-    "title": "13  How can I learn more about creating APIs?",
+    "objectID": "deploy.html#learning-objectives",
+    "href": "deploy.html#learning-objectives",
+    "title": "13  How do I deploy my plumber API?",
     "section": "13.2 Learning Objectives",
     "text": "13.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
   },
   {
-    "objectID": "creating-more.html#prerequisites",
-    "href": "creating-more.html#prerequisites",
-    "title": "13  How can I learn more about creating APIs?",
+    "objectID": "deploy.html#prerequisites",
+    "href": "deploy.html#prerequisites",
+    "title": "13  How do I deploy my plumber API?",
     "section": "13.3 Prerequisites",
     "text": "13.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "test-plumber.html#introduction",
+    "href": "test-plumber.html#introduction",
+    "title": "14  How can I test my plumber API?",
+    "section": "14.1 Introduction",
+    "text": "14.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "test-plumber.html#learning-objectives",
+    "href": "test-plumber.html#learning-objectives",
+    "title": "14  How can I test my plumber API?",
+    "section": "14.2 Learning Objectives",
+    "text": "14.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "test-plumber.html#prerequisites",
+    "href": "test-plumber.html#prerequisites",
+    "title": "14  How can I test my plumber API?",
+    "section": "14.3 Prerequisites",
+    "text": "14.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "creating-more.html#introduction",
+    "href": "creating-more.html#introduction",
+    "title": "15  How can I learn more about creating APIs?",
+    "section": "15.1 Introduction",
+    "text": "15.1 Introduction\nThis is a chapter."
+  },
+  {
+    "objectID": "creating-more.html#learning-objectives",
+    "href": "creating-more.html#learning-objectives",
+    "title": "15  How can I learn more about creating APIs?",
+    "section": "15.2 Learning Objectives",
+    "text": "15.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+  },
+  {
+    "objectID": "creating-more.html#prerequisites",
+    "href": "creating-more.html#prerequisites",
+    "title": "15  How can I learn more about creating APIs?",
+    "section": "15.3 Prerequisites",
+    "text": "15.3 Prerequisites\nIt has prerequisites, maybe?"
   }
 ]
