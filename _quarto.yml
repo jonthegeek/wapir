@@ -38,12 +38,14 @@ book:
         - authentication.qmd
         - automation.qmd
         - packages.qmd
+        - test-access.qmd
         - accessing-more.qmd
 
     - part: part_creating.qmd
       chapters:
         - plumber.qmd
         - deploy.qmd
+        - test-plumber.qmd
         - creating-more.qmd
 
 format:

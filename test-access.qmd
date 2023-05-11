@@ -1,4 +1,4 @@
-# How do I deploy my plumber API? {#sec-deploy}
+# How can I test my web API interface? {#sec-test-access}
 
 ## Introduction
 
