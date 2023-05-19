@@ -4,6 +4,19 @@
 
 This is the website for the work-in-progress book, ***Web APIs with R.*** This book will teach you how to create and utilize web APIs in R.
 
-## Acknowledgemets {.unnumbered}
+::: callout-warning
+This book is very much a work in progress.
 
-Thank you to the [R4DS Online Learning Community](https://r4ds.io/join) for giving me the confidence to try this!
+I am currently focused on 
+sorting out the scope of the book, and the general structure.
+:::
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
+This website is **free to use,** and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+The code contained in this book is simultaneously available under the [MIT license](https://opensource.org/licenses/MIT); this means that you are free to use it in your own packages, as long as you cite the source.
+
+## The R4DS Online Learning Community {.unnumbered}
+
+If you would like to discuss the contents of this book (or any other R-related topic), join the [R4DS Online Learning Community Slack](https://r4ds.io/join).
