@@ -5,6 +5,7 @@
 
 /.quarto/
 /_book/
+*.html
 
 *-apis-with-r.docx
 *.tmp
