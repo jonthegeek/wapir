@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to create and utilize web APIs in R."
+    "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to create and utilize web APIs in R.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
-    "objectID": "index.html#acknowledgemets",
-    "href": "index.html#acknowledgemets",
+    "objectID": "index.html#the-r4ds-online-learning-community",
+    "href": "index.html#the-r4ds-online-learning-community",
     "title": "Web APIs with R",
-    "section": "Acknowledgemets",
-    "text": "Acknowledgemets\nThank you to the R4DS Online Learning Community for giving me the confidence to try this!"
+    "section": "The R4DS Online Learning Community",
+    "text": "The R4DS Online Learning Community\nIf you would like to discuss the contents of this book (or any other R-related topic), join the R4DS Online Learning Community Slack."
   },
   {
     "objectID": "intro.html#what-you-will-learn",
