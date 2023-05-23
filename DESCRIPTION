@@ -8,6 +8,6 @@ URL: https://github.com/jonthegeek/wapir
 Depends: 
     R (>= 3.1.0)
 Encoding: UTF-8
-License: TBD
+License: CC BY NC SA 4.0
 Suggests: 
     knitr

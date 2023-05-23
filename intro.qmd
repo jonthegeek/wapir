@@ -2,33 +2,35 @@
 
 <!--# This file is an intro to the *book.* index.qmd is an intro to the *website.* -->
 
-Add a one-paragraph-or-so introduction here.
-For now the general structure is strongly inspired by R4DS.
-I'll likely make many changes as I fill this in.
+<!--# Walk through a typical set of interactions with websites. Add to calendar. Sign-on with. Zoom link in work messenger. Then looking at data and wishing they could add things. Then recipes and grocery shopping. Don't need them to be interacting with APIs, but make it things that COULD be API interactions. Then define APIs (better then below). Then state the goal of the book. -->
 
-## What you will learn
+The modern internet is made up of web APIs: services that enable communication between computer programs.
+The goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.
 
-Describe the overall goals, and explain the learning objective hierarchy.
+## Who should read this book?
 
-## How this book is organized
+*This might overlap with the "What will you learn?" section. It feels like a good thing to have up front to entice people to read or buy the book, though.*
 
-I'd love to know!
+## What will I learn?
 
-## What you won't learn
+*Describe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?*
+
+## What won't I learn?
 
 I like the idea of this section, but I don't know if it will fit.
 
-## Prerequisites
+## How is this book organized?
 
-Describe what we expect people to already know.
-Probably include subsections.
-Note that each part and/or chapter will describe the prerequisites for that part.
+I'd love to know!
 
-## Running R code
+## What should I already know?
 
-Explain what code looks like here vs to the user.
+*Describe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part.*
+
+## How do I run the code?
+
+*Explain what code looks like here vs to the user. Give a disclaimer that open source software changes so things might change, and that we'll try to keep the online version up-to-date. Potentially link to additional resources, maybe a book package.*
 
 ## Acknowledgements
 
-This is the acknowledgement that appears in the actual book.
-RStudio has code to auto-generate it, consider something similar.
+*This is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar.*
