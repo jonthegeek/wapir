@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to create and utilize web APIs in R.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -88,7 +88,7 @@
     "href": "part_apis.html",
     "title": "What do APIs have to do with R?",
     "section": "",
-    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+    "text": "Reorg: Let’s include rvest! We’ll use it to introduce GET & formatting the stuff that comes back (specifically as HTML/XML in this case, but transition to httr2 from there). Maybe even use rvest to get a json payload at the end?\nThis is an intro to a part.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
     "objectID": "whole-game.html#introduction",
@@ -179,7 +179,7 @@
     "href": "part_accessing.html",
     "title": "How can I access web APIs from R?",
     "section": "",
-    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
     "objectID": "httr2.html#introduction",
@@ -312,7 +312,7 @@
     "href": "part_creating.html",
     "title": "How can I create my own APIs with R?",
     "section": "",
-    "text": "TODO:\n\nConsider adding a chapter on securing APIs (or at least include it in deploy.qmd).\nSame for scaling. Scaling should almost definitely go inside deploy.qmd.\n\nThis is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+    "text": "TODO:\n\nConsider adding a chapter on securing APIs (or at least include it in deploy.qmd).\nSame for scaling. Scaling should almost definitely go inside deploy.qmd.\n\nThis is an intro to a part.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
     "objectID": "plumber.html#introduction",
