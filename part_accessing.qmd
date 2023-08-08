@@ -2,7 +2,7 @@
 
 This is an intro to a part.
 
-These are the chapters, introduced with a phrase the encapsulates them:
+These are the chapters, introduced with a phrase that encapsulates them:
 
 -   Describe the chapter. Reference it with a tag.
 
