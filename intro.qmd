@@ -13,7 +13,8 @@ Whether or not you realize it, you likely use web APIs every day, when you
 
 It's equally likely that you *could* be using web APIs to help you with *more* things.
 You could automatically update a dashboard with information from your work issue tracker, or enrich datasets by adding additional context for places or dates.
-You could connect your favorite recipe site to your calendar and grocery list for weekly meal planning, add tasks to your to-do list from your R console while you work.
+You could connect your favorite recipe site to your calendar and grocery list for weekly meal planning, or add tasks to your to-do list from your R console while you work.
+You could automate the things you do all the time, and find new things you didn't know were possible.
 
 The goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.
 

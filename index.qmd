@@ -2,13 +2,12 @@
 
 <!--# This file is an intro to the *website.* intro.qmd is an intro to the *book.* -->
 
-This is the website for the work-in-progress book, ***Web APIs with R.*** This book will teach you how to create and utilize web APIs in R.
+This is the website for the work-in-progress book, ***Web APIs with R.*** This book will teach you how to work with the web from your R session.
 
 ::: callout-warning
 This book is very much a work in progress.
 
-I am currently focused on 
-sorting out the scope of the book, and the general structure.
+I am trying to dive in and do some actual writing, though!
 :::
 
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
