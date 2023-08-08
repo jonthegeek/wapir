@@ -7,6 +7,13 @@
     "text": "Welcome\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to create and utilize web APIs in R.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
+    "objectID": "index.html#want-to-help",
+    "href": "index.html#want-to-help",
+    "title": "Web APIs with R",
+    "section": "Want to help?",
+    "text": "Want to help?\nI am writing this book in a GitHub repository. Follow the “Edit this page” or “Report an issue” links in the table of contents if you would like to help!"
+  },
+  {
     "objectID": "index.html#the-r4ds-online-learning-community",
     "href": "index.html#the-r4ds-online-learning-community",
     "title": "Web APIs with R",
@@ -14,46 +21,67 @@
     "text": "The R4DS Online Learning Community\nIf you would like to discuss the contents of this book (or any other R-related topic), join the R4DS Online Learning Community Slack."
   },
   {
-    "objectID": "intro.html#what-you-will-learn",
-    "href": "intro.html#what-you-will-learn",
-    "title": "1  Introduction",
-    "section": "1.1 What you will learn",
-    "text": "1.1 What you will learn\nDescribe the overall goals, and explain the learning objective hierarchy."
+    "objectID": "index.html#code-of-conduct",
+    "href": "index.html#code-of-conduct",
+    "title": "Web APIs with R",
+    "section": "Code of Conduct",
+    "text": "Code of Conduct\nPlease note that Web APIs with R is released with a Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms."
   },
   {
-    "objectID": "intro.html#how-this-book-is-organized",
-    "href": "intro.html#how-this-book-is-organized",
+    "objectID": "intro.html#who-should-read-this-book",
+    "href": "intro.html#who-should-read-this-book",
     "title": "1  Introduction",
-    "section": "1.2 How this book is organized",
-    "text": "1.2 How this book is organized\nI’d love to know!"
+    "section": "1.1 Who should read this book?",
+    "text": "1.1 Who should read this book?\nThis might overlap with the “What will I learn?” section. It feels like a good thing to have up front to entice people to read or buy the book, though."
   },
   {
-    "objectID": "intro.html#what-you-wont-learn",
-    "href": "intro.html#what-you-wont-learn",
+    "objectID": "intro.html#what-will-i-learn",
+    "href": "intro.html#what-will-i-learn",
     "title": "1  Introduction",
-    "section": "1.3 What you won’t learn",
-    "text": "1.3 What you won’t learn\nI like the idea of this section, but I don’t know if it will fit."
+    "section": "1.2 What will I learn?",
+    "text": "1.2 What will I learn?\nDescribe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?"
   },
   {
-    "objectID": "intro.html#prerequisites",
-    "href": "intro.html#prerequisites",
+    "objectID": "intro.html#what-wont-i-learn",
+    "href": "intro.html#what-wont-i-learn",
     "title": "1  Introduction",
-    "section": "1.4 Prerequisites",
-    "text": "1.4 Prerequisites\nDescribe what we expect people to already know. Probably include subsections. Note that each part and/or chapter will describe the prerequisites for that part."
+    "section": "1.3 What won’t I learn?",
+    "text": "1.3 What won’t I learn?\nI like the idea of this section, but I don’t know if it will fit."
   },
   {
-    "objectID": "intro.html#running-r-code",
-    "href": "intro.html#running-r-code",
+    "objectID": "intro.html#how-is-this-book-organized",
+    "href": "intro.html#how-is-this-book-organized",
     "title": "1  Introduction",
-    "section": "1.5 Running R code",
-    "text": "1.5 Running R code\nExplain what code looks like here vs to the user."
+    "section": "1.4 How is this book organized?",
+    "text": "1.4 How is this book organized?\nI’d love to know!"
+  },
+  {
+    "objectID": "intro.html#what-should-i-already-know",
+    "href": "intro.html#what-should-i-already-know",
+    "title": "1  Introduction",
+    "section": "1.5 What should I already know?",
+    "text": "1.5 What should I already know?\nDescribe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part."
+  },
+  {
+    "objectID": "intro.html#how-do-i-run-the-code",
+    "href": "intro.html#how-do-i-run-the-code",
+    "title": "1  Introduction",
+    "section": "1.6 How do I run the code?",
+    "text": "1.6 How do I run the code?\nExplain what code looks like here vs to the user. Give a disclaimer that open source software changes so things might change, and that we’ll try to keep the online version up-to-date. Potentially link to additional resources, maybe a book package."
   },
   {
     "objectID": "intro.html#acknowledgements",
     "href": "intro.html#acknowledgements",
     "title": "1  Introduction",
-    "section": "1.6 Acknowledgements",
-    "text": "1.6 Acknowledgements\nThis is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar."
+    "section": "1.7 Acknowledgements",
+    "text": "1.7 Acknowledgements\nThis is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar."
+  },
+  {
+    "objectID": "intro.html#footnotes",
+    "href": "intro.html#footnotes",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "API stands for “application programming interface,” but you will almost always see it written as “API.” It’s pronounced “A P I.”↩︎"
   },
   {
     "objectID": "part_apis.html",
@@ -284,7 +312,7 @@
     "href": "part_creating.html",
     "title": "How can I create my own APIs with R?",
     "section": "",
-    "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+    "text": "TODO:\n\nConsider adding a chapter on securing APIs (or at least include it in deploy.qmd).\nSame for scaling. Scaling should almost definitely go inside deploy.qmd.\n\nThis is an intro to a part.\nThese are the chapters, introduced with a phrase the encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
     "objectID": "plumber.html#introduction",
