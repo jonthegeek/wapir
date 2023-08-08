@@ -1,5 +1,10 @@
 # How can I create my own APIs with R? {#sec-creating-intro .unnumbered}
 
+TODO:
+
+-   Consider adding a chapter on securing APIs (or at least include it in deploy.qmd).
+-   Same for scaling. Scaling should almost definitely go inside deploy.qmd.
+
 This is an intro to a part.
 
 These are the chapters, introduced with a phrase the encapsulates them:

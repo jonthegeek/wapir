@@ -17,6 +17,15 @@ This website is **free to use,** and is licensed under the [Creative Commons Att
 
 The code contained in this book is simultaneously available under the [MIT license](https://opensource.org/licenses/MIT); this means that you are free to use it in your own packages, as long as you cite the source.
 
+## Want to help?
+
+I am writing this book in a GitHub repository.
+Follow the "Edit this page" or "Report an issue" links in the table of contents if you would like to help!
+
 ## The R4DS Online Learning Community {.unnumbered}
 
 If you would like to discuss the contents of this book (or any other R-related topic), join the [R4DS Online Learning Community Slack](https://r4ds.io/join).
+
+## Code of Conduct
+
+Please note that *Web APIs with R* is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

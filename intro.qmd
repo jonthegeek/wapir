@@ -2,33 +2,45 @@
 
 <!--# This file is an intro to the *book.* index.qmd is an intro to the *website.* -->
 
-Add a one-paragraph-or-so introduction here.
-For now the general structure is strongly inspired by R4DS.
-I'll likely make many changes as I fill this in.
+The modern internet is full of web APIs[^intro-1]: services that enable communication between computer programs.
+Whether or not you realize it, you likely use web APIs every day, when you
 
-## What you will learn
+[^intro-1]: API stands for "application programming interface," but you will almost always see it written as "API." It's pronounced "A P I."
 
-Describe the overall goals, and explain the learning objective hierarchy.
+-   Log into a website using your account at another website, like Google or Apple.
+-   Create a video meeting using an integration in your work messaging app.
+-   Add an event to your calendar using a button on a website.
 
-## How this book is organized
+It's equally likely that you *could* be using web APIs to help you with *more* things.
+You could automatically update a dashboard with information from your work issue tracker, or enrich datasets by adding additional context for places or dates.
+You could connect your favorite recipe site to your calendar and grocery list for weekly meal planning, add tasks to your to-do list from your R console while you work.
 
-I'd love to know!
+The goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.
 
-## What you won't learn
+## Who should read this book?
+
+*This might overlap with the "What will I learn?" section. It feels like a good thing to have up front to entice people to read or buy the book, though.*
+
+## What will I learn?
+
+*Describe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?*
+
+## What won't I learn?
 
 I like the idea of this section, but I don't know if it will fit.
 
-## Prerequisites
+## How is this book organized?
 
-Describe what we expect people to already know.
-Probably include subsections.
-Note that each part and/or chapter will describe the prerequisites for that part.
+I'd love to know!
 
-## Running R code
+## What should I already know?
 
-Explain what code looks like here vs to the user.
+*Describe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part.*
+
+## How do I run the code?
+
+*Explain what code looks like here vs to the user. Give a disclaimer that open source software changes so things might change, and that we'll try to keep the online version up-to-date. Potentially link to additional resources, maybe a book package.*
 
 ## Acknowledgements
 
-This is the acknowledgement that appears in the actual book.
-RStudio has code to auto-generate it, consider something similar.
+*This is the acknowledgement that appears in the actual book. RStudio has code to auto-generate it, consider something similar.*
