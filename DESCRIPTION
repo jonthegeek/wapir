@@ -10,5 +10,6 @@ Depends:
 Imports: 
     lubridate
 Suggests: 
-    knitr
+    knitr, 
+    rmarkdown
 Encoding: UTF-8
