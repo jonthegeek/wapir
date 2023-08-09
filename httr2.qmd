@@ -1,4 +1,4 @@
-# What is httr2? {#sec-httr2}
+# What is an API and how can I access one? {#sec-httr2}
 
 ## Introduction
 

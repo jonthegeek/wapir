@@ -1,4 +1,4 @@
-# What can I do with web APIs? {#sec-whole-game}
+# How can I process JSON data? {#sec-json}
 
 ## Introduction
 

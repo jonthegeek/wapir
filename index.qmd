@@ -1,4 +1,10 @@
+---
+engine: knitr
+---
+
 # Welcome {.unnumbered}
+
+*Last updated: `r format(lubridate::now(tzone = "America/Chicago"), usetz = TRUE, digits = 0)`*
 
 <!--# This file is an intro to the *website.* intro.qmd is an intro to the *book.* -->
 
@@ -8,9 +14,12 @@ This is the website for the work-in-progress book, ***Web APIs with R.*** This b
 This book is very much a work in progress.
 
 I am trying to dive in and do some actual writing, though!
+
+I'm not ready for PRs yet (despite what you might see in some of the boilerplate).
+However, if you have thoughts about what you'd like to see, please submit an issue!
 :::
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a>
 
 This website is **free to use,** and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
@@ -27,4 +36,5 @@ If you would like to discuss the contents of this book (or any other R-related t
 
 ## Code of Conduct
 
-Please note that *Web APIs with R* is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that *Web APIs with R* is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.

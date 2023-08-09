@@ -1,13 +1,5 @@
-# What APIs should I know about? {#sec-examples}
+# API Examples {#sec-examples}
 
 ## Introduction
 
-This is a chapter.
-
-## Learning Objectives
-
-Do LOs get their own subsection in each chapter?
-
-## Prerequisites
-
-It has prerequisites, maybe?
+This is an appendix.
