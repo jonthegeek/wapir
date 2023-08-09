@@ -25,20 +25,14 @@ book:
     - index.qmd
     - intro.qmd
 
-    - part: part_apis.qmd
-      chapters:
-        - whole-game.qmd
-        - rest.qmd
-        - examples.qmd
-        - apis-more.qmd
-
     - part: part_accessing.qmd
       chapters:
+        - rvest.qmd
+        - json.qmd
         - httr2.qmd
         - authentication.qmd
         - automation.qmd
         - packages.qmd
-        - test-access.qmd
         - accessing-more.qmd
 
     - part: part_creating.qmd
@@ -47,6 +41,9 @@ book:
         - deploy.qmd
         - test-plumber.qmd
         - creating-more.qmd
+
+  appendices:
+    - examples.qmd
 
 format:
   html:

@@ -1,4 +1,4 @@
-# How can I test my web API interface? {#sec-test-access}
+# How can I scrape web pages? {#sec-rvest}
 
 ## Introduction
 
