@@ -1,5 +1,7 @@
 # Welcome {.unnumbered}
 
+*Last updated: `r lubridate::now()`
+
 <!--# This file is an intro to the *website.* intro.qmd is an intro to the *book.* -->
 
 This is the website for the work-in-progress book, ***Web APIs with R.*** This book will teach you how to work with the web from your R session.
