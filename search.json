@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-08-09 18:18:50 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-08-10 08:54:39 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -110,6 +110,13 @@
     "title": "2  How can I scrape web pages?",
     "section": "2.3 Prerequisites",
     "text": "2.3 Prerequisites\nIt has prerequisites, maybe?"
+  },
+  {
+    "objectID": "rvest.html#exploration",
+    "href": "rvest.html#exploration",
+    "title": "2  How can I scrape web pages?",
+    "section": "2.4 Exploration",
+    "text": "2.4 Exploration\nThis section will be merged into other things or maybe thrown entirely away. I am using it to remind myself what the steps are.\n\nlibrary(rvest)\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_most_visited_websites\"\n\nmost_visited_websites_raw &lt;- \n  url |&gt; \n  rvest::read_html() |&gt; \n  rvest::html_table() |&gt; \n  _[[1]]\n\ndplyr::glimpse(most_visited_websites_raw)\n\nRows: 50\nColumns: 5\n$ Site                                                            &lt;chr&gt; \"Googl…\n$ `Domain name`                                                   &lt;chr&gt; \"googl…\n$ `Similarweb top 50websites ranking(As of July 2023[update])[1]` &lt;chr&gt; \"1 ()\"…\n$ Category                                                        &lt;chr&gt; \"Compu…\n$ `Principal country/territory`                                   &lt;chr&gt; \"Unite…\n\nmost_visited_websites_janitor &lt;- most_visited_websites_raw |&gt; \n  janitor::clean_names()\n\n# Future-proof\ncolnames(most_visited_websites_janitor)[\n  stringr::str_detect(colnames(most_visited_websites_janitor), \"similarweb\")\n] &lt;- \"similarweb_ranking\"\n\nmost_visited_websites_ranking &lt;- \n  most_visited_websites_janitor |&gt; \n  tidyr::separate_wider_delim(\n    similarweb_ranking, \n    \" \",\n    names = c(\"similarweb_ranking\", \"similarweb_change\")\n  )\n\ndplyr::glimpse(most_visited_websites_ranking)\n\nRows: 50\nColumns: 6\n$ site                        &lt;chr&gt; \"Google Search\", \"YouTube\", \"Facebook\", \"I…\n$ domain_name                 &lt;chr&gt; \"google.com\", \"youtube.com\", \"facebook.com…\n$ similarweb_ranking          &lt;chr&gt; \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9…\n$ similarweb_change           &lt;chr&gt; \"()\", \"()\", \"()\", \"()\", \"()\", \"()\", \"()\", …\n$ category                    &lt;chr&gt; \"Computers Electronics and Technology &gt; Se…\n$ principal_country_territory &lt;chr&gt; \"United States\", \"United States\", \"United …\n\ndplyr::count(most_visited_websites_ranking, similarweb_change)\n\n# A tibble: 7 × 2\n  similarweb_change     n\n  &lt;chr&gt;             &lt;int&gt;\n1 ()                   18\n2 (1)                  11\n3 (2)                   9\n4 (3)                   6\n5 (4)                   2\n6 (5)                   3\n7 (6)                   1\n\n# TODO: We lost the up/down arrows! Investigate how to get those.\n\nmost_visited_websites_category &lt;- \n  most_visited_websites_ranking |&gt; \n  tidyr::separate_wider_delim(\n    category,\n    delim = \" &gt; \",\n    names_sep = \"_\",\n    too_few = \"align_start\"\n  )\n\ndplyr::glimpse(most_visited_websites_category)\n\nRows: 50\nColumns: 7\n$ site                        &lt;chr&gt; \"Google Search\", \"YouTube\", \"Facebook\", \"I…\n$ domain_name                 &lt;chr&gt; \"google.com\", \"youtube.com\", \"facebook.com…\n$ similarweb_ranking          &lt;chr&gt; \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9…\n$ similarweb_change           &lt;chr&gt; \"()\", \"()\", \"()\", \"()\", \"()\", \"()\", \"()\", …\n$ category_1                  &lt;chr&gt; \"Computers Electronics and Technology\", \"A…\n$ category_2                  &lt;chr&gt; \"Search Engines\", \"Streaming & Online TV\",…\n$ principal_country_territory &lt;chr&gt; \"United States\", \"United States\", \"United …\n\ndplyr::count(most_visited_websites_category, category_1)\n\n# A tibble: 10 × 2\n   category_1                               n\n   &lt;chr&gt;                                &lt;int&gt;\n 1 Adult                                    6\n 2 Arts & Entertainment                     5\n 3 Community and Society                    1\n 4 Computers Electronics and Technology    25\n 5 Games                                    2\n 6 News & Media Publishers                  6\n 7 Reference Materials                      1\n 8 Science and Education                    1\n 9 Travel and Tourism                       1\n10 eCommerce & Shopping                     2\n\n# Huh. Maybe don't use this for the example. I'm not sure I want to put a bunch\n# of adult sites in my book.\n\nNotes:\n\nMost of that script is tidying, not scraping. Probably worthwhile to talk about column names and separating data, but it’s the same as for any data cleaning.\nImages in Wikipedia tables are lost. Look into how to deal with that, whether it’s worth digging into.\nDefinitely dig into harder examples! Well-formatted tables are boring. Although getting the images might require breaking it down into specifics, which could be useful.\nWhen I break it down, probably show logical breakdowns (tables, then the first table, then rows, or whatever). Still introduce SelectorGadget but talk through other approaches when it isn’t working.\nUse the breakdown to talk about HTML/XML, and also “Inspect” in Chrome.\nDeal with a more complex example that needs a session. Maybe host something for this so it can be published in a book? Make sure Hadley isn’t fundamentally changing this in the dev branch.\nUse session thing to transition to real APIs.\nrvest::read_html() is from {xml2}, and ultimately uses .Call(). session() is doing {httr} stuff under the hood."
   },
   {
     "objectID": "json.html#introduction",
@@ -247,21 +254,21 @@
   {
     "objectID": "plumber.html#introduction",
     "href": "plumber.html#introduction",
-    "title": "9  What is plumber?",
+    "title": "9  How can I create my own APIs?",
     "section": "9.1 Introduction",
     "text": "9.1 Introduction\nThis is a chapter."
   },
   {
     "objectID": "plumber.html#learning-objectives",
     "href": "plumber.html#learning-objectives",
-    "title": "9  What is plumber?",
+    "title": "9  How can I create my own APIs?",
     "section": "9.2 Learning Objectives",
     "text": "9.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
   },
   {
     "objectID": "plumber.html#prerequisites",
     "href": "plumber.html#prerequisites",
-    "title": "9  What is plumber?",
+    "title": "9  How can I create my own APIs?",
     "section": "9.3 Prerequisites",
     "text": "9.3 Prerequisites\nIt has prerequisites, maybe?"
   },

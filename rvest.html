@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -186,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./plumber.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">What is plumber?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">How can I create my own APIs?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -239,6 +273,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2.2</span> Learning Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">2.3</span> Prerequisites</a></li>
+  <li><a href="#exploration" id="toc-exploration" class="nav-link" data-scroll-target="#exploration"><span class="header-section-number">2.4</span> Exploration</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -273,6 +308,123 @@ ul.task-list li input[type="checkbox"] {
 <section id="prerequisites" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">2.3</span> Prerequisites</h2>
 <p>It has prerequisites, maybe?</p>
+</section>
+<section id="exploration" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exploration"><span class="header-section-number">2.4</span> Exploration</h2>
+<p>This section will be merged into other things or maybe thrown entirely away. I am using it to remind myself what the steps are.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://en.wikipedia.org/wiki/List_of_most_visited_websites"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>most_visited_websites_raw <span class="ot">&lt;-</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  url <span class="sc">|&gt;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">html_table</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  _[[<span class="dv">1</span>]]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(most_visited_websites_raw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 50
+Columns: 5
+$ Site                                                            &lt;chr&gt; "Googl…
+$ `Domain name`                                                   &lt;chr&gt; "googl…
+$ `Similarweb top 50websites ranking(As of July&nbsp;2023[update])[1]` &lt;chr&gt; "1 ()"…
+$ Category                                                        &lt;chr&gt; "Compu…
+$ `Principal country/territory`                                   &lt;chr&gt; "Unite…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>most_visited_websites_janitor <span class="ot">&lt;-</span> most_visited_websites_raw <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Future-proof</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(most_visited_websites_janitor)[</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  stringr<span class="sc">::</span><span class="fu">str_detect</span>(<span class="fu">colnames</span>(most_visited_websites_janitor), <span class="st">"similarweb"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>] <span class="ot">&lt;-</span> <span class="st">"similarweb_ranking"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>most_visited_websites_ranking <span class="ot">&lt;-</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  most_visited_websites_janitor <span class="sc">|&gt;</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate_wider_delim</span>(</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    similarweb_ranking, </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">" "</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"similarweb_ranking"</span>, <span class="st">"similarweb_change"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(most_visited_websites_ranking)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 50
+Columns: 6
+$ site                        &lt;chr&gt; "Google Search", "YouTube", "Facebook", "I…
+$ domain_name                 &lt;chr&gt; "google.com", "youtube.com", "facebook.com…
+$ similarweb_ranking          &lt;chr&gt; "1", "2", "3", "4", "5", "6", "7", "8", "9…
+$ similarweb_change           &lt;chr&gt; "()", "()", "()", "()", "()", "()", "()", …
+$ category                    &lt;chr&gt; "Computers Electronics and Technology &gt; Se…
+$ principal_country_territory &lt;chr&gt; "United States", "United States", "United …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">count</span>(most_visited_websites_ranking, similarweb_change)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 2
+  similarweb_change     n
+  &lt;chr&gt;             &lt;int&gt;
+1 ()                   18
+2 (1)                  11
+3 (2)                   9
+4 (3)                   6
+5 (4)                   2
+6 (5)                   3
+7 (6)                   1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: We lost the up/down arrows! Investigate how to get those.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>most_visited_websites_category <span class="ot">&lt;-</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  most_visited_websites_ranking <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate_wider_delim</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    category,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">delim =</span> <span class="st">" &gt; "</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_sep =</span> <span class="st">"_"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">too_few =</span> <span class="st">"align_start"</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(most_visited_websites_category)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 50
+Columns: 7
+$ site                        &lt;chr&gt; "Google Search", "YouTube", "Facebook", "I…
+$ domain_name                 &lt;chr&gt; "google.com", "youtube.com", "facebook.com…
+$ similarweb_ranking          &lt;chr&gt; "1", "2", "3", "4", "5", "6", "7", "8", "9…
+$ similarweb_change           &lt;chr&gt; "()", "()", "()", "()", "()", "()", "()", …
+$ category_1                  &lt;chr&gt; "Computers Electronics and Technology", "A…
+$ category_2                  &lt;chr&gt; "Search Engines", "Streaming &amp; Online TV",…
+$ principal_country_territory &lt;chr&gt; "United States", "United States", "United …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">count</span>(most_visited_websites_category, category_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   category_1                               n
+   &lt;chr&gt;                                &lt;int&gt;
+ 1 Adult                                    6
+ 2 Arts &amp; Entertainment                     5
+ 3 Community and Society                    1
+ 4 Computers Electronics and Technology    25
+ 5 Games                                    2
+ 6 News &amp; Media Publishers                  6
+ 7 Reference Materials                      1
+ 8 Science and Education                    1
+ 9 Travel and Tourism                       1
+10 eCommerce &amp; Shopping                     2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Huh. Maybe don't use this for the example. I'm not sure I want to put a bunch</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># of adult sites in my book.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Notes:</p>
+<ul>
+<li>Most of that script is tidying, not scraping. Probably worthwhile to talk about column names and separating data, but it’s the same as for any data cleaning.</li>
+<li>Images in Wikipedia tables are lost. Look into how to deal with that, whether it’s worth digging into.</li>
+<li>Definitely dig into harder examples! Well-formatted tables are boring. Although getting the images might require breaking it down into specifics, which could be useful.</li>
+<li>When I break it down, probably show logical breakdowns (tables, then the first table, then rows, or whatever). Still introduce SelectorGadget but talk through other approaches when it isn’t working.</li>
+<li>Use the breakdown to talk about HTML/XML, and also “Inspect” in Chrome.</li>
+<li>Deal with a more complex example that needs a session. Maybe host something for this so it can be published in a book? Make sure Hadley isn’t fundamentally changing this in the dev branch.</li>
+<li>Use session thing to transition to real APIs.</li>
+<li><code>rvest::read_html()</code> is from {xml2}, and ultimately uses <code>.Call()</code>. <code>session()</code> is doing {httr} stuff under the hood.</li>
+</ul>
 
 
 </section>
