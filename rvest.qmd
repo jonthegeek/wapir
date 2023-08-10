@@ -11,3 +11,66 @@ Do LOs get their own subsection in each chapter?
 ## Prerequisites
 
 It has prerequisites, maybe?
+
+## Exploration
+
+This section will be merged into other things or maybe thrown entirely away.
+I am using it to remind myself what the steps are.
+
+```{r scrap-exploration}
+library(rvest)
+url <- "https://en.wikipedia.org/wiki/List_of_most_visited_websites"
+
+most_visited_websites_raw <- 
+  url |> 
+  rvest::read_html() |> 
+  rvest::html_table() |> 
+  _[[1]]
+
+dplyr::glimpse(most_visited_websites_raw)
+
+most_visited_websites_janitor <- most_visited_websites_raw |> 
+  janitor::clean_names()
+
+# Future-proof
+colnames(most_visited_websites_janitor)[
+  stringr::str_detect(colnames(most_visited_websites_janitor), "similarweb")
+] <- "similarweb_ranking"
+
+most_visited_websites_ranking <- 
+  most_visited_websites_janitor |> 
+  tidyr::separate_wider_delim(
+    similarweb_ranking, 
+    " ",
+    names = c("similarweb_ranking", "similarweb_change")
+  )
+
+dplyr::glimpse(most_visited_websites_ranking)
+dplyr::count(most_visited_websites_ranking, similarweb_change)
+# TODO: We lost the up/down arrows! Investigate how to get those.
+
+most_visited_websites_category <- 
+  most_visited_websites_ranking |> 
+  tidyr::separate_wider_delim(
+    category,
+    delim = " > ",
+    names_sep = "_",
+    too_few = "align_start"
+  )
+
+dplyr::glimpse(most_visited_websites_category)
+dplyr::count(most_visited_websites_category, category_1)
+# Huh. Maybe don't use this for the example. I'm not sure I want to put a bunch
+# of adult sites in my book.
+```
+
+Notes:
+
+-   Most of that script is tidying, not scraping. Probably worthwhile to talk about column names and separating data, but it's the same as for any data cleaning.
+-   Images in Wikipedia tables are lost. Look into how to deal with that, whether it's worth digging into.
+-   Definitely dig into harder examples! Well-formatted tables are boring. Although getting the images might require breaking it down into specifics, which could be useful.
+-   When I break it down, probably show logical breakdowns (tables, then the first table, then rows, or whatever). Still introduce SelectorGadget but talk through other approaches when it isn't working.
+-   Use the breakdown to talk about HTML/XML, and also "Inspect" in Chrome.
+-   Deal with a more complex example that needs a session. Maybe host something for this so it can be published in a book? Make sure Hadley isn't fundamentally changing this in the dev branch.
+-   Use session thing to transition to real APIs.
+-   `rvest::read_html()` is from {xml2}, and ultimately uses `.Call()`. `session()` is doing {httr} stuff under the hood.
