@@ -425,6 +425,141 @@ $ principal_country_territory &lt;chr&gt; "United States", "United States", "Uni
 <li>Use session thing to transition to real APIs.</li>
 <li><code>rvest::read_html()</code> is from {xml2}, and ultimately uses <code>.Call()</code>. <code>session()</code> is doing {httr} stuff under the hood.</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use this one later, it has a broken header row AND images.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States"</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>states_raw <span class="ot">&lt;-</span> </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  url <span class="sc">|&gt;</span> </span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">html_table</span>()</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>states_raw[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 13
+   `Flag, name andpostal abbreviation[8]` Flag, name andpostal a…¹ Cities Cities
+   &lt;chr&gt;                                  &lt;chr&gt;                    &lt;chr&gt;  &lt;chr&gt; 
+ 1 Flag, name andpostal abbreviation[8]   Flag, name andpostal ab… Capit… Large…
+ 2 Alabama                                AL                       Montg… Hunts…
+ 3 Alaska                                 AK                       Juneau Ancho…
+ 4 Arizona                                AZ                       Phoen… Phoen…
+ 5 Arkansas                               AR                       Littl… Littl…
+ 6 California                             CA                       Sacra… Los A…
+ 7 Colorado                               CO                       Denver Denver
+ 8 Connecticut                            CT                       Hartf… Bridg…
+ 9 Delaware                               DE                       Dover  Wilmi…
+10 Florida                                FL                       Talla… Jacks…
+# ℹ 41 more rows
+# ℹ abbreviated name: ¹​`Flag, name andpostal abbreviation[8]`
+# ℹ 9 more variables: `Ratification oradmission[A]` &lt;chr&gt;,
+#   `Population(2020 census)[10]` &lt;chr&gt;, `Total area[11]` &lt;chr&gt;,
+#   `Total area[11]` &lt;chr&gt;, `Land area[11]` &lt;chr&gt;, `Land area[11]` &lt;chr&gt;,
+#   `Water area[11]` &lt;chr&gt;, `Water area[11]` &lt;chr&gt;, `Numberof Reps.` &lt;chr&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">####</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use this one first, it's simpler.</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://en.wikipedia.org/wiki/List_of_state_and_territory_name_etymologies_of_the_United_States"</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>state_name_etymology <span class="ot">&lt;-</span> </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  url <span class="sc">|&gt;</span> </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">html_table</span>()</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(state_name_etymology[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 56
+Columns: 5
+$ `State name`                               &lt;chr&gt; "Alabama", "Alaska", "Arizo…
+$ `Date first attested in original language` &lt;chr&gt; "April 19, 1692", "December…
+$ `Language of origin`                       &lt;chr&gt; "Choctaw/Alabama", "Aleut v…
+$ `Word(s) in original language`             &lt;chr&gt; "alba amo/Albaamaha", "alax…
+$ `Meaning and notes`                        &lt;chr&gt; "'Thicket-clearers'[3] or '…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Point out row 3-4, which were one row in the original table. Good job, rvest!</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">:</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># * Images didn't make it (flag + map)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># * Footnotes might be helpful to fetch</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># * colnames, dates, etc (normal cleaning)</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Images</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at SelectorGadget, talk about drawbacks. Probably do a case where it</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># works better first.</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Right-click, inspect element</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Maybe start with a more raw approach.</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>state_name_etymology_images_raw <span class="ot">&lt;-</span> </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  url <span class="sc">|&gt;</span> </span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_first</span>(<span class="st">".//table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_all</span>(<span class="st">".//img"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_attr</span>(<span class="st">"src"</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>state_flags <span class="ot">&lt;-</span> state_name_etymology_images_raw <span class="sc">|&gt;</span> </span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  stringr<span class="sc">::</span><span class="fu">str_subset</span>(<span class="st">"Flag_of"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  (\(x) {<span class="fu">paste0</span>(<span class="st">"https:"</span>, x)})()</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co"># browseURL(state_flags[[1]])</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co"># browseURL(state_flags[[1]])</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>state_locations <span class="ot">&lt;-</span> state_name_etymology_images_raw <span class="sc">|&gt;</span> </span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  stringr<span class="sc">::</span><span class="fu">str_subset</span>(<span class="st">"Map_of"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>  (\(x) {<span class="fu">paste0</span>(<span class="st">"https:"</span>, x)})()</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="co"># browseURL(state_locations[[1]])</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>test1 <span class="ot">&lt;-</span> url <span class="sc">|&gt;</span> </span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_first</span>(<span class="st">".//table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_all</span>(<span class="st">".//img"</span>)</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>test2 <span class="ot">&lt;-</span> url <span class="sc">|&gt;</span> </span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_first</span>(<span class="st">".//table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_all</span>(<span class="st">"//img"</span>)</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>test3 <span class="ot">&lt;-</span> url <span class="sc">|&gt;</span> </span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>  rvest<span class="sc">::</span><span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_find_all</span>(<span class="st">"//img"</span>)</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(test1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(test2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 132</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(test3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 132</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>waldo<span class="sc">::</span><span class="fu">compare</span>(test2, test3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>✔ No differences</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve xpaths, could be useful if you want to come back after exploring.</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>test1 <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  xml2<span class="sc">::</span><span class="fu">xml_path</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[2]/td[1]/span[1]/span/span/img"
+[2] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[2]/td[1]/span[2]/a/img"        
+[3] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[3]/td[1]/span[1]/span/span/img"
+[4] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[3]/td[1]/span[2]/a/img"        
+[5] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[4]/td[1]/span[1]/span/span/img"
+[6] "/html/body/div[2]/div/div[3]/main/div[3]/div[3]/div[1]/table[1]/tbody/tr[4]/td[1]/span[2]/a/img"        </code></pre>
+</div>
+</div>
+<ul>
+<li>A lot of this chapter should probably be an intro to Xpath.</li>
+<li>Note the difference between <code>".//"</code> (search below the current node) and <code>"//"</code> (search anywhere in the document). You never want just <code>"//"</code> in a pipe, because it ignores previous steps!</li>
+<li>Also note the <code>flatten</code> argument for <code>xml2::xml_find_all()</code>! By default it de-duplicates, so watch out if you’re trying to align lists.</li>
+<li><code>xml_attrs()</code> (list all of the attributes) vs <code>xml_attr()</code> (get a specific attribute). Similar to <code>attributes()</code> vs <code>attr()</code>.</li>
+</ul>
 
 
 </section>
