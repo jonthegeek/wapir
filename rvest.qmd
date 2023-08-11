@@ -17,7 +17,7 @@ It has prerequisites, maybe?
 This section will be merged into other things or maybe thrown entirely away.
 I am using it to remind myself what the steps are.
 
-```{r scrap-exploration}
+```{r scrape-exploration1}
 library(rvest)
 url <- "https://en.wikipedia.org/wiki/List_of_most_visited_websites"
 
@@ -74,3 +74,91 @@ Notes:
 -   Deal with a more complex example that needs a session. Maybe host something for this so it can be published in a book? Make sure Hadley isn't fundamentally changing this in the dev branch.
 -   Use session thing to transition to real APIs.
 -   `rvest::read_html()` is from {xml2}, and ultimately uses `.Call()`. `session()` is doing {httr} stuff under the hood.
+
+```{r scrape-exploration1-states}
+library(rvest)
+
+# Use this one later, it has a broken header row AND images.
+url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States"
+
+states_raw <- 
+  url |> 
+  rvest::read_html() |> 
+  rvest::html_table()
+
+states_raw[[2]]
+
+####
+
+# Use this one first, it's simpler.
+url <- "https://en.wikipedia.org/wiki/List_of_state_and_territory_name_etymologies_of_the_United_States"
+state_name_etymology <- 
+  url |> 
+  rvest::read_html() |> 
+  rvest::html_table()
+
+dplyr::glimpse(state_name_etymology_raw[[1]])
+
+# Point out row 3-4, which were one row in the original table. Good job, rvest!
+
+# TODO:
+# * Images didn't make it (flag + map)
+# * Footnotes might be helpful to fetch
+# * colnames, dates, etc (normal cleaning)
+
+## Images
+
+# Look at SelectorGadget, talk about drawbacks. Probably do a case where it
+# works better first.
+
+# Right-click, inspect element
+
+# Maybe start with a more raw approach.
+
+state_name_etymology_images_raw <- 
+  url |> 
+  rvest::read_html() |> 
+  xml2::xml_find_first(".//table") |> 
+  xml2::xml_find_all(".//img") |> 
+  xml2::xml_attr("src")
+
+state_flags <- state_name_etymology_images_raw |> 
+  stringr::str_subset("Flag_of") |> 
+  (\(x) {paste0("https:", x)})()
+
+# browseURL(state_flags[[1]])
+# browseURL(state_flags[[1]])
+state_locations <- state_name_etymology_images_raw |> 
+  stringr::str_subset("Map_of") |> 
+  (\(x) {paste0("https:", x)})()
+# browseURL(state_locations[[1]])
+
+test1 <- url |> 
+  rvest::read_html() |> 
+  xml2::xml_find_first(".//table") |> 
+  xml2::xml_find_all(".//img")
+
+test2 <- url |> 
+  rvest::read_html() |> 
+  xml2::xml_find_first(".//table") |> 
+  xml2::xml_find_all("//img")
+
+test3 <- url |> 
+  rvest::read_html() |> 
+  xml2::xml_find_all("//img")
+
+length(test1)
+length(test2)
+length(test3)
+waldo::compare(test2, test3)
+
+# Retrieve xpaths, could be useful if you want to come back after exploring.
+test1 |> 
+  xml2::xml_path() |> 
+  head()
+```
+
+-   A lot of this chapter should probably be an intro to Xpath.
+-   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps!
+-   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists.
+-   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
