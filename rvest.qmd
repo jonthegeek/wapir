@@ -97,7 +97,7 @@ state_name_etymology <-
   rvest::read_html() |> 
   rvest::html_table()
 
-dplyr::glimpse(state_name_etymology_raw[[1]])
+dplyr::glimpse(state_name_etymology[[1]])
 
 # Point out row 3-4, which were one row in the original table. Good job, rvest!
 
