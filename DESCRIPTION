@@ -11,7 +11,8 @@ Imports:
     janitor,
     lubridate,
     rvest,
-    tidyverse
+    tidyverse, 
+    waldo
 Suggests: 
     knitr,
     rmarkdown
