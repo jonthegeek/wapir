@@ -12,153 +12,43 @@ Do LOs get their own subsection in each chapter?
 
 It has prerequisites, maybe?
 
-## Exploration
+## Ideas to cover:
 
-This section will be merged into other things or maybe thrown entirely away.
-I am using it to remind myself what the steps are.
-
-```{r scrape-exploration1}
-library(rvest)
-url <- "https://en.wikipedia.org/wiki/List_of_most_visited_websites"
-
-most_visited_websites_raw <- 
-  url |> 
-  rvest::read_html() |> 
-  rvest::html_table() |> 
-  _[[1]]
-
-dplyr::glimpse(most_visited_websites_raw)
-
-most_visited_websites_janitor <- most_visited_websites_raw |> 
-  janitor::clean_names()
-
-# Future-proof
-colnames(most_visited_websites_janitor)[
-  stringr::str_detect(colnames(most_visited_websites_janitor), "similarweb")
-] <- "similarweb_ranking"
-
-most_visited_websites_ranking <- 
-  most_visited_websites_janitor |> 
-  tidyr::separate_wider_delim(
-    similarweb_ranking, 
-    " ",
-    names = c("similarweb_ranking", "similarweb_change")
-  )
-
-dplyr::glimpse(most_visited_websites_ranking)
-dplyr::count(most_visited_websites_ranking, similarweb_change)
-# TODO: We lost the up/down arrows! Investigate how to get those.
-
-most_visited_websites_category <- 
-  most_visited_websites_ranking |> 
-  tidyr::separate_wider_delim(
-    category,
-    delim = " > ",
-    names_sep = "_",
-    too_few = "align_start"
-  )
-
-dplyr::glimpse(most_visited_websites_category)
-dplyr::count(most_visited_websites_category, category_1)
-# Huh. Maybe don't use this for the example. I'm not sure I want to put a bunch
-# of adult sites in my book.
-```
-
-Notes:
-
--   Most of that script is tidying, not scraping. Probably worthwhile to talk about column names and separating data, but it's the same as for any data cleaning.
--   Images in Wikipedia tables are lost. Look into how to deal with that, whether it's worth digging into.
--   Definitely dig into harder examples! Well-formatted tables are boring. Although getting the images might require breaking it down into specifics, which could be useful.
--   When I break it down, probably show logical breakdowns (tables, then the first table, then rows, or whatever). Still introduce SelectorGadget but talk through other approaches when it isn't working.
--   Use the breakdown to talk about HTML/XML, and also "Inspect" in Chrome.
--   Deal with a more complex example that needs a session. Maybe host something for this so it can be published in a book? Make sure Hadley isn't fundamentally changing this in the dev branch.
--   Use session thing to transition to real APIs.
--   `rvest::read_html()` is from {xml2}, and ultimately uses `.Call()`. `session()` is doing {httr} stuff under the hood.
-
-```{r scrape-exploration1-states}
-library(rvest)
-
-# Use this one later, it has a broken header row AND images.
-url <- "https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States"
-
-states_raw <- 
-  url |> 
-  rvest::read_html() |> 
-  rvest::html_table()
-
-states_raw[[2]]
-
-####
-
-# Use this one first, it's simpler.
-url <- "https://en.wikipedia.org/wiki/List_of_state_and_territory_name_etymologies_of_the_United_States"
-state_name_etymology <- 
-  url |> 
-  rvest::read_html() |> 
-  rvest::html_table()
-
-dplyr::glimpse(state_name_etymology[[1]])
-
-# Point out row 3-4, which were one row in the original table. Good job, rvest!
-
-# TODO:
-# * Images didn't make it (flag + map)
-# * Footnotes might be helpful to fetch
-# * colnames, dates, etc (normal cleaning)
-
-## Images
-
-# Look at SelectorGadget, talk about drawbacks. Probably do a case where it
-# works better first.
-
-# Right-click, inspect element
-
-# Maybe start with a more raw approach.
-
-state_name_etymology_images_raw <- 
-  url |> 
-  rvest::read_html() |> 
-  xml2::xml_find_first(".//table") |> 
-  xml2::xml_find_all(".//img") |> 
-  xml2::xml_attr("src")
-
-state_flags <- state_name_etymology_images_raw |> 
-  stringr::str_subset("Flag_of") |> 
-  (\(x) {paste0("https:", x)})()
-
-# browseURL(state_flags[[1]])
-# browseURL(state_flags[[1]])
-state_locations <- state_name_etymology_images_raw |> 
-  stringr::str_subset("Map_of") |> 
-  (\(x) {paste0("https:", x)})()
-# browseURL(state_locations[[1]])
-
-test1 <- url |> 
-  rvest::read_html() |> 
-  xml2::xml_find_first(".//table") |> 
-  xml2::xml_find_all(".//img")
-
-test2 <- url |> 
-  rvest::read_html() |> 
-  xml2::xml_find_first(".//table") |> 
-  xml2::xml_find_all("//img")
-
-test3 <- url |> 
-  rvest::read_html() |> 
-  xml2::xml_find_all("//img")
-
-length(test1)
-length(test2)
-length(test3)
-waldo::compare(test2, test3)
-
-# Retrieve xpaths, could be useful if you want to come back after exploring.
-test1 |> 
-  xml2::xml_path() |> 
-  head()
-```
-
--   A lot of this chapter should probably be an intro to Xpath.
--   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps!
--   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists.
--   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
+-   Basic intro to {rvest}.
+    -   Dive into a simple scrape right away. A static table in this repo where 
+        html_table works out of the box. It looks like it'll get a single table
+        without any fuss. Is that true?
+    -   BRIEFLY touch on data cleaning, but send them to R4DS for more details.
+    -   Maybe note that a lot of {rvest} is reexports from {xml2}, which we'll 
+        cover in detail later in the chapter.
+-   Using SelectorGadget.
+    -   Start by reproducing the table scrape.
+    -   A second table where html_table doesn't work as well (weird headers or 
+        something). Maybe; the next example might be enough.
+    -   A web page with structured content that isn't in a table. Like the Star 
+        Wars example in rvest, but someting else. Maybe information about HTTP
+        request methods? Oh, or Xpath rules!
+-   Understanding what SelectorGadget generated/finding other paths (Xpath 
+    basics).
+    -   Start by digging into what SelectorGadget produced for the examples 
+        above/what it means.
+    -   Add an example where it's way more straightforward to do things 
+        sequentially (structured data in a particular cell of a particular 
+        table, something like that).
+    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably 
+        teach Xpath because it lets you do all the things.
+    -   Note the difference between `".//"` (search below the current node) and 
+        `"//"` (search anywhere in the document). You never want just `"//"` in 
+        a pipe, because it ignores previous steps! Probably put this in a call
+        out.
+    -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default 
+        it de-duplicates, so watch out if you're trying to align lists. Make 
+        sure this behaves how I think it does, and, if so, provide an example
+        where it matters.
+    -   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a 
+        specific attribute). Similar to `attributes()` vs `attr()`.
+-   Advanced {rvest} techniques.
+    -   Can I ~easily deploy something that requires a session?
+    -   Is the session stuff relatively stable?
+    -   Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?
+    -   Bridge into {httr2}. Don't write this yet, bridges should be written last!
