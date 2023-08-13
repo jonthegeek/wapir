@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-08-12 18:17:39 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-08-13 08:51:01 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -95,28 +95,28 @@
     "href": "rvest.html#introduction",
     "title": "2  How can I scrape web pages?",
     "section": "2.1 Introduction",
-    "text": "2.1 Introduction\nThis is a chapter."
+    "text": "2.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "rvest.html#learning-objectives",
     "href": "rvest.html#learning-objectives",
     "title": "2  How can I scrape web pages?",
     "section": "2.2 Learning Objectives",
-    "text": "2.2 Learning Objectives\nDo LOs get their own subsection in each chapter?"
+    "text": "2.2 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nScrape data from a web page.\nUse SelectorGadget to choose pieces of a web page.\nUse Xpath to refine your selections.\nScrape data from a web page that requires you to log in."
   },
   {
     "objectID": "rvest.html#prerequisites",
     "href": "rvest.html#prerequisites",
     "title": "2  How can I scrape web pages?",
     "section": "2.3 Prerequisites",
-    "text": "2.3 Prerequisites\nIt has prerequisites, maybe?"
+    "text": "2.3 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "rvest.html#ideas-to-cover",
     "href": "rvest.html#ideas-to-cover",
     "title": "2  How can I scrape web pages?",
     "section": "2.4 Ideas to cover:",
-    "text": "2.4 Ideas to cover:\n\nBasic intro to {rvest}.\n\nDive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss. Is that true?\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nMaybe note that a lot of {rvest} is reexports from {xml2}, which we’ll cover in detail later in the chapter.\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape.\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nUnderstanding what SelectorGadget generated/finding other paths (Xpath basics).\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.\nNote the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps! Probably put this in a call out.\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.\nxml_attrs() (list all of the attributes) vs xml_attr() (get a specific attribute). Similar to attributes() vs attr().\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff relatively stable?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!"
+    "text": "2.4 Ideas to cover:\n\nBasic intro to {rvest}.\n\nDive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss. Is that true?\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nMaybe note that a lot of {rvest} is reexports from {xml2}, which we’ll cover in detail later in the chapter.\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape.\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nUnderstanding what SelectorGadget generated/finding other paths (Xpath basics).\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.\nNote the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps! Probably put this in a call out.\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.\nxml_attrs() (list all of the attributes) vs xml_attr() (get a specific attribute). Similar to attributes() vs attr().\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!"
   },
   {
     "objectID": "json.html#introduction",
