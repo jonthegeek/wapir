@@ -2,53 +2,40 @@
 
 ## Introduction
 
-This is a chapter.
+(introduction will be written \~last)
 
 ## Learning Objectives
 
-Do LOs get their own subsection in each chapter?
+After you read this chapter, you will be able to:
+
+-   Scrape data from a web page.
+-   Use SelectorGadget to choose pieces of a web page.
+-   Use Xpath to refine your selections.
+-   Scrape data from a web page that requires you to log in.
 
 ## Prerequisites
 
-It has prerequisites, maybe?
+(prerequisites will be filled in as I write, if I decide to keep this section)
 
 ## Ideas to cover:
 
 -   Basic intro to {rvest}.
-    -   Dive into a simple scrape right away. A static table in this repo where 
-        html_table works out of the box. It looks like it'll get a single table
-        without any fuss. Is that true?
+    -   Dive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it'll get a single table without any fuss. Is that true?
     -   BRIEFLY touch on data cleaning, but send them to R4DS for more details.
-    -   Maybe note that a lot of {rvest} is reexports from {xml2}, which we'll 
-        cover in detail later in the chapter.
+    -   Maybe note that a lot of {rvest} is reexports from {xml2}, which we'll cover in detail later in the chapter.
 -   Using SelectorGadget.
     -   Start by reproducing the table scrape.
-    -   A second table where html_table doesn't work as well (weird headers or 
-        something). Maybe; the next example might be enough.
-    -   A web page with structured content that isn't in a table. Like the Star 
-        Wars example in rvest, but someting else. Maybe information about HTTP
-        request methods? Oh, or Xpath rules!
--   Understanding what SelectorGadget generated/finding other paths (Xpath 
-    basics).
-    -   Start by digging into what SelectorGadget produced for the examples 
-        above/what it means.
-    -   Add an example where it's way more straightforward to do things 
-        sequentially (structured data in a particular cell of a particular 
-        table, something like that).
-    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably 
-        teach Xpath because it lets you do all the things.
-    -   Note the difference between `".//"` (search below the current node) and 
-        `"//"` (search anywhere in the document). You never want just `"//"` in 
-        a pipe, because it ignores previous steps! Probably put this in a call
-        out.
-    -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default 
-        it de-duplicates, so watch out if you're trying to align lists. Make 
-        sure this behaves how I think it does, and, if so, provide an example
-        where it matters.
-    -   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a 
-        specific attribute). Similar to `attributes()` vs `attr()`.
+    -   A second table where html_table doesn't work as well (weird headers or something). Maybe; the next example might be enough.
+    -   A web page with structured content that isn't in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!
+-   Understanding what SelectorGadget generated/finding other paths (Xpath basics).
+    -   Start by digging into what SelectorGadget produced for the examples above/what it means.
+    -   Add an example where it's way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).
+    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.
+    -   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps! Probably put this in a call out.
+    -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.
+    -   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
 -   Advanced {rvest} techniques.
-    -   Can I ~easily deploy something that requires a session?
-    -   Is the session stuff relatively stable?
+    -   Can I \~easily deploy something that requires a session?
+    -   Is the session stuff in {rvest} relatively stable?
     -   Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?
     -   Bridge into {httr2}. Don't write this yet, bridges should be written last!
