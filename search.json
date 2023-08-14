@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-08-13 18:17:02 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-08-14 08:03:47 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -39,7 +39,7 @@
     "href": "intro.html#what-will-i-learn",
     "title": "1  Introduction",
     "section": "1.2 What will I learn?",
-    "text": "1.2 What will I learn?\nDescribe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?"
+    "text": "1.2 What will I learn?\nDescribe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?\nMaybe put the landscape here, and intro the structure of the book earlier. How will I learn? maybe?"
   },
   {
     "objectID": "intro.html#what-wont-i-learn",
@@ -60,7 +60,7 @@
     "href": "intro.html#what-should-i-already-know",
     "title": "1  Introduction",
     "section": "1.5 What should I already know?",
-    "text": "1.5 What should I already know?\nDescribe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part."
+    "text": "1.5 What should I already know?\nDescribe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part. Most of those books will be places to find more info or to dive deeper into a topic."
   },
   {
     "objectID": "intro.html#how-do-i-run-the-code",
@@ -102,7 +102,7 @@
     "href": "rvest.html#learning-objectives",
     "title": "2  How can I scrape web pages?",
     "section": "2.2 Learning Objectives",
-    "text": "2.2 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nScrape data from a web page.\nUse SelectorGadget to choose pieces of a web page.\nUse Xpath to refine your selections.\nScrape data from a web page that requires you to log in."
+    "text": "2.2 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nScrape data from a web page.\nUse SelectorGadget to choose pieces of a web page.\nUse Xpath to refine your selections.\nScrape data from a web page that requires you to log in."
   },
   {
     "objectID": "rvest.html#prerequisites",
@@ -116,14 +116,21 @@
     "href": "rvest.html#ideas-to-cover",
     "title": "2  How can I scrape web pages?",
     "section": "2.4 Ideas to cover:",
-    "text": "2.4 Ideas to cover:\n\nBasic intro to {rvest}.\n\nDive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss. Is that true?\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nMaybe note that a lot of {rvest} is reexports from {xml2}, which we’ll cover in detail later in the chapter.\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape.\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nUnderstanding what SelectorGadget generated/finding other paths (Xpath basics).\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.\nNote the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps! Probably put this in a call out.\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.\nxml_attrs() (list all of the attributes) vs xml_attr() (get a specific attribute). Similar to attributes() vs attr().\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!"
+    "text": "2.4 Ideas to cover:\n\nrobots.txt\n\nIt’s probably worth talking about possibly using an API instead of scraping, how to spot them, and then point to that chapter.\n\nIs it worth scraping? Will {datapasta} cover it?\nBasic intro to {rvest}.\n\nDive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss. Is that true?\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nMaybe note that a lot of {rvest} is reexports from {xml2}, which we’ll cover in detail later in the chapter.\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape.\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nUnderstanding what SelectorGadget generated/finding other paths (Xpath basics).\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.\nNote the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps! Probably put this in a call out.\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.\nxml_attrs() (list all of the attributes) vs xml_attr() (get a specific attribute). Similar to attributes() vs attr().\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!"
+  },
+  {
+    "objectID": "rvest.html#another-exploration",
+    "href": "rvest.html#another-exploration",
+    "title": "2  How can I scrape web pages?",
+    "section": "2.5 Another Exploration",
+    "text": "2.5 Another Exploration\nSuggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!\n\nlibrary(rvest)\nurl &lt;- \"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1\"\n\nannual &lt;-\n    rvest::read_html(url) |&gt; \n    rvest::html_element(\n        xpath = \".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']\"\n    ) |&gt; \n    rvest::html_text2() |&gt; \n    stringr::str_split_1(stringr::fixed(\"\\n\")) |&gt; \n    # We're going to transpose the table as we go; rows will become columns,\n    # columns will become rows. It's tidier that way. Get the \"6\" here by\n    # counting the displayed columns.\n    matrix(nrow = 6, byrow = FALSE) |&gt; \n    as.data.frame() |&gt; \n    janitor::row_to_names(row_number = 1) |&gt; \n    tibble::as_tibble()\n\n# That gets the a good start on the \"Annual\" data; it just needs normal cleaning\n# from there. It does NOT include the breakdowns yet, though. I believe both\n# that and Quarterly will require some session fanciness. To be continued\n# tomorrow!"
   },
   {
     "objectID": "json.html#introduction",
     "href": "json.html#introduction",
     "title": "3  How can I process JSON data?",
     "section": "3.1 Introduction",
-    "text": "3.1 Introduction\nThis is a chapter."
+    "text": "3.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "json.html#learning-objectives",
@@ -144,7 +151,7 @@
     "href": "httr2.html#introduction",
     "title": "4  What is an API and how can I access one?",
     "section": "4.1 Introduction",
-    "text": "4.1 Introduction\nThis is a chapter."
+    "text": "4.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "httr2.html#learning-objectives",
@@ -165,7 +172,7 @@
     "href": "authentication.html#introduction",
     "title": "5  How do I prove that I’m me?",
     "section": "5.1 Introduction",
-    "text": "5.1 Introduction\nThis is a chapter."
+    "text": "5.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "authentication.html#learning-objectives",
@@ -186,7 +193,7 @@
     "href": "automation.html#introduction",
     "title": "6  How can I automate web API access?",
     "section": "6.1 Introduction",
-    "text": "6.1 Introduction\nThis is a chapter."
+    "text": "6.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "automation.html#learning-objectives",
@@ -203,11 +210,18 @@
     "text": "6.3 Prerequisites\nIt has prerequisites, maybe?"
   },
   {
+    "objectID": "automation.html#notes-ideas",
+    "href": "automation.html#notes-ideas",
+    "title": "6  How can I automate web API access?",
+    "section": "6.4 Notes & ideas",
+    "text": "6.4 Notes & ideas\n\nInclude {rvest} automation.\nCover (an intro to) error messaging/logging/alerting."
+  },
+  {
     "objectID": "packages.html#introduction",
     "href": "packages.html#introduction",
     "title": "7  How can I wrap a web API into an R package?",
     "section": "7.1 Introduction",
-    "text": "7.1 Introduction\nThis is a chapter."
+    "text": "7.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "packages.html#learning-objectives",
@@ -228,7 +242,7 @@
     "href": "accessing-more.html#introduction",
     "title": "8  How can I learn more about accessing web APIs?",
     "section": "8.1 Introduction",
-    "text": "8.1 Introduction\nThis is a chapter."
+    "text": "8.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "accessing-more.html#learning-objectives",
@@ -256,7 +270,7 @@
     "href": "plumber.html#introduction",
     "title": "9  How can I create my own APIs?",
     "section": "9.1 Introduction",
-    "text": "9.1 Introduction\nThis is a chapter."
+    "text": "9.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "plumber.html#learning-objectives",
@@ -277,7 +291,7 @@
     "href": "deploy.html#introduction",
     "title": "10  How do I deploy my plumber API?",
     "section": "10.1 Introduction",
-    "text": "10.1 Introduction\nThis is a chapter."
+    "text": "10.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "deploy.html#learning-objectives",
@@ -298,7 +312,7 @@
     "href": "test-plumber.html#introduction",
     "title": "11  How can I test my plumber API?",
     "section": "11.1 Introduction",
-    "text": "11.1 Introduction\nThis is a chapter."
+    "text": "11.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "test-plumber.html#learning-objectives",
@@ -319,7 +333,7 @@
     "href": "creating-more.html#introduction",
     "title": "12  How can I learn more about creating APIs?",
     "section": "12.1 Introduction",
-    "text": "12.1 Introduction\nThis is a chapter."
+    "text": "12.1 Introduction\n(introduction will be written ~last)"
   },
   {
     "objectID": "creating-more.html#learning-objectives",
