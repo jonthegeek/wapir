@@ -9,10 +9,10 @@
 After you read this chapter, you will be able to:
 
 -   Determine whether a website allows you to scrape data from it.
--   Scrape data from a web page.
+-   Scrape data from a static web page.
 -   Use SelectorGadget to choose pieces of a web page.
 -   Use Xpath to refine your selections.
--   Scrape data from a web page that requires you to log in.
+-   Scrape data from a dynamic web page.
 
 ## Prerequisites
 
