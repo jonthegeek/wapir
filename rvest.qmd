@@ -2,12 +2,13 @@
 
 ## Introduction
 
-(introduction will be written \~last)
+*(introduction will be written \~last)*
 
 ## Learning Objectives
 
 After you read this chapter, you will be able to:
 
+-   Determine whether a website allows you to scrape data from it.
 -   Scrape data from a web page.
 -   Use SelectorGadget to choose pieces of a web page.
 -   Use Xpath to refine your selections.
@@ -19,6 +20,9 @@ After you read this chapter, you will be able to:
 
 ## Ideas to cover:
 
+-   robots.txt
+    -   It's probably worth talking about possibly using an API instead of scraping, how to spot them, and then point to that chapter.
+-   Is it worth scraping? Will {datapasta} cover it?
 -   Basic intro to {rvest}.
     -   Dive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it'll get a single table without any fuss. Is that true?
     -   BRIEFLY touch on data cleaning, but send them to R4DS for more details.
@@ -39,3 +43,33 @@ After you read this chapter, you will be able to:
     -   Is the session stuff in {rvest} relatively stable?
     -   Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?
     -   Bridge into {httr2}. Don't write this yet, bridges should be written last!
+
+## Another Exploration
+
+Suggested by Emir Bilim on R4DS, let them know when it's worked out!
+Also include a case like this in the Appendix!
+
+```{r yahoo-finance}
+library(rvest)
+url <- "https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1"
+
+annual <-
+    rvest::read_html(url) |> 
+    rvest::html_element(
+        xpath = ".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']"
+    ) |> 
+    rvest::html_text2() |> 
+    stringr::str_split_1(stringr::fixed("\n")) |> 
+    # We're going to transpose the table as we go; rows will become columns,
+    # columns will become rows. It's tidier that way. Get the "6" here by
+    # counting the displayed columns.
+    matrix(nrow = 6, byrow = FALSE) |> 
+    as.data.frame() |> 
+    janitor::row_to_names(row_number = 1) |> 
+    tibble::as_tibble()
+
+# That gets the a good start on the "Annual" data; it just needs normal cleaning
+# from there. It does NOT include the breakdowns yet, though. I believe both
+# that and Quarterly will require some session fanciness. To be continued
+# tomorrow!
+```
