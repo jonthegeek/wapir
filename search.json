@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-08-14 08:03:47 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-08-14 08:34:56 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -102,7 +102,7 @@
     "href": "rvest.html#learning-objectives",
     "title": "2  How can I scrape web pages?",
     "section": "2.2 Learning Objectives",
-    "text": "2.2 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nScrape data from a web page.\nUse SelectorGadget to choose pieces of a web page.\nUse Xpath to refine your selections.\nScrape data from a web page that requires you to log in."
+    "text": "2.2 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nScrape data from a static web page.\nUse SelectorGadget to choose pieces of a web page.\nUse Xpath to refine your selections.\nScrape data from a dynamic web page."
   },
   {
     "objectID": "rvest.html#prerequisites",
