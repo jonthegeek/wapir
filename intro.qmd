@@ -18,6 +18,8 @@ You could automate the things you do all the time, and find new things you didn'
 
 The goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.
 
+*Somewhere in here: Include the overall landscape of web-related packages: rvest, httr(2), plumber, but also RSelenium, chromote, curl, touch on some api-specific packages.*
+
 ## Who should read this book?
 
 *This might overlap with the "What will I learn?" section. It feels like a good thing to have up front to entice people to read or buy the book, though.*
@@ -25,6 +27,8 @@ The goal of Web APIs with R is to teach you how to unlock the power of APIs in y
 ## What will I learn?
 
 *Describe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?*
+
+*Maybe put the landscape here, and intro the structure of the book earlier. How will I learn? maybe?*
 
 ## What won't I learn?
 
@@ -36,7 +40,7 @@ I'd love to know!
 
 ## What should I already know?
 
-*Describe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part.*
+*Describe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part. Most of those books will be places to find more info or to dive deeper into a topic.*
 
 ## How do I run the code?
 
