@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jon Harmon">
 
-<title>Web APIs with R - 2&nbsp; How can I scrape web pages?</title>
+<title>Web APIs with R - 2&nbsp; How can I get data from web pages?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_accessing.html">How can I get web data into R?</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I scrape web pages?</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_accessing.html">How can I get web data into R?</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rvest.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I scrape web pages?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -270,11 +270,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2.2</span> Learning Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">2.3</span> Prerequisites</a></li>
-  <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover"><span class="header-section-number">2.4</span> Ideas to cover:</a></li>
-  <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration"><span class="header-section-number">2.5</span> Another Exploration</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2.1.1</span> Learning Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">2.1.2</span> Prerequisites</a></li>
+  </ul></li>
+  <li><a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">2.2</span> Should I scrape this data?</a></li>
+  <li><a href="#how-can-i-scrape-a-table-of-data-from-a-web-page" id="toc-how-can-i-scrape-a-table-of-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">2.3</span> How can I scrape a table of data from a web page?</a></li>
+  <li><a href="#how-can-i-scrape-more-complex-data-from-a-web-page" id="toc-how-can-i-scrape-more-complex-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">2.4</span> How can I scrape more complex data from a web page?</a></li>
+  <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover"><span class="header-section-number">2.5</span> Ideas to cover:</a></li>
+  <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration"><span class="header-section-number">2.6</span> Another Exploration</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -283,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-rvest" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I scrape web pages?</span></span></h1>
+<h1 class="title"><span id="sec-rvest" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></span></h1>
 </div>
 
 
@@ -301,62 +306,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
 <p><em>(introduction will be written ~last)</em></p>
-</section>
-<section id="learning-objectives" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.2</span> Learning Objectives</h2>
+<section id="learning-objectives" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.1.1</span> Learning Objectives</h3>
 <p>After you read this chapter, you will be able to:</p>
 <ul>
-<li>Determine whether a website allows you to scrape data from it.</li>
-<li>Scrape data from a static web page.</li>
-<li>Use SelectorGadget to choose pieces of a web page.</li>
-<li>Use Xpath to refine your selections.</li>
-<li>Scrape data from a dynamic web page.</li>
+<li>Determine whether a website <em>allows you</em> to scrape data from it.</li>
+<li>Determine whether you <em>should</em> scrape data from a web page.</li>
+<li>Scrape tables from web pages.</li>
+<li>Scrape more complex data structures from web pages.</li>
+</ul>
+<p><em>(potential chapter break)</em></p>
+<ul>
+<li>Scrape data from websites that require you to log in.</li>
+<li>Scrape content that requires interaction.</li>
+<li>Automate web scraping processes.</li>
+<li>Scrape data as part of a workflow.</li>
 </ul>
 </section>
-<section id="prerequisites" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">2.3</span> Prerequisites</h2>
-<p>(prerequisites will be filled in as I write, if I decide to keep this section)</p>
+<section id="prerequisites" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">2.1.2</span> Prerequisites</h3>
+<p><em>(prerequisites will be filled in as I write, if I decide to keep this section)</em></p>
 </section>
-<section id="ideas-to-cover" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="ideas-to-cover"><span class="header-section-number">2.4</span> Ideas to cover:</h2>
+</section>
+<section id="should-i-scrape-this-data" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="should-i-scrape-this-data"><span class="header-section-number">2.2</span> Should I scrape this data?</h2>
+<p><em>Things to put into this section:</em></p>
 <ul>
-<li>robots.txt
-<ul>
-<li>It’s probably worth talking about possibly using an API instead of scraping, how to spot them, and then point to that chapter.</li>
-</ul></li>
+<li>robots.txt</li>
+<li>Licenses &amp; legal usage. IANAL.</li>
 <li>Is it worth scraping? Will {datapasta} cover it?</li>
+<li>Quickly identifying whether it will be hard.</li>
+<li>Look for an API to use instead of scraping. Just introduce the idea then point to that chapter.</li>
+<li>Even when robots.txt allows scraping, give tips on how to be a good citizen.</li>
+<li>{<a href="https://dmi3kno.github.io/polite/index.html">polite</a>} package? I think <em>probably</em> focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}.</li>
+</ul>
+</section>
+<section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">2.3</span> How can I scrape a table of data from a web page?</h2>
+<ul>
 <li>Basic intro to {rvest}.
 <ul>
-<li>Dive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss. Is that true?</li>
+<li>Scrape a static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss.</li>
 <li>BRIEFLY touch on data cleaning, but send them to R4DS for more details.</li>
-<li>Maybe note that a lot of {rvest} is reexports from {xml2}, which we’ll cover in detail later in the chapter.</li>
+<li>Show an example with multiple tables &amp; how to deal with that (pre-SelectorGadget).</li>
 </ul></li>
+</ul>
+</section>
+<section id="how-can-i-scrape-more-complex-data-from-a-web-page" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">2.4</span> How can I scrape more complex data from a web page?</h2>
+<ul>
 <li>Using SelectorGadget.
 <ul>
-<li>Start by reproducing the table scrape.</li>
+<li>Start by reproducing the table scrape, without SelectorGadget (basically just do what )</li>
 <li>A second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.</li>
 <li>A web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!</li>
 </ul></li>
-<li>Understanding what SelectorGadget generated/finding other paths (Xpath basics).
+<li>Xpath and/or CSS selectors
 <ul>
 <li>Start by digging into what SelectorGadget produced for the examples above/what it means.</li>
 <li>Add an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).</li>
-<li>CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.</li>
-<li>Note the difference between <code>".//"</code> (search below the current node) and <code>"//"</code> (search anywhere in the document). You never want just <code>"//"</code> in a pipe, because it ignores previous steps! Probably put this in a call out.</li>
-<li>Also note the <code>flatten</code> argument for <code>xml2::xml_find_all()</code>! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.</li>
-<li><code>xml_attrs()</code> (list all of the attributes) vs <code>xml_attr()</code> (get a specific attribute). Similar to <code>attributes()</code> vs <code>attr()</code>.</li>
-</ul></li>
-<li>Advanced {rvest} techniques.
-<ul>
-<li>Can I ~easily deploy something that requires a session?</li>
-<li>Is the session stuff in {rvest} relatively stable?</li>
-<li>Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?</li>
-<li>Bridge into {httr2}. Don’t write this yet, bridges should be written last!</li>
+<li>CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via <code>selectr::css_to_xpath()</code>.</li>
+<li>Note the difference between <code>".//"</code> (search below the current node) and <code>"//"</code> (search anywhere in the document). You never want just <code>"//"</code> in a pipe, because it ignores previous steps (well, except MAYBE if you’re using a selection to go back and find something else)! Probably put this in a call out.</li>
+<li>Maybe note that a lot of {rvest} is reexports from {xml2}?</li>
+<li>Also note the <code>flatten</code> argument for <code>xml2::xml_find_all()</code>! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.</li>
+<li><code>html_attrs()</code> (list all of the attributes) vs <code>html_attr()</code> (get a specific attribute). Similar to <code>attributes()</code> vs <code>attr()</code>.</li>
 </ul></li>
 </ul>
 </section>
-<section id="another-exploration" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="another-exploration"><span class="header-section-number">2.5</span> Another Exploration</h2>
+<section id="ideas-to-cover" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="ideas-to-cover"><span class="header-section-number">2.5</span> Ideas to cover:</h2>
+<ul>
+<li>Advanced {rvest} techniques.
+<ul>
+<li>Can I ~easily deploy something that requires a session?</li>
+<li>Is the session stuff in {rvest} relatively stable? How might the {chromote} PR impact it?</li>
+<li>Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?</li>
+<li>Bridge into {httr2}. Don’t write this yet, bridges should be written last!</li>
+<li>Larger-than-memory scraping, splitting scrapes, etc.</li>
+</ul></li>
+<li>Automation.
+<ul>
+<li>Refining selections toward “what” vs “how” &amp; “where”, trying to make your selections less fragile.</li>
+<li>Deduplication.</li>
+<li>Error handling.</li>
+<li>Logging? Likely mention and point to do4ds for more details (or just a specific logging package).</li>
+<li>Mention packages for notification that a job is finished (from {beepr} to an email or Slack message… but maybe use those to tease later chapters).</li>
+</ul></li>
+<li>{targets}?
+<ul>
+<li>At least mention.</li>
+<li>Dig into this to see how quickly I could introduce without it growing into a separate <em>thing.</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="another-exploration" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="another-exploration"><span class="header-section-number">2.6</span> Another Exploration</h2>
 <p>Suggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
