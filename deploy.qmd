@@ -4,10 +4,10 @@
 
 *(introduction will be written \~last)*
 
-## Learning Objectives
+### Learning Objectives
 
-Do LOs get their own subsection in each chapter?
+After you read this chapter, you will be able to:
 
-## Prerequisites
+### Prerequisites
 
-It has prerequisites, maybe?
+*(prerequisites will be filled in as I write, if I decide to keep this section)*
