@@ -1,48 +1,81 @@
-# How can I scrape web pages? {#sec-rvest}
+# How can I get data from web pages? {#sec-rvest}
 
 ## Introduction
 
 *(introduction will be written \~last)*
 
-## Learning Objectives
+### Learning Objectives
 
 After you read this chapter, you will be able to:
 
--   Determine whether a website allows you to scrape data from it.
--   Scrape data from a static web page.
--   Use SelectorGadget to choose pieces of a web page.
--   Use Xpath to refine your selections.
--   Scrape data from a dynamic web page.
+-   Determine whether a website *allows you* to scrape data from it.
+-   Determine whether you *should* scrape data from a web page.
+-   Scrape tables from web pages.
+-   Scrape more complex data structures from web pages.
 
-## Prerequisites
+*(potential chapter break)*
 
-(prerequisites will be filled in as I write, if I decide to keep this section)
+-   Scrape data from websites that require you to log in.
+-   Scrape content that requires interaction.
+-   Automate web scraping processes.
+-   Scrape data as part of a workflow.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*
+
+## Should I scrape this data?
+
+*Things to put into this section:*
+
+-   robots.txt
+-   Licenses & legal usage. IANAL.
+-   Is it worth scraping? Will {datapasta} cover it?
+-   Quickly identifying whether it will be hard.
+-   Look for an API to use instead of scraping. Just introduce the idea then point to that chapter.
+-   Even when robots.txt allows scraping, give tips on how to be a good citizen.
+-   {[polite](https://dmi3kno.github.io/polite/index.html)} package? I think *probably* focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}.
+
+## How can I scrape a table of data from a web page?
+
+-   Basic intro to {rvest}.
+    -   Scrape a static table in this repo where html_table works out of the box. It looks like it'll get a single table without any fuss.
+    -   BRIEFLY touch on data cleaning, but send them to R4DS for more details.
+    -   Show an example with multiple tables & how to deal with that (pre-SelectorGadget).
+
+## How can I scrape more complex data from a web page?
+
+-   Using SelectorGadget.
+    -   Start by reproducing the table scrape, without SelectorGadget (basically just do what )
+    -   A second table where html_table doesn't work as well (weird headers or something). Maybe; the next example might be enough.
+    -   A web page with structured content that isn't in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!
+-   Xpath and/or CSS selectors
+    -   Start by digging into what SelectorGadget produced for the examples above/what it means.
+    -   Add an example where it's way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).
+    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via `selectr::css_to_xpath()`.
+    -   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps (well, except MAYBE if you're using a selection to go back and find something else)! Probably put this in a call out.
+    -   Maybe note that a lot of {rvest} is reexports from {xml2}?
+    -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.
+    -   `html_attrs()` (list all of the attributes) vs `html_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
+
 
 ## Ideas to cover:
 
--   robots.txt
-    -   It's probably worth talking about possibly using an API instead of scraping, how to spot them, and then point to that chapter.
--   Is it worth scraping? Will {datapasta} cover it?
--   Basic intro to {rvest}.
-    -   Dive into a simple scrape right away. A static table in this repo where html_table works out of the box. It looks like it'll get a single table without any fuss. Is that true?
-    -   BRIEFLY touch on data cleaning, but send them to R4DS for more details.
-    -   Maybe note that a lot of {rvest} is reexports from {xml2}, which we'll cover in detail later in the chapter.
--   Using SelectorGadget.
-    -   Start by reproducing the table scrape.
-    -   A second table where html_table doesn't work as well (weird headers or something). Maybe; the next example might be enough.
-    -   A web page with structured content that isn't in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!
--   Understanding what SelectorGadget generated/finding other paths (Xpath basics).
-    -   Start by digging into what SelectorGadget produced for the examples above/what it means.
-    -   Add an example where it's way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).
-    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things.
-    -   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps! Probably put this in a call out.
-    -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters.
-    -   `xml_attrs()` (list all of the attributes) vs `xml_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
 -   Advanced {rvest} techniques.
     -   Can I \~easily deploy something that requires a session?
-    -   Is the session stuff in {rvest} relatively stable?
+    -   Is the session stuff in {rvest} relatively stable? How might the {chromote} PR impact it?
     -   Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?
     -   Bridge into {httr2}. Don't write this yet, bridges should be written last!
+    -   Larger-than-memory scraping, splitting scrapes, etc.
+-   Automation.
+    -   Refining selections toward "what" vs "how" & "where", trying to make your selections less fragile.
+    -   Deduplication.
+    -   Error handling.
+    -   Logging? Likely mention and point to do4ds for more details (or just a specific logging package).
+    -   Mention packages for notification that a job is finished (from {beepr} to an email or Slack message... but maybe use those to tease later chapters).
+-   {targets}?
+    -   At least mention.
+    -   Dig into this to see how quickly I could introduce without it growing into a separate *thing.*
 
 ## Another Exploration
 
