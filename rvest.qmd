@@ -4,7 +4,7 @@
 
 *(introduction will be written \~last)*
 
-### Learning Objectives
+### Learning Objectives {.unnumbered}
 
 After you read this chapter, you will be able to:
 
@@ -20,15 +20,65 @@ After you read this chapter, you will be able to:
 -   Automate web scraping processes.
 -   Scrape data as part of a workflow.
 
-### Prerequisites
+### Prerequisites {.unnumbered}
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*
 
 ## Should I scrape this data?
 
+When you see data online that you think you could use, stop to answer these three questions:
+
+-   Am I legally allowed to scrape this data?
+-   Am I allowed to scrape this data automatically?
+-   Do I need to scrape this data with code?
+
+### Am I legally allowed to scrape this data?
+
+I am an R developer, not a lawyer, and none of this should be construed as legal advice.
+If you're going to use the data in a commercial product, you may want to consult a lawyer.
+That said, these guidelines should get you started in most cases.
+
+If you're using the data for your own exploration or for nonprofit educational purposes, you're almost definitely free to use the data however you like.
+Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.
+
+Also check the site for legal disclaimers.
+These are usually located at the bottom of the page, or possibly somewhere on the first page of the site.
+Look for words or phrases like "Legal," "License," "Code of Conduct", "Usage", or "Disclaimers." Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.
+
+If you're going to publish (or otherwise share) the data, and you can't find anything on the site given you permission, you'll have to decide if your use case is allowed.
+In the United States, facts are not protected by copyright.[^rvest-1]
+That's why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves --- the recipes are facts and thus don't have copyright protection in the U.S.
+However, a *collection* of facts (such as the data you're trying to scrape) *can* be protected in the U.S. if that collection was selected by a person.
+
+[^rvest-1]: See the [U.S. Copyright Office Fair Use Index](https://www.copyright.gov/fair-use/) for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.
+
+> "These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws"[^rvest-2]
+
+[^rvest-2]: [Feist Publications, Inc. v. Rural Telephone Service Co., 499 U. S. 340 (1991)](https://www.law.cornell.edu/supremecourt/text/499/340)
+
+Outside the U.S., protections may be stronger or weaker.
+For example, the European Union established specific legal protections for databases in a [directive on the legal protection of databases](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31996L0009:EN:HTML).
+If you're going to publish the data, investigate legal requirements in your location.
+
+### Am I allowed to scrape this data automatically?
+
+Even if it is *legal* for you to use the data, it might not be *polite* to do so.
+For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages.
+Most websites list these preference in a `robots.txt` file at the root of the site.
+For example, the `robots.txt` file for the online version of this book is available at <https://jonthegeek.github.io/wapir/robots.txt>.
+This file might contain one or a few lines.
+
+```
+# TODO: Replace this with the final version for this book.
+
+# TODO: How can I attach a title to this? Or do I do that outside the block?
+
+Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml
+```
+
 *Things to put into this section:*
 
--   robots.txt
+-   robots.txt (search for `"User-agent: *"` and the particular page you want to scrape)
 -   Licenses & legal usage. IANAL.
 -   Is it worth scraping? Will {datapasta} cover it?
 -   Quickly identifying whether it will be hard.
@@ -58,8 +108,7 @@ After you read this chapter, you will be able to:
     -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.
     -   `html_attrs()` (list all of the attributes) vs `html_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
 
-
-## Ideas to cover:
+## Ideas to cover {.unnumbered}
 
 -   Advanced {rvest} techniques.
     -   Can I \~easily deploy something that requires a session?
@@ -77,7 +126,7 @@ After you read this chapter, you will be able to:
     -   At least mention.
     -   Dig into this to see how quickly I could introduce without it growing into a separate *thing.*
 
-## Another Exploration
+## Another Exploration {.unnumbered}
 
 Suggested by Emir Bilim on R4DS, let them know when it's worked out!
 Also include a case like this in the Appendix!
