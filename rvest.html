@@ -272,14 +272,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2.1.1</span> Learning Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">2.1.2</span> Prerequisites</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   </ul></li>
-  <li><a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">2.2</span> Should I scrape this data?</a></li>
+  <li><a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">2.2</span> Should I scrape this data?</a>
+  <ul class="collapse">
+  <li><a href="#am-i-legally-allowed-to-scrape-this-data" id="toc-am-i-legally-allowed-to-scrape-this-data" class="nav-link" data-scroll-target="#am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">2.2.1</span> Am I legally allowed to scrape this data?</a></li>
+  <li><a href="#am-i-allowed-to-scrape-this-data-automatically" id="toc-am-i-allowed-to-scrape-this-data-automatically" class="nav-link" data-scroll-target="#am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">2.2.2</span> Am I allowed to scrape this data automatically?</a></li>
+  </ul></li>
   <li><a href="#how-can-i-scrape-a-table-of-data-from-a-web-page" id="toc-how-can-i-scrape-a-table-of-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">2.3</span> How can I scrape a table of data from a web page?</a></li>
   <li><a href="#how-can-i-scrape-more-complex-data-from-a-web-page" id="toc-how-can-i-scrape-more-complex-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">2.4</span> How can I scrape more complex data from a web page?</a></li>
-  <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover"><span class="header-section-number">2.5</span> Ideas to cover:</a></li>
-  <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration"><span class="header-section-number">2.6</span> Another Exploration</a></li>
+  <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover">Ideas to cover</a></li>
+  <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration">Another Exploration</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -306,8 +310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
 <p><em>(introduction will be written ~last)</em></p>
-<section id="learning-objectives" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.1.1</span> Learning Objectives</h3>
+<section id="learning-objectives" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
 <p>After you read this chapter, you will be able to:</p>
 <ul>
 <li>Determine whether a website <em>allows you</em> to scrape data from it.</li>
@@ -323,16 +327,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Scrape data as part of a workflow.</li>
 </ul>
 </section>
-<section id="prerequisites" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">2.1.2</span> Prerequisites</h3>
+<section id="prerequisites" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <p><em>(prerequisites will be filled in as I write, if I decide to keep this section)</em></p>
 </section>
 </section>
 <section id="should-i-scrape-this-data" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="should-i-scrape-this-data"><span class="header-section-number">2.2</span> Should I scrape this data?</h2>
+<p>When you see data online that you think you could use, stop to answer these three questions:</p>
+<ul>
+<li>Am I legally allowed to scrape this data?</li>
+<li>Am I allowed to scrape this data automatically?</li>
+<li>Do I need to scrape this data with code?</li>
+</ul>
+<section id="am-i-legally-allowed-to-scrape-this-data" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">2.2.1</span> Am I legally allowed to scrape this data?</h3>
+<p>I am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.</p>
+<p>If you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.</p>
+<p>Also check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.</p>
+<p>If you’re going to publish (or otherwise share) the data, and you can’t find anything on the site given you permission, you’ll have to decide if your use case is allowed. In the United States, facts are not protected by copyright.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> That’s why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves — the recipes are facts and thus don’t have copyright protection in the U.S. However, a <em>collection</em> of facts (such as the data you’re trying to scrape) <em>can</em> be protected in the U.S. if that collection was selected by a person.</p>
+<blockquote class="blockquote">
+<p>“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p>Outside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31996L0009:EN:HTML">directive on the legal protection of databases</a>. If you’re going to publish the data, investigate legal requirements in your location.</p>
+</section>
+<section id="am-i-allowed-to-scrape-this-data-automatically" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">2.2.2</span> Am I allowed to scrape this data automatically?</h3>
+<p>Even if it is <em>legal</em> for you to use the data, it might not be <em>polite</em> to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a <code>robots.txt</code> file at the root of the site. For example, the <code>robots.txt</code> file for the online version of this book is available at <a href="https://jonthegeek.github.io/wapir/robots.txt" class="uri">https://jonthegeek.github.io/wapir/robots.txt</a>. This file might contain one or a few lines.</p>
+<pre><code># TODO: Replace this with the final version for this book.
+
+# TODO: How can I attach a title to this? Or do I do that outside the block?
+
+Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml</code></pre>
 <p><em>Things to put into this section:</em></p>
 <ul>
-<li>robots.txt</li>
+<li>robots.txt (search for <code>"User-agent: *"</code> and the particular page you want to scrape)</li>
 <li>Licenses &amp; legal usage. IANAL.</li>
 <li>Is it worth scraping? Will {datapasta} cover it?</li>
 <li>Quickly identifying whether it will be hard.</li>
@@ -340,6 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Even when robots.txt allows scraping, give tips on how to be a good citizen.</li>
 <li>{<a href="https://dmi3kno.github.io/polite/index.html">polite</a>} package? I think <em>probably</em> focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}.</li>
 </ul>
+</section>
 </section>
 <section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">2.3</span> How can I scrape a table of data from a web page?</h2>
@@ -373,8 +403,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="ideas-to-cover" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="ideas-to-cover"><span class="header-section-number">2.5</span> Ideas to cover:</h2>
+<section id="ideas-to-cover" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="ideas-to-cover">Ideas to cover</h2>
 <ul>
 <li>Advanced {rvest} techniques.
 <ul>
@@ -399,35 +429,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="another-exploration" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="another-exploration"><span class="header-section-number">2.6</span> Another Exploration</h2>
+<section id="another-exploration" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="another-exploration">Another Exploration</h2>
 <p>Suggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&amp;guccounter=1"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>annual <span class="ot">&lt;-</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">read_html</span>(url) <span class="sc">|&gt;</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_element</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">xpath =</span> <span class="st">".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']"</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_text2</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    stringr<span class="sc">::</span><span class="fu">str_split_1</span>(stringr<span class="sc">::</span><span class="fu">fixed</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># We're going to transpose the table as we go; rows will become columns,</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># columns will become rows. It's tidier that way. Get the "6" here by</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># counting the displayed columns.</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    janitor<span class="sc">::</span><span class="fu">row_to_names</span>(<span class="at">row_number =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    tibble<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># That gets the a good start on the "Annual" data; it just needs normal cleaning</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># from there. It does NOT include the breakdowns yet, though. I believe both</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># that and Quarterly will require some session fanciness. To be continued</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># tomorrow!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&amp;guccounter=1"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>annual <span class="ot">&lt;-</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">read_html</span>(url) <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_element</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">xpath =</span> <span class="st">".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_text2</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    stringr<span class="sc">::</span><span class="fu">str_split_1</span>(stringr<span class="sc">::</span><span class="fu">fixed</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># We're going to transpose the table as we go; rows will become columns,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># columns will become rows. It's tidier that way. Get the "6" here by</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># counting the displayed columns.</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    janitor<span class="sc">::</span><span class="fu">row_to_names</span>(<span class="at">row_number =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    tibble<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># That gets the a good start on the "Annual" data; it just needs normal cleaning</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># from there. It does NOT include the breakdowns yet, though. I believe both</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># that and Quarterly will require some session fanciness. To be continued</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># tomorrow!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>See the <a href="https://www.copyright.gov/fair-use/">U.S. Copyright Office Fair Use Index</a> for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.law.cornell.edu/supremecourt/text/499/340">Feist Publications, Inc.&nbsp;v. Rural Telephone Service Co., 499 U. S. 340 (1991)</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
