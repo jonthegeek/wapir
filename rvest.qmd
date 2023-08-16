@@ -68,10 +68,11 @@ Most websites list these preference in a `robots.txt` file at the root of the si
 For example, the `robots.txt` file for the online version of this book is available at <https://jonthegeek.github.io/wapir/robots.txt>.
 This file might contain one or a few lines.
 
-```
-# TODO: Replace this with the final version for this book.
+```{javascript}
+#| eval: false
+#| filename: "https://jonthegeek.github.io/wapir/robots.txt"
 
-# TODO: How can I attach a title to this? Or do I do that outside the block?
+# TODO: Replace this with the final version for this book.
 
 Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml
 ```
