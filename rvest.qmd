@@ -47,7 +47,7 @@ Look for words or phrases like "Legal," "License," "Code of Conduct", "Usage", o
 
 If you're going to publish (or otherwise share) the data, and you can't find anything on the site given you permission, you'll have to decide if your use case is allowed.
 In the United States, facts are not protected by copyright.[^rvest-1]
-That's why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves --- the recipes are facts and thus don't have copyright protection in the U.S.
+TODO: DIFFERENT EXAMPLE, EVERYONE USES RECIPES! That's why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves --- the recipes are facts and thus don't have copyright protection in the U.S.
 However, a *collection* of facts (such as the data you're trying to scrape) *can* be protected in the U.S. if that collection was selected by a person.
 
 [^rvest-1]: See the [U.S. Copyright Office Fair Use Index](https://www.copyright.gov/fair-use/) for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.
@@ -100,14 +100,16 @@ Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml
     -   Start by reproducing the table scrape, without SelectorGadget (basically just do what )
     -   A second table where html_table doesn't work as well (weird headers or something). Maybe; the next example might be enough.
     -   A web page with structured content that isn't in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!
--   Xpath and/or CSS selectors
+-   CSS selectors
     -   Start by digging into what SelectorGadget produced for the examples above/what it means.
     -   Add an example where it's way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).
-    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via `selectr::css_to_xpath()`.
-    -   Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps (well, except MAYBE if you're using a selection to go back and find something else)! Probably put this in a call out.
+    -   CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via `selectr::css_to_xpath()`.
+    -   If Xpath: Note the difference between `".//"` (search below the current node) and `"//"` (search anywhere in the document). You never want just `"//"` in a pipe, because it ignores previous steps (well, except MAYBE if you're using a selection to go back and find something else)! Probably put this in a call out.
     -   Maybe note that a lot of {rvest} is reexports from {xml2}?
     -   Also note the `flatten` argument for `xml2::xml_find_all()`! By default it de-duplicates, so watch out if you're trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.
     -   `html_attrs()` (list all of the attributes) vs `html_attr()` (get a specific attribute). Similar to `attributes()` vs `attr()`.
+    -   A con of CSS selectors: Can't go back up the tree! I feel like this is probably important in some contexts. If there's a legitimate case where this is true, use that as the reason to focus on Xpath.
+
 
 ## Ideas to cover {.unnumbered}
 
