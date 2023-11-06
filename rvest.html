@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jon Harmon">
-
 <title>Web APIs with R - 9&nbsp; How can I get data from web pages?</title>
 <style>
 code{white-space: pre-wrap;}
@@ -57,7 +54,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -76,8 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -97,16 +92,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -117,13 +107,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Web APIs with R</a> 
         <div class="sidebar-tools-main">
@@ -143,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
@@ -163,8 +149,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./apis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How do computers communicate?</span></span></a>
@@ -225,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./part_creating.html" class="sidebar-item-text sidebar-link">
@@ -234,8 +220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./plumber.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">How can I create my own APIs?</span></span></a>
@@ -260,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
@@ -269,47 +255,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">API Examples</span></span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">9.1</span> Introduction</a>
+<li>
+<a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">9.1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  </ul></li>
-  <li><a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">9.2</span> Should I scrape this data?</a>
+  </ul>
+</li>
+  <li>
+<a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">9.2</span> Should I scrape this data?</a>
   <ul class="collapse">
-  <li><a href="#am-i-legally-allowed-to-scrape-this-data" id="toc-am-i-legally-allowed-to-scrape-this-data" class="nav-link" data-scroll-target="#am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">9.2.1</span> Am I legally allowed to scrape this data?</a></li>
+<li><a href="#am-i-legally-allowed-to-scrape-this-data" id="toc-am-i-legally-allowed-to-scrape-this-data" class="nav-link" data-scroll-target="#am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">9.2.1</span> Am I legally allowed to scrape this data?</a></li>
   <li><a href="#am-i-allowed-to-scrape-this-data-automatically" id="toc-am-i-allowed-to-scrape-this-data-automatically" class="nav-link" data-scroll-target="#am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">9.2.2</span> Am I allowed to scrape this data automatically?</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#how-can-i-scrape-a-table-of-data-from-a-web-page" id="toc-how-can-i-scrape-a-table-of-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">9.3</span> How can I scrape a table of data from a web page?</a></li>
   <li><a href="#how-can-i-scrape-more-complex-data-from-a-web-page" id="toc-how-can-i-scrape-more-complex-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">9.4</span> How can I scrape more complex data from a web page?</a></li>
   <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover">Ideas to cover</a></li>
   <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration">Another Exploration</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="sec-rvest" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></span></h1>
 </div>
 
@@ -323,13 +307,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-</header>
-
-<section id="introduction" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">9.1</span> Introduction</h2>
+</header><section id="introduction" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">9.1</span> Introduction</h2>
 <p><em>(introduction will be written ~last)</em></p>
-<section id="learning-objectives" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
+<section id="learning-objectives" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
 <p>After you read this chapter, you will be able to:</p>
 <ul>
 <li>Determine whether a website <em>allows you</em> to scrape data from it.</li>
@@ -343,23 +324,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Scrape content that requires interaction.</li>
 <li>Automate web scraping processes.</li>
 <li>Scrape data as part of a workflow.</li>
-</ul>
-</section>
-<section id="prerequisites" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+</ul></section><section id="prerequisites" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <p><em>(prerequisites will be filled in as I write, if I decide to keep this section)</em></p>
-</section>
-</section>
-<section id="should-i-scrape-this-data" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="should-i-scrape-this-data"><span class="header-section-number">9.2</span> Should I scrape this data?</h2>
+</section></section><section id="should-i-scrape-this-data" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="should-i-scrape-this-data">
+<span class="header-section-number">9.2</span> Should I scrape this data?</h2>
 <p>When you see data online that you think you could use, stop to answer these three questions:</p>
 <ul>
 <li>Am I legally allowed to scrape this data?</li>
 <li>Am I allowed to scrape this data automatically?</li>
 <li>Do I need to scrape this data with code?</li>
 </ul>
-<section id="am-i-legally-allowed-to-scrape-this-data" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">9.2.1</span> Am I legally allowed to scrape this data?</h3>
+<section id="am-i-legally-allowed-to-scrape-this-data" class="level3" data-number="9.2.1"><h3 data-number="9.2.1" class="anchored" data-anchor-id="am-i-legally-allowed-to-scrape-this-data">
+<span class="header-section-number">9.2.1</span> Am I legally allowed to scrape this data?</h3>
 <p>I am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.</p>
 <p>If you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.</p>
 <p>Also check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.</p>
@@ -368,9 +344,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 </blockquote>
 <p>Outside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31996L0009:EN:HTML">directive on the legal protection of databases</a>. If you’re going to publish the data, investigate legal requirements in your location.</p>
-</section>
-<section id="am-i-allowed-to-scrape-this-data-automatically" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">9.2.2</span> Am I allowed to scrape this data automatically?</h3>
+</section><section id="am-i-allowed-to-scrape-this-data-automatically" class="level3" data-number="9.2.2"><h3 data-number="9.2.2" class="anchored" data-anchor-id="am-i-allowed-to-scrape-this-data-automatically">
+<span class="header-section-number">9.2.2</span> Am I allowed to scrape this data automatically?</h3>
 <p>Even if it is <em>legal</em> for you to use the data, it might not be <em>polite</em> to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a <code>robots.txt</code> file at the root of the site. For example, the <code>robots.txt</code> file for the online version of this book is available at <a href="https://jonthegeek.github.io/wapir/robots.txt" class="uri">https://jonthegeek.github.io/wapir/robots.txt</a>. This file might contain one or a few lines.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -391,44 +366,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Look for an API to use instead of scraping. Just introduce the idea then point to that chapter.</li>
 <li>Even when robots.txt allows scraping, give tips on how to be a good citizen.</li>
 <li>{<a href="https://dmi3kno.github.io/polite/index.html">polite</a>} package? I think <em>probably</em> focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}.</li>
-</ul>
-</section>
-</section>
-<section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">9.3</span> How can I scrape a table of data from a web page?</h2>
+</ul></section></section><section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page">
+<span class="header-section-number">9.3</span> How can I scrape a table of data from a web page?</h2>
 <ul>
 <li>Basic intro to {rvest}.
 <ul>
 <li>Scrape a static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss.</li>
 <li>BRIEFLY touch on data cleaning, but send them to R4DS for more details.</li>
 <li>Show an example with multiple tables &amp; how to deal with that (pre-SelectorGadget).</li>
-</ul></li>
 </ul>
-</section>
-<section id="how-can-i-scrape-more-complex-data-from-a-web-page" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">9.4</span> How can I scrape more complex data from a web page?</h2>
+</li>
+</ul></section><section id="how-can-i-scrape-more-complex-data-from-a-web-page" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="how-can-i-scrape-more-complex-data-from-a-web-page">
+<span class="header-section-number">9.4</span> How can I scrape more complex data from a web page?</h2>
 <ul>
 <li>Using SelectorGadget.
 <ul>
 <li>Start by reproducing the table scrape, without SelectorGadget (basically just do what )</li>
 <li>A second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.</li>
 <li>A web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!</li>
-</ul></li>
+</ul>
+</li>
 <li>CSS selectors
 <ul>
 <li>Start by digging into what SelectorGadget produced for the examples above/what it means.</li>
 <li>Add an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).</li>
-<li>CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via <code>selectr::css_to_xpath()</code>.</li>
+<li>CSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via <code><a href="https://rdrr.io/pkg/selectr/man/css_to_xpath.html">selectr::css_to_xpath()</a></code>.</li>
 <li>If Xpath: Note the difference between <code>".//"</code> (search below the current node) and <code>"//"</code> (search anywhere in the document). You never want just <code>"//"</code> in a pipe, because it ignores previous steps (well, except MAYBE if you’re using a selection to go back and find something else)! Probably put this in a call out.</li>
 <li>Maybe note that a lot of {rvest} is reexports from {xml2}?</li>
-<li>Also note the <code>flatten</code> argument for <code>xml2::xml_find_all()</code>! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.</li>
-<li><code>html_attrs()</code> (list all of the attributes) vs <code>html_attr()</code> (get a specific attribute). Similar to <code>attributes()</code> vs <code>attr()</code>.</li>
+<li>Also note the <code>flatten</code> argument for <code><a href="http://xml2.r-lib.org/reference/xml_find_all.html">xml2::xml_find_all()</a></code>! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.</li>
+<li>
+<code><a href="https://rvest.tidyverse.org/reference/html_attr.html">html_attrs()</a></code> (list all of the attributes) vs <code><a href="https://rvest.tidyverse.org/reference/html_attr.html">html_attr()</a></code> (get a specific attribute). Similar to <code><a href="https://rdrr.io/r/base/attributes.html">attributes()</a></code> vs <code><a href="https://rdrr.io/r/base/attr.html">attr()</a></code>.</li>
 <li>A con of CSS selectors: Can’t go back up the tree! I feel like this is probably important in some contexts. If there’s a legitimate case where this is true, use that as the reason to focus on Xpath.</li>
-</ul></li>
 </ul>
-</section>
-<section id="ideas-to-cover" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="ideas-to-cover">Ideas to cover</h2>
+</li>
+</ul></section><section id="ideas-to-cover" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="ideas-to-cover">Ideas to cover</h2>
 <ul>
 <li>Advanced {rvest} techniques.
 <ul>
@@ -437,7 +408,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Are there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?</li>
 <li>Bridge into {httr2}. Don’t write this yet, bridges should be written last!</li>
 <li>Larger-than-memory scraping, splitting scrapes, etc.</li>
-</ul></li>
+</ul>
+</li>
 <li>Automation.
 <ul>
 <li>Refining selections toward “what” vs “how” &amp; “where”, trying to make your selections less fragile.</li>
@@ -445,69 +417,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Error handling.</li>
 <li>Logging? Likely mention and point to do4ds for more details (or just a specific logging package).</li>
 <li>Mention packages for notification that a job is finished (from {beepr} to an email or Slack message… but maybe use those to tease later chapters).</li>
-</ul></li>
+</ul>
+</li>
 <li>{targets}?
 <ul>
 <li>At least mention.</li>
-<li>Dig into this to see how quickly I could introduce without it growing into a separate <em>thing.</em></li>
-</ul></li>
+<li>Dig into this to see how quickly I could introduce without it growing into a separate <em>thing.</em>
+</li>
 </ul>
-</section>
-<section id="another-exploration" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="another-exploration">Another Exploration</h2>
+</li>
+</ul></section><section id="another-exploration" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="another-exploration">Another Exploration</h2>
 <p>Suggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&amp;guccounter=1"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Annual only for now.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cache the read during experimentation so you don't hit it over and over.</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>raw_html <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(url)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>annual_cells <span class="ot">&lt;-</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    raw_html <span class="sc">|&gt;</span> </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_element</span>(</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">xpath =</span> <span class="st">".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']"</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    rvest<span class="sc">::</span><span class="fu">html_text2</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The text comes in as a single block separated by newlines (\n).</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    stringr<span class="sc">::</span><span class="fu">str_split_1</span>(stringr<span class="sc">::</span><span class="fu">fixed</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>))</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># The first text to come in is the column headers. We want to go through the</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># last one that's a date.</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>annual_date_cell_numbers <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_which</span>(</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    annual_cells, <span class="st">"^</span><span class="sc">\\</span><span class="st">d{1,2}/</span><span class="sc">\\</span><span class="st">d{1,2}/</span><span class="sc">\\</span><span class="st">d{4}$"</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>last_date_cell_number <span class="ot">&lt;-</span> <span class="fu">max</span>(annual_date_cell_numbers)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>annual <span class="ot">&lt;-</span> </span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    annual_cells <span class="sc">|&gt;</span> </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># We're going to transpose the table as we go; rows will become columns,</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># columns will become rows. It's tidier that way. The last date is our last</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># column.</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">matrix</span>(<span class="at">nrow =</span> last_date_cell_number, <span class="at">byrow =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.data.frame</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    janitor<span class="sc">::</span><span class="fu">row_to_names</span>(<span class="at">row_number =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    tibble<span class="sc">::</span><span class="fu">as_tibble</span>()</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># That gets the a good start on the "Annual" data; it just needs normal cleaning</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># from there. It does NOT include the breakdowns yet, though. I believe both</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># that and Quarterly will require some session fanciness. To be continued!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rvest.tidyverse.org/">rvest</a></span><span class="op">)</span></span>
+<span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&amp;guccounter=1"</span></span>
+<span></span>
+<span><span class="co">## Annual only for now.</span></span>
+<span></span>
+<span><span class="co"># Cache the read during experimentation so you don't hit it over and over.</span></span>
+<span><span class="va">raw_html</span> <span class="op">&lt;-</span> <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">annual_cells</span> <span class="op">&lt;-</span></span>
+<span>    <span class="va">raw_html</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="https://rvest.tidyverse.org/reference/html_element.html">html_element</a></span><span class="op">(</span></span>
+<span>        xpath <span class="op">=</span> <span class="st">".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']"</span></span>
+<span>    <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">rvest</span><span class="fu">::</span><span class="fu"><a href="https://rvest.tidyverse.org/reference/html_text.html">html_text2</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="co"># The text comes in as a single block separated by newlines (\n).</span></span>
+<span>    <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_split.html">str_split_1</a></span><span class="op">(</span><span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/modifiers.html">fixed</a></span><span class="op">(</span><span class="st">"\n"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># The first text to come in is the column headers. We want to go through the</span></span>
+<span><span class="co"># last one that's a date.</span></span>
+<span><span class="va">annual_date_cell_numbers</span> <span class="op">&lt;-</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_which.html">str_which</a></span><span class="op">(</span></span>
+<span>    <span class="va">annual_cells</span>, <span class="st">"^\\d{1,2}/\\d{1,2}/\\d{4}$"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">last_date_cell_number</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">annual_date_cell_numbers</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">annual</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="va">annual_cells</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="co"># We're going to transpose the table as we go; rows will become columns,</span></span>
+<span>    <span class="co"># columns will become rows. It's tidier that way. The last date is our last</span></span>
+<span>    <span class="co"># column.</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>nrow <span class="op">=</span> <span class="va">last_date_cell_number</span>, byrow <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">janitor</span><span class="fu">::</span><span class="fu"><a href="https://sfirke.github.io/janitor/reference/row_to_names.html">row_to_names</a></span><span class="op">(</span>row_number <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># That gets the a good start on the "Annual" data; it just needs normal cleaning</span></span>
+<span><span class="co"># from there. It does NOT include the breakdowns yet, though. I believe both</span></span>
+<span><span class="co"># that and Quarterly will require some session fanciness. To be continued!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>See the <a href="https://www.copyright.gov/fair-use/">U.S. Copyright Office Fair Use Index</a> for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p><a href="https://www.law.cornell.edu/supremecourt/text/499/340">Feist Publications, Inc.&nbsp;v. Rural Telephone Service Co., 499 U. S. 340 (1991)</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -739,9 +705,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./packages.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">How can I wrap a web API into an R package?</span></span>
       </a>          
@@ -753,8 +717,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">Web APIs with R is being written by Jon Harmon. Join the <a href="https://r4ds.io/join">R4DS Community Slack</a> to discuss the book!</div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -762,7 +725,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
 
 
 </body></html>
