@@ -1,4 +1,4 @@
-# How can I process API responses? {#sec-json}
+# How do computers communicate with one another? {#sec-apis}
 
 ## Introduction
 
