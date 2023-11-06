@@ -8,11 +8,13 @@ URL: https://github.com/jonthegeek/wapir
 Depends: 
     R (>= 3.1.0)
 Imports: 
+    downlit,
     janitor,
     lubridate,
     rvest,
     stringr,
-    tibble
+    tibble,
+    xml2
 Suggests: 
     knitr,
     rmarkdown
