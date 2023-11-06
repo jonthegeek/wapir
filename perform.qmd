@@ -1,4 +1,4 @@
-# How do computers communicate? {#sec-apis}
+# How can I perform advanced requests? {#sec-perform}
 
 ## Introduction
 

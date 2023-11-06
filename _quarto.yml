@@ -29,6 +29,7 @@ book:
       chapters:
         - apis.qmd
         - httr2.qmd
+        - perform.qmd
         - authentication.qmd
         - json.qmd
         - automation.qmd
