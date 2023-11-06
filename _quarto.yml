@@ -27,12 +27,14 @@ book:
 
     - part: part_accessing.qmd
       chapters:
-        - rvest.qmd
-        - json.qmd
+        - apis.qmd
         - httr2.qmd
         - authentication.qmd
+        - json.qmd
         - automation.qmd
         - packages.qmd
+        - rvest.qmd
+        - websocket.qmd
         - accessing-more.qmd
 
     - part: part_creating.qmd

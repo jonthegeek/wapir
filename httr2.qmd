@@ -1,4 +1,4 @@
-# What is an API and how can I access one? {#sec-httr2}
+# How can I access APIs from R? {#sec-httr2}
 
 ## Introduction
 
