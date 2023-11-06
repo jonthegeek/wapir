@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-11-05 17:17:54 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-11-06 13:11:36 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -91,72 +91,30 @@
     "text": "This is an intro to a part.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
-    "objectID": "rvest.html#introduction",
-    "href": "rvest.html#introduction",
-    "title": "2  How can I get data from web pages?",
+    "objectID": "apis.html#introduction",
+    "href": "apis.html#introduction",
+    "title": "2  How do computers communicate with one another?",
     "section": "2.1 Introduction",
-    "text": "2.1 Introduction\n(introduction will be written ~last)\n\nLearning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nDetermine whether you should scrape data from a web page.\nScrape tables from web pages.\nScrape more complex data structures from web pages.\n\n(potential chapter break)\n\nScrape data from websites that require you to log in.\nScrape content that requires interaction.\nAutomate web scraping processes.\nScrape data as part of a workflow.\n\n\n\nPrerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
-  },
-  {
-    "objectID": "rvest.html#should-i-scrape-this-data",
-    "href": "rvest.html#should-i-scrape-this-data",
-    "title": "2  How can I get data from web pages?",
-    "section": "2.2 Should I scrape this data?",
-    "text": "2.2 Should I scrape this data?\nWhen you see data online that you think you could use, stop to answer these three questions:\n\nAm I legally allowed to scrape this data?\nAm I allowed to scrape this data automatically?\nDo I need to scrape this data with code?\n\n\n2.2.1 Am I legally allowed to scrape this data?\nI am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.\nIf you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.\nAlso check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.\nIf you’re going to publish (or otherwise share) the data, and you can’t find anything on the site given you permission, you’ll have to decide if your use case is allowed. In the United States, facts are not protected by copyright.1 TODO: DIFFERENT EXAMPLE, EVERYONE USES RECIPES! That’s why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves — the recipes are facts and thus don’t have copyright protection in the U.S. However, a collection of facts (such as the data you’re trying to scrape) can be protected in the U.S. if that collection was selected by a person.\n\n“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”2\n\nOutside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a directive on the legal protection of databases. If you’re going to publish the data, investigate legal requirements in your location.\n\n\n2.2.2 Am I allowed to scrape this data automatically?\nEven if it is legal for you to use the data, it might not be polite to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a robots.txt file at the root of the site. For example, the robots.txt file for the online version of this book is available at https://jonthegeek.github.io/wapir/robots.txt. This file might contain one or a few lines.\n\n\n\nhttps://jonthegeek.github.io/wapir/robots.txt\n\n# TODO: Replace this with the final version for this book.\n\nSitemap: https://jonthegeek.github.io/wapir/sitemap.xml\n\n\nThings to put into this section:\n\nrobots.txt (search for \"User-agent: *\" and the particular page you want to scrape)\nLicenses & legal usage. IANAL.\nIs it worth scraping? Will {datapasta} cover it?\nQuickly identifying whether it will be hard.\nLook for an API to use instead of scraping. Just introduce the idea then point to that chapter.\nEven when robots.txt allows scraping, give tips on how to be a good citizen.\n{polite} package? I think probably focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}."
-  },
-  {
-    "objectID": "rvest.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
-    "href": "rvest.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
-    "title": "2  How can I get data from web pages?",
-    "section": "2.3 How can I scrape a table of data from a web page?",
-    "text": "2.3 How can I scrape a table of data from a web page?\n\nBasic intro to {rvest}.\n\nScrape a static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss.\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nShow an example with multiple tables & how to deal with that (pre-SelectorGadget)."
-  },
-  {
-    "objectID": "rvest.html#how-can-i-scrape-more-complex-data-from-a-web-page",
-    "href": "rvest.html#how-can-i-scrape-more-complex-data-from-a-web-page",
-    "title": "2  How can I get data from web pages?",
-    "section": "2.4 How can I scrape more complex data from a web page?",
-    "text": "2.4 How can I scrape more complex data from a web page?\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape, without SelectorGadget (basically just do what )\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nCSS selectors\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via selectr::css_to_xpath().\nIf Xpath: Note the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps (well, except MAYBE if you’re using a selection to go back and find something else)! Probably put this in a call out.\nMaybe note that a lot of {rvest} is reexports from {xml2}?\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.\nhtml_attrs() (list all of the attributes) vs html_attr() (get a specific attribute). Similar to attributes() vs attr().\nA con of CSS selectors: Can’t go back up the tree! I feel like this is probably important in some contexts. If there’s a legitimate case where this is true, use that as the reason to focus on Xpath."
-  },
-  {
-    "objectID": "rvest.html#ideas-to-cover",
-    "href": "rvest.html#ideas-to-cover",
-    "title": "2  How can I get data from web pages?",
-    "section": "Ideas to cover",
-    "text": "Ideas to cover\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable? How might the {chromote} PR impact it?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!\nLarger-than-memory scraping, splitting scrapes, etc.\n\nAutomation.\n\nRefining selections toward “what” vs “how” & “where”, trying to make your selections less fragile.\nDeduplication.\nError handling.\nLogging? Likely mention and point to do4ds for more details (or just a specific logging package).\nMention packages for notification that a job is finished (from {beepr} to an email or Slack message… but maybe use those to tease later chapters).\n\n{targets}?\n\nAt least mention.\nDig into this to see how quickly I could introduce without it growing into a separate thing."
-  },
-  {
-    "objectID": "rvest.html#another-exploration",
-    "href": "rvest.html#another-exploration",
-    "title": "2  How can I get data from web pages?",
-    "section": "Another Exploration",
-    "text": "Another Exploration\nSuggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!\n\nlibrary(rvest)\nurl &lt;- \"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1\"\n\n## Annual only for now.\n\n# Cache the read during experimentation so you don't hit it over and over.\nraw_html &lt;- rvest::read_html(url)\n\nannual_cells &lt;-\n    raw_html |&gt; \n    rvest::html_element(\n        xpath = \".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']\"\n    ) |&gt; \n    rvest::html_text2() |&gt; \n    # The text comes in as a single block separated by newlines (\\n).\n    stringr::str_split_1(stringr::fixed(\"\\n\"))\n\n# The first text to come in is the column headers. We want to go through the\n# last one that's a date.\nannual_date_cell_numbers &lt;- stringr::str_which(\n    annual_cells, \"^\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}$\"\n)\nlast_date_cell_number &lt;- max(annual_date_cell_numbers)\n\nannual &lt;- \n    annual_cells |&gt; \n    # We're going to transpose the table as we go; rows will become columns,\n    # columns will become rows. It's tidier that way. The last date is our last\n    # column.\n    matrix(nrow = last_date_cell_number, byrow = FALSE) |&gt; \n    as.data.frame() |&gt; \n    janitor::row_to_names(row_number = 1) |&gt; \n    tibble::as_tibble()\n\n# That gets the a good start on the \"Annual\" data; it just needs normal cleaning\n# from there. It does NOT include the breakdowns yet, though. I believe both\n# that and Quarterly will require some session fanciness. To be continued!"
-  },
-  {
-    "objectID": "rvest.html#footnotes",
-    "href": "rvest.html#footnotes",
-    "title": "2  How can I get data from web pages?",
-    "section": "",
-    "text": "See the U.S. Copyright Office Fair Use Index for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.↩︎\nFeist Publications, Inc. v. Rural Telephone Service Co., 499 U. S. 340 (1991)↩︎"
-  },
-  {
-    "objectID": "json.html#introduction",
-    "href": "json.html#introduction",
-    "title": "3  How can I process JSON data?",
-    "section": "3.1 Introduction",
-    "text": "3.1 Introduction\n(introduction will be written ~last)\n\n3.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n3.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "2.1 Introduction\n(introduction will be written ~last)\n\n2.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n2.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "httr2.html#introduction",
     "href": "httr2.html#introduction",
-    "title": "4  What is an API and how can I access one?",
-    "section": "4.1 Introduction",
-    "text": "4.1 Introduction\n(introduction will be written ~last)\n\n4.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n4.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "title": "3  How can I access APIs from R?",
+    "section": "3.1 Introduction",
+    "text": "3.1 Introduction\n(introduction will be written ~last)\n\n3.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n3.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "authentication.html#introduction",
     "href": "authentication.html#introduction",
-    "title": "5  How do I prove that I’m me?",
+    "title": "4  How do I prove that I’m me?",
+    "section": "4.1 Introduction",
+    "text": "4.1 Introduction\n(introduction will be written ~last)\n\n4.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n4.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "json.html#introduction",
+    "href": "json.html#introduction",
+    "title": "5  How can I process API responses?",
     "section": "5.1 Introduction",
     "text": "5.1 Introduction\n(introduction will be written ~last)\n\n5.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n5.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
@@ -182,11 +140,109 @@
     "text": "7.1 Introduction\n(introduction will be written ~last)\n\n7.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n7.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
+    "objectID": "rvest.html#introduction",
+    "href": "rvest.html#introduction",
+    "title": "8  How can I get data from web pages?",
+    "section": "8.1 Introduction",
+    "text": "8.1 Introduction\n(introduction will be written ~last)\n\nLearning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nDetermine whether you should scrape data from a web page.\nScrape tables from web pages.\nScrape more complex data structures from web pages.\n\n(potential chapter break)\n\nScrape data from websites that require you to log in.\nScrape content that requires interaction.\nAutomate web scraping processes.\nScrape data as part of a workflow.\n\n\n\nPrerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "rvest.html#should-i-scrape-this-data",
+    "href": "rvest.html#should-i-scrape-this-data",
+    "title": "8  How can I get data from web pages?",
+    "section": "8.2 Should I scrape this data?",
+    "text": "8.2 Should I scrape this data?\nWhen you see data online that you think you could use, stop to answer these three questions:\n\nAm I legally allowed to scrape this data?\nAm I allowed to scrape this data automatically?\nDo I need to scrape this data with code?\n\n\n8.2.1 Am I legally allowed to scrape this data?\nI am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.\nIf you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.\nAlso check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.\nIf you’re going to publish (or otherwise share) the data, and you can’t find anything on the site given you permission, you’ll have to decide if your use case is allowed. In the United States, facts are not protected by copyright.1 TODO: DIFFERENT EXAMPLE, EVERYONE USES RECIPES! That’s why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves — the recipes are facts and thus don’t have copyright protection in the U.S. However, a collection of facts (such as the data you’re trying to scrape) can be protected in the U.S. if that collection was selected by a person.\n\n“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”2\n\nOutside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a directive on the legal protection of databases. If you’re going to publish the data, investigate legal requirements in your location.\n\n\n8.2.2 Am I allowed to scrape this data automatically?\nEven if it is legal for you to use the data, it might not be polite to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a robots.txt file at the root of the site. For example, the robots.txt file for the online version of this book is available at https://jonthegeek.github.io/wapir/robots.txt. This file might contain one or a few lines.\n\n\n\nhttps://jonthegeek.github.io/wapir/robots.txt\n\n# TODO: Replace this with the final version for this book.\n\nSitemap: https://jonthegeek.github.io/wapir/sitemap.xml\n\n\nThings to put into this section:\n\nrobots.txt (search for \"User-agent: *\" and the particular page you want to scrape)\nLicenses & legal usage. IANAL.\nIs it worth scraping? Will {datapasta} cover it?\nQuickly identifying whether it will be hard.\nLook for an API to use instead of scraping. Just introduce the idea then point to that chapter.\nEven when robots.txt allows scraping, give tips on how to be a good citizen.\n{polite} package? I think probably focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}."
+  },
+  {
+    "objectID": "rvest.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
+    "href": "rvest.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
+    "title": "8  How can I get data from web pages?",
+    "section": "8.3 How can I scrape a table of data from a web page?",
+    "text": "8.3 How can I scrape a table of data from a web page?\n\nBasic intro to {rvest}.\n\nScrape a static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss.\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nShow an example with multiple tables & how to deal with that (pre-SelectorGadget)."
+  },
+  {
+    "objectID": "rvest.html#how-can-i-scrape-more-complex-data-from-a-web-page",
+    "href": "rvest.html#how-can-i-scrape-more-complex-data-from-a-web-page",
+    "title": "8  How can I get data from web pages?",
+    "section": "8.4 How can I scrape more complex data from a web page?",
+    "text": "8.4 How can I scrape more complex data from a web page?\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape, without SelectorGadget (basically just do what )\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nCSS selectors\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via selectr::css_to_xpath().\nIf Xpath: Note the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps (well, except MAYBE if you’re using a selection to go back and find something else)! Probably put this in a call out.\nMaybe note that a lot of {rvest} is reexports from {xml2}?\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.\nhtml_attrs() (list all of the attributes) vs html_attr() (get a specific attribute). Similar to attributes() vs attr().\nA con of CSS selectors: Can’t go back up the tree! I feel like this is probably important in some contexts. If there’s a legitimate case where this is true, use that as the reason to focus on Xpath."
+  },
+  {
+    "objectID": "rvest.html#ideas-to-cover",
+    "href": "rvest.html#ideas-to-cover",
+    "title": "8  How can I get data from web pages?",
+    "section": "Ideas to cover",
+    "text": "Ideas to cover\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable? How might the {chromote} PR impact it?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!\nLarger-than-memory scraping, splitting scrapes, etc.\n\nAutomation.\n\nRefining selections toward “what” vs “how” & “where”, trying to make your selections less fragile.\nDeduplication.\nError handling.\nLogging? Likely mention and point to do4ds for more details (or just a specific logging package).\nMention packages for notification that a job is finished (from {beepr} to an email or Slack message… but maybe use those to tease later chapters).\n\n{targets}?\n\nAt least mention.\nDig into this to see how quickly I could introduce without it growing into a separate thing."
+  },
+  {
+    "objectID": "rvest.html#another-exploration",
+    "href": "rvest.html#another-exploration",
+    "title": "8  How can I get data from web pages?",
+    "section": "Another Exploration",
+    "text": "Another Exploration\nSuggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!\n\nlibrary(rvest)\nurl &lt;- \"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1\"\n\n## Annual only for now.\n\n# Cache the read during experimentation so you don't hit it over and over.\nraw_html &lt;- rvest::read_html(url)\n\nannual_cells &lt;-\n    raw_html |&gt; \n    rvest::html_element(\n        xpath = \".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']\"\n    ) |&gt; \n    rvest::html_text2() |&gt; \n    # The text comes in as a single block separated by newlines (\\n).\n    stringr::str_split_1(stringr::fixed(\"\\n\"))\n\n# The first text to come in is the column headers. We want to go through the\n# last one that's a date.\nannual_date_cell_numbers &lt;- stringr::str_which(\n    annual_cells, \"^\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}$\"\n)\nlast_date_cell_number &lt;- max(annual_date_cell_numbers)\n\nannual &lt;- \n    annual_cells |&gt; \n    # We're going to transpose the table as we go; rows will become columns,\n    # columns will become rows. It's tidier that way. The last date is our last\n    # column.\n    matrix(nrow = last_date_cell_number, byrow = FALSE) |&gt; \n    as.data.frame() |&gt; \n    janitor::row_to_names(row_number = 1) |&gt; \n    tibble::as_tibble()\n\n# That gets the a good start on the \"Annual\" data; it just needs normal cleaning\n# from there. It does NOT include the breakdowns yet, though. I believe both\n# that and Quarterly will require some session fanciness. To be continued!"
+  },
+  {
+    "objectID": "rvest.html#footnotes",
+    "href": "rvest.html#footnotes",
+    "title": "8  How can I get data from web pages?",
+    "section": "",
+    "text": "See the U.S. Copyright Office Fair Use Index for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.↩︎\nFeist Publications, Inc. v. Rural Telephone Service Co., 499 U. S. 340 (1991)↩︎"
+  },
+  {
+    "objectID": "websocket.html#introduction",
+    "href": "websocket.html#introduction",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "9.1 Introduction",
+    "text": "9.1 Introduction\n(introduction will be written ~last)\n\nLearning Objectives\nAfter you read this chapter, you will be able to:\n\nDetermine whether a website allows you to scrape data from it.\nDetermine whether you should scrape data from a web page.\nScrape tables from web pages.\nScrape more complex data structures from web pages.\n\n(potential chapter break)\n\nScrape data from websites that require you to log in.\nScrape content that requires interaction.\nAutomate web scraping processes.\nScrape data as part of a workflow.\n\n\n\nPrerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "websocket.html#should-i-scrape-this-data",
+    "href": "websocket.html#should-i-scrape-this-data",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "9.2 Should I scrape this data?",
+    "text": "9.2 Should I scrape this data?\nWhen you see data online that you think you could use, stop to answer these three questions:\n\nAm I legally allowed to scrape this data?\nAm I allowed to scrape this data automatically?\nDo I need to scrape this data with code?\n\n\n9.2.1 Am I legally allowed to scrape this data?\nI am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.\nIf you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.\nAlso check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.\nIf you’re going to publish (or otherwise share) the data, and you can’t find anything on the site given you permission, you’ll have to decide if your use case is allowed. In the United States, facts are not protected by copyright.1 TODO: DIFFERENT EXAMPLE, EVERYONE USES RECIPES! That’s why cook books and online recipes tend to devote as much space (or more) to stories than to the recipes themselves — the recipes are facts and thus don’t have copyright protection in the U.S. However, a collection of facts (such as the data you’re trying to scrape) can be protected in the U.S. if that collection was selected by a person.\n\n“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”2\n\nOutside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a directive on the legal protection of databases. If you’re going to publish the data, investigate legal requirements in your location.\n\n\n9.2.2 Am I allowed to scrape this data automatically?\nEven if it is legal for you to use the data, it might not be polite to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a robots.txt file at the root of the site. For example, the robots.txt file for the online version of this book is available at https://jonthegeek.github.io/wapir/robots.txt. This file might contain one or a few lines.\n\n\n\nhttps://jonthegeek.github.io/wapir/robots.txt\n\n# TODO: Replace this with the final version for this book.\n\nSitemap: https://jonthegeek.github.io/wapir/sitemap.xml\n\n\nThings to put into this section:\n\nrobots.txt (search for \"User-agent: *\" and the particular page you want to scrape)\nLicenses & legal usage. IANAL.\nIs it worth scraping? Will {datapasta} cover it?\nQuickly identifying whether it will be hard.\nLook for an API to use instead of scraping. Just introduce the idea then point to that chapter.\nEven when robots.txt allows scraping, give tips on how to be a good citizen.\n{polite} package? I think probably focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}."
+  },
+  {
+    "objectID": "websocket.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
+    "href": "websocket.html#how-can-i-scrape-a-table-of-data-from-a-web-page",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "9.3 How can I scrape a table of data from a web page?",
+    "text": "9.3 How can I scrape a table of data from a web page?\n\nBasic intro to {rvest}.\n\nScrape a static table in this repo where html_table works out of the box. It looks like it’ll get a single table without any fuss.\nBRIEFLY touch on data cleaning, but send them to R4DS for more details.\nShow an example with multiple tables & how to deal with that (pre-SelectorGadget)."
+  },
+  {
+    "objectID": "websocket.html#how-can-i-scrape-more-complex-data-from-a-web-page",
+    "href": "websocket.html#how-can-i-scrape-more-complex-data-from-a-web-page",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "9.4 How can I scrape more complex data from a web page?",
+    "text": "9.4 How can I scrape more complex data from a web page?\n\nUsing SelectorGadget.\n\nStart by reproducing the table scrape, without SelectorGadget (basically just do what )\nA second table where html_table doesn’t work as well (weird headers or something). Maybe; the next example might be enough.\nA web page with structured content that isn’t in a table. Like the Star Wars example in rvest, but someting else. Maybe information about HTTP request methods? Oh, or Xpath rules!\n\nCSS selectors\n\nStart by digging into what SelectorGadget produced for the examples above/what it means.\nAdd an example where it’s way more straightforward to do things sequentially (structured data in a particular cell of a particular table, something like that).\nCSS selectors vs Xpath. Hmm. Which is more straightforward? Probably teach Xpath because it lets you do all the things. Nope, CSS selectors can also do all the things, and they overlap with actual CSS which is useful in its own right! Consider teaching both, at least briefly, and point to MDN or w3schools for more. FWIW, rvest translates everything to xpath via selectr::css_to_xpath().\nIf Xpath: Note the difference between \".//\" (search below the current node) and \"//\" (search anywhere in the document). You never want just \"//\" in a pipe, because it ignores previous steps (well, except MAYBE if you’re using a selection to go back and find something else)! Probably put this in a call out.\nMaybe note that a lot of {rvest} is reexports from {xml2}?\nAlso note the flatten argument for xml2::xml_find_all()! By default it de-duplicates, so watch out if you’re trying to align lists. Make sure this behaves how I think it does, and, if so, provide an example where it matters. This appears to be the only place where I need to bring up {xml2} directly, but probably point it out for further reading.\nhtml_attrs() (list all of the attributes) vs html_attr() (get a specific attribute). Similar to attributes() vs attr().\nA con of CSS selectors: Can’t go back up the tree! I feel like this is probably important in some contexts. If there’s a legitimate case where this is true, use that as the reason to focus on Xpath."
+  },
+  {
+    "objectID": "websocket.html#ideas-to-cover",
+    "href": "websocket.html#ideas-to-cover",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "Ideas to cover",
+    "text": "Ideas to cover\n\nAdvanced {rvest} techniques.\n\nCan I ~easily deploy something that requires a session?\nIs the session stuff in {rvest} relatively stable? How might the {chromote} PR impact it?\nAre there options other than {rvest} that I should explore? {RSelenium}, {chromote} worth mentions, or too different?\nBridge into {httr2}. Don’t write this yet, bridges should be written last!\nLarger-than-memory scraping, splitting scrapes, etc.\n\nAutomation.\n\nRefining selections toward “what” vs “how” & “where”, trying to make your selections less fragile.\nDeduplication.\nError handling.\nLogging? Likely mention and point to do4ds for more details (or just a specific logging package).\nMention packages for notification that a job is finished (from {beepr} to an email or Slack message… but maybe use those to tease later chapters).\n\n{targets}?\n\nAt least mention.\nDig into this to see how quickly I could introduce without it growing into a separate thing."
+  },
+  {
+    "objectID": "websocket.html#another-exploration",
+    "href": "websocket.html#another-exploration",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "Another Exploration",
+    "text": "Another Exploration\nSuggested by Emir Bilim on R4DS, let them know when it’s worked out! Also include a case like this in the Appendix!\n\nlibrary(rvest)\nurl &lt;- \"https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1\"\n\n## Annual only for now.\n\n# Cache the read during experimentation so you don't hit it over and over.\nraw_html &lt;- rvest::read_html(url)\n\nannual_cells &lt;-\n    raw_html |&gt; \n    rvest::html_element(\n        xpath = \".//div[@class='M(0) Whs(n) BdEnd Bdc($seperatorColor) D(itb)']\"\n    ) |&gt; \n    rvest::html_text2() |&gt; \n    # The text comes in as a single block separated by newlines (\\n).\n    stringr::str_split_1(stringr::fixed(\"\\n\"))\n\n# The first text to come in is the column headers. We want to go through the\n# last one that's a date.\nannual_date_cell_numbers &lt;- stringr::str_which(\n    annual_cells, \"^\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}$\"\n)\nlast_date_cell_number &lt;- max(annual_date_cell_numbers)\n\nannual &lt;- \n    annual_cells |&gt; \n    # We're going to transpose the table as we go; rows will become columns,\n    # columns will become rows. It's tidier that way. The last date is our last\n    # column.\n    matrix(nrow = last_date_cell_number, byrow = FALSE) |&gt; \n    as.data.frame() |&gt; \n    janitor::row_to_names(row_number = 1) |&gt; \n    tibble::as_tibble()\n\n# That gets the a good start on the \"Annual\" data; it just needs normal cleaning\n# from there. It does NOT include the breakdowns yet, though. I believe both\n# that and Quarterly will require some session fanciness. To be continued!"
+  },
+  {
+    "objectID": "websocket.html#footnotes",
+    "href": "websocket.html#footnotes",
+    "title": "9  How else can I communicate with APIs from R?",
+    "section": "",
+    "text": "See the U.S. Copyright Office Fair Use Index for a detailed discussion of the legal definition of fair use in the United States, and an index of related court decisions.↩︎\nFeist Publications, Inc. v. Rural Telephone Service Co., 499 U. S. 340 (1991)↩︎"
+  },
+  {
     "objectID": "accessing-more.html#introduction",
     "href": "accessing-more.html#introduction",
-    "title": "8  How can I learn more about accessing web APIs?",
-    "section": "8.1 Introduction",
-    "text": "8.1 Introduction\n(introduction will be written ~last)\n\n8.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n8.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "title": "10  How can I learn more about accessing web APIs?",
+    "section": "10.1 Introduction",
+    "text": "10.1 Introduction\n(introduction will be written ~last)\n\n10.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n10.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "part_creating.html",
@@ -198,30 +254,30 @@
   {
     "objectID": "plumber.html#introduction",
     "href": "plumber.html#introduction",
-    "title": "9  How can I create my own APIs?",
-    "section": "9.1 Introduction",
-    "text": "9.1 Introduction\n(introduction will be written ~last)\n\n9.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n9.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
-  },
-  {
-    "objectID": "deploy.html#introduction",
-    "href": "deploy.html#introduction",
-    "title": "10  How do I deploy my plumber API?",
-    "section": "10.1 Introduction",
-    "text": "10.1 Introduction\n(introduction will be written ~last)\n\n10.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n10.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
-  },
-  {
-    "objectID": "test-plumber.html#introduction",
-    "href": "test-plumber.html#introduction",
-    "title": "11  How can I test my plumber API?",
+    "title": "11  How can I create my own APIs?",
     "section": "11.1 Introduction",
     "text": "11.1 Introduction\n(introduction will be written ~last)\n\n11.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n11.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "creating-more.html#introduction",
-    "href": "creating-more.html#introduction",
-    "title": "12  How can I learn more about creating APIs?",
+    "objectID": "deploy.html#introduction",
+    "href": "deploy.html#introduction",
+    "title": "12  How do I deploy my plumber API?",
     "section": "12.1 Introduction",
     "text": "12.1 Introduction\n(introduction will be written ~last)\n\n12.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n12.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "test-plumber.html#introduction",
+    "href": "test-plumber.html#introduction",
+    "title": "13  How can I test my plumber API?",
+    "section": "13.1 Introduction",
+    "text": "13.1 Introduction\n(introduction will be written ~last)\n\n13.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n13.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "creating-more.html#introduction",
+    "href": "creating-more.html#introduction",
+    "title": "14  How can I learn more about creating APIs?",
+    "section": "14.1 Introduction",
+    "text": "14.1 Introduction\n(introduction will be written ~last)\n\n14.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n14.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "examples.html#introduction",
