@@ -1,0 +1,14 @@
+# How else can I communicate with APIs from R? {#sec-rvest}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives {.unnumbered}
+
+After you read this chapter, you will be able to:
+
+-   Websocket
+-   gRPC
+-   graphQL here?
+-   Anything else?
