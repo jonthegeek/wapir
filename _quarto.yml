@@ -29,13 +29,12 @@ book:
       chapters:
         - apis.qmd
         - httr2.qmd
-        - perform.qmd
         - authentication.qmd
-        - json.qmd
-        - automation.qmd
+        - responses.qmd
+        - perform.qmd
         - packages.qmd
+        - accessing-other.qmd
         - rvest.qmd
-        - websocket.qmd
         - accessing-more.qmd
 
     - part: part_creating.qmd

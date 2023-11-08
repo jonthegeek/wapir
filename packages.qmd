@@ -1,4 +1,4 @@
-# How can I wrap a web API into an R package? {#sec-packages}
+# Are there R packages for APIs? {#sec-packages}
 
 ## Introduction
 

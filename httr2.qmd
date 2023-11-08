@@ -11,3 +11,8 @@ After you read this chapter, you will be able to:
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*
+
+TODO: Somewhere in here, include something along the line of "Principles."
+
+-   Make as few separate requests as possible.
+-   Only request what you need (make requests as small as possible).
