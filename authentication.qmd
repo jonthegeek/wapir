@@ -1,4 +1,4 @@
-# How do I prove that I'm me? {#sec-authentication}
+# How do I tell the API who I am? {#sec-authentication}
 
 ## Introduction
 
