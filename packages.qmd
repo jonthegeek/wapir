@@ -1,4 +1,4 @@
-# Are there R packages for APIs? {#sec-packages}
+# How can I find API-wrapping packages? {#sec-packages}
 
 ## Introduction
 
