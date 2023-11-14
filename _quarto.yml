@@ -32,6 +32,7 @@ book:
         - authentication.qmd
         - responses.qmd
         - perform.qmd
+        - find-apis.qmd
         - packages.qmd
         - accessing-other.qmd
         - rvest.qmd
