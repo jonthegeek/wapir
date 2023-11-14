@@ -8,12 +8,16 @@ engine: knitr
 
 <!--# This file is an intro to the *website.* intro.qmd is an intro to the *book.* -->
 
-This is the website for the work-in-progress book, ***Web APIs with R.*** This book will teach you how to work with the web from your R session.
+This is the website for the work-in-progress book, ***Web APIs with R.*** 
+This book will teach you how to work with the web from your R session.
+This book will be published as part of [The R Series from CRC Press](https://www.routledge.com/go/the-r-series/).
 
 ::: callout-warning
 This book is very much a work in progress.
 
-I am trying to dive in and do some actual writing, though!
+I'm using a ["backwards design" approach](https://www.cultofpedagogy.com/backward-design-basics/), through which I'm creating [book club slides](https://r4ds.io/wapir) for an eventual R4DS book club.
+Once the slides are refined to cover the salient points I want the reader to take away from the book, I will resume work on the actual book.
+I'm aiming to finish initial slides [by the end of November, 2023.](https://www.youtube.com/watch?v=zDBjqRj_bVQ)
 
 I'm not ready for PRs yet (despite what you might see in some of the boilerplate).
 However, if you have thoughts about what you'd like to see, please submit an issue!
