@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-11-15 17:20:21 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-11-16 17:13:54 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -210,38 +210,66 @@
     "text": "TODO:\n\nConsider adding a chapter on securing APIs (or at least include it in deploy.qmd).\nSame for scaling. Scaling should almost definitely go inside deploy.qmd.\n\nThis is an intro to a part.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
-    "objectID": "plumber.html#introduction",
-    "href": "plumber.html#introduction",
+    "objectID": "plumber-intro.html#introduction",
+    "href": "plumber-intro.html#introduction",
     "title": "12  How can I create my own APIs?",
     "section": "12.1 Introduction",
     "text": "12.1 Introduction\n(introduction will be written ~last)\n\n12.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n12.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "deploy.html#introduction",
-    "href": "deploy.html#introduction",
-    "title": "13  How do I deploy my plumber API?",
+    "objectID": "plumber-io.html#introduction",
+    "href": "plumber-io.html#introduction",
+    "title": "13  How can I better control plumber input and output?",
     "section": "13.1 Introduction",
     "text": "13.1 Introduction\n(introduction will be written ~last)\n\n13.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n13.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "test-plumber.html#introduction",
-    "href": "test-plumber.html#introduction",
-    "title": "14  How can I test my plumber API?",
+    "objectID": "plumber-security.html#introduction",
+    "href": "plumber-security.html#introduction",
+    "title": "14  How can I secure my APIs?",
     "section": "14.1 Introduction",
     "text": "14.1 Introduction\n(introduction will be written ~last)\n\n14.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n14.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "creating-more.html#introduction",
-    "href": "creating-more.html#introduction",
-    "title": "15  How can I learn more about creating APIs?",
+    "objectID": "test-plumber.html#introduction",
+    "href": "test-plumber.html#introduction",
+    "title": "15  How can I test my plumber API?",
     "section": "15.1 Introduction",
     "text": "15.1 Introduction\n(introduction will be written ~last)\n\n15.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n15.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
+    "objectID": "deploy.html#introduction",
+    "href": "deploy.html#introduction",
+    "title": "16  How do I deploy my plumber API?",
+    "section": "16.1 Introduction",
+    "text": "16.1 Introduction\n(introduction will be written ~last)\n\n16.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n16.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "lambdr.html#introduction",
+    "href": "lambdr.html#introduction",
+    "title": "17  How can I work with microservices?",
+    "section": "17.1 Introduction",
+    "text": "17.1 Introduction\n(introduction will be written ~last)\n\n17.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n17.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "creating-more.html#introduction",
+    "href": "creating-more.html#introduction",
+    "title": "18  How can I learn more about creating APIs?",
+    "section": "18.1 Introduction",
+    "text": "18.1 Introduction\n(introduction will be written ~last)\n\n18.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n18.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+  },
+  {
+    "objectID": "part_use-cases.html",
+    "href": "part_use-cases.html",
+    "title": "What are some ways I can use web APIs?",
+    "section": "",
+    "text": "This part will give concrete examples of using different APIs or families of APIs.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+  },
+  {
     "objectID": "examples.html#introduction",
     "href": "examples.html#introduction",
-    "title": "Appendix A — API Examples",
+    "title": "Appendix A — API Demos",
     "section": "A.1 Introduction",
-    "text": "A.1 Introduction\nThis is an appendix."
+    "text": "A.1 Introduction\nThis is an appendix. These will be toy examples, to be used with exercises."
   }
 ]
