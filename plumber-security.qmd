@@ -1,0 +1,13 @@
+# How can I secure my APIs? {#sec-plumber}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*

@@ -40,10 +40,15 @@ book:
 
     - part: part_creating.qmd
       chapters:
-        - plumber.qmd
-        - deploy.qmd
+        - plumber-intro.qmd
+        - plumber-io.qmd
+        - plumber-security.qmd
         - test-plumber.qmd
+        - deploy.qmd
+        - lambdr.qmd
         - creating-more.qmd
+
+    - part: part_use-cases.qmd
 
   appendices:
     - examples.qmd

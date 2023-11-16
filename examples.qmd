@@ -1,5 +1,6 @@
-# API Examples {#sec-examples}
+# API Demos {#sec-examples}
 
 ## Introduction
 
 This is an appendix.
+These will be toy examples, to be used with exercises.
