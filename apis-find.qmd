@@ -1,4 +1,4 @@
-# How can I find APIs? {#sec-find-apis}
+# How can I find APIs? {#sec-apis-find}
 
 ## Introduction
 

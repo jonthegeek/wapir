@@ -1,4 +1,4 @@
-# How can I get a lot of data from an API? {#sec-perform}
+# How do I tell the API who I am? {#sec-httr2-authentication}
 
 ## Introduction
 

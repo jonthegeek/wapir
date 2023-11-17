@@ -1,4 +1,4 @@
-# How else can I communicate with APIs from R? {#sec-rvest}
+# How else can I communicate with APIs from R? {#sec-accessing-other}
 
 ## Introduction
 

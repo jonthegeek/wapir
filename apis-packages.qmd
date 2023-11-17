@@ -1,4 +1,4 @@
-# How can I test my plumber API? {#sec-test-plumber}
+# How can I find API-wrapping packages? {#sec-apis-packages}
 
 ## Introduction
 
