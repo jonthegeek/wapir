@@ -1,4 +1,4 @@
-# How can I work with microservices? {#sec-lambdr}
+# How can I deploy serverless APIs? {#sec-lambdr}
 
 ## Introduction
 
