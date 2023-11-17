@@ -1,4 +1,4 @@
-# How can I secure my APIs? {#sec-plumber}
+# How can I secure my APIs? {#sec-plumber-security}
 
 ## Introduction
 

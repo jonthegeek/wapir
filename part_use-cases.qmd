@@ -1,4 +1,4 @@
-# What are some ways I can use web APIs? {#sec-use-cases}
+# What are some ways I can use web APIs? {#sec-use-cases .unnumbered}
 
 This part will give concrete examples of using different APIs or families of APIs.
 

@@ -1,4 +1,4 @@
-# How do I tell the API who I am? {#sec-authentication}
+# How can I process API responses? {#sec-httr2-responses}
 
 ## Introduction
 
