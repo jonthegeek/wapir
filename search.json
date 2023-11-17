@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-11-17 07:30:24 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-11-17 07:39:12 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -247,7 +247,7 @@
   {
     "objectID": "lambdr.html#introduction",
     "href": "lambdr.html#introduction",
-    "title": "17  How can I work with microservices?",
+    "title": "17  How can I deploy serverless APIs?",
     "section": "17.1 Introduction",
     "text": "17.1 Introduction\n(introduction will be written ~last)\n\n17.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n17.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
