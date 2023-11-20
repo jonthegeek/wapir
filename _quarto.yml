@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - CNAME
 
 book:
   title: "Web APIs with R"
