@@ -43,7 +43,9 @@ book:
     - part: part_creating.qmd
       chapters:
         - plumber-intro.qmd
-        - plumber-io.qmd
+        - plumber-input.qmd
+        - plumber-output.qmd
+        - plumber-errors.qmd
         - plumber-security.qmd
         - plumber-test.qmd
         - deploy.qmd

@@ -1,4 +1,4 @@
-# How can I better control plumber input and output? {#sec-plumber-io}
+# How can I get inputs from API users? {#sec-plumber-input}
 
 ## Introduction
 
