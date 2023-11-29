@@ -49,13 +49,13 @@ book:
         - plumber-security.qmd
         - plumber-test.qmd
         - deploy.qmd
-        - lambdr.qmd
         - creating-more.qmd
 
     - part: part_use-cases.qmd
 
   appendices:
     - examples-toy.qmd
+    - plumber-missing-manual.qmd
 
 format:
   html:
