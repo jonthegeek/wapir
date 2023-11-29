@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jon Harmon">
 
-<title>Web APIs with R - 19&nbsp; How can I deploy serverless APIs?</title>
+<title>Web APIs with R - Appendix B — plumber: The Missing Manual</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./creating-more.html" rel="next">
-<link href="./deploy.html" rel="prev">
+<link href="./examples-toy.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_creating.html">How can I create my own APIs with R?</a></li><li class="breadcrumb-item"><a href="./lambdr.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">How can I deploy serverless APIs?</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./examples-toy.html">Appendices</a></li><li class="breadcrumb-item"><a href="./plumber-missing-manual.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">plumber: The Missing Manual</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -245,14 +244,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lambdr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">How can I deploy serverless APIs?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./creating-more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span></a>
   </div>
 </li>
       </ul>
@@ -276,6 +269,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Toy Examples</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./plumber-missing-manual.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">plumber: The Missing Manual</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -288,20 +287,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">19.1</span> Introduction</a>
-  <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">19.1.1</span> Learning Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">19.1.2</span> Prerequisites</a></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">B.1</span> Introduction</a></li>
+  <li><a href="#response-methods" id="toc-response-methods" class="nav-link" data-scroll-target="#response-methods"><span class="header-section-number">B.2</span> Response Methods</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/lambdr.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jonthegeek/wapir/edit/main/plumber-missing-manual.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-lambdr" class="quarto-section-identifier"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">How can I deploy serverless APIs?</span></span></h1>
+<h1 class="title"><span id="sec-plumber-missing-manual" class="quarto-section-identifier">Appendix B — plumber: The Missing Manual</span></h1>
 </div>
 
 
@@ -316,19 +312,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">19.1</span> Introduction</h2>
-<p><em>(introduction will be written ~last)</em></p>
-<section id="learning-objectives" class="level3" data-number="19.1.1">
-<h3 data-number="19.1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">19.1.1</span> Learning Objectives</h3>
-<p>After you read this chapter, you will be able to:</p>
+<section id="introduction" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">B.1</span> Introduction</h2>
+<p>This is an appendix. I hope to not need this, but for now I’m planning to document things in plumber that aren’t well-documented by plumber itself. These are things that I had to dig through code to find.</p>
 </section>
-<section id="prerequisites" class="level3" data-number="19.1.2">
-<h3 data-number="19.1.2" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">19.1.2</span> Prerequisites</h3>
-<p><em>(prerequisites will be filled in as I write, if I decide to keep this section)</em></p>
+<section id="response-methods" class="level2" data-number="B.2">
+<h2 data-number="B.2" class="anchored" data-anchor-id="response-methods"><span class="header-section-number">B.2</span> Response Methods</h2>
+<p>The res object that’s available in most plumber functions is an R6 object defined in <code>PlumberResponse</code>. It has these public methods (partially documented in the <a href="https://www.rplumber.io/articles/rendering-output.html#response-object">Rendering Output Vignette</a>:</p>
+<ul>
+<li><code>setHeader(name, value)</code></li>
+<li><code>toResponse()</code> (hidden inputs: <code>self$headers</code>, <code>self$body</code>, <code>self$status</code>)</li>
+<li><code>setCookie(name, value, path = NULL, expiration = FALSE, http = FALSE, secure = FALSE, same_site = FALSE)</code>
+<ul>
+<li>Kinda documented in <a href="https://www.rplumber.io/reference/session_cookie.html">session_cookie()</a> (and related docs), but it isn’t clear until you dig.</li>
+</ul></li>
+<li><code>removeCookies(name, path = NULL, http = FALSE, secure = FALSE, same_site = FALSE, ...)</code>
+<ul>
+<li><code>...</code> isn’t used</li>
+<li>Sends a directive to expire the cookie “Thu, 01 Jan 1970 00:00:00 GMT”, which hopefully results in the cookie being deleted.</li>
+</ul></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -567,14 +572,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./deploy.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">How do I deploy my plumber API?</span></span>
+      <a href="./examples-toy.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Toy Examples</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./creating-more.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

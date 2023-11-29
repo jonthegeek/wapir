@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-11-28 17:19:16 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-11-29 16:13:29 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -259,18 +259,11 @@
     "text": "18.1 Introduction\n(introduction will be written ~last)\n\n18.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n18.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "lambdr.html#introduction",
-    "href": "lambdr.html#introduction",
-    "title": "19  How can I deploy serverless APIs?",
-    "section": "19.1 Introduction",
-    "text": "19.1 Introduction\n(introduction will be written ~last)\n\n19.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n19.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
-  },
-  {
     "objectID": "creating-more.html#introduction",
     "href": "creating-more.html#introduction",
-    "title": "20  How can I learn more about creating APIs?",
-    "section": "20.1 Introduction",
-    "text": "20.1 Introduction\n(introduction will be written ~last)\n\n20.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n20.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "title": "19  How can I learn more about creating APIs?",
+    "section": "19.1 Introduction",
+    "text": "19.1 Introduction\n(introduction will be written ~last)\n\n19.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n19.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "part_use-cases.html",
@@ -285,5 +278,19 @@
     "title": "Appendix A — Toy Examples",
     "section": "A.1 Introduction",
     "text": "A.1 Introduction\nThis is an appendix. These will be toy examples, to be used with exercises."
+  },
+  {
+    "objectID": "plumber-missing-manual.html#introduction",
+    "href": "plumber-missing-manual.html#introduction",
+    "title": "Appendix B — plumber: The Missing Manual",
+    "section": "B.1 Introduction",
+    "text": "B.1 Introduction\nThis is an appendix. I hope to not need this, but for now I’m planning to document things in plumber that aren’t well-documented by plumber itself. These are things that I had to dig through code to find."
+  },
+  {
+    "objectID": "plumber-missing-manual.html#response-methods",
+    "href": "plumber-missing-manual.html#response-methods",
+    "title": "Appendix B — plumber: The Missing Manual",
+    "section": "B.2 Response Methods",
+    "text": "B.2 Response Methods\nThe res object that’s available in most plumber functions is an R6 object defined in PlumberResponse. It has these public methods (partially documented in the Rendering Output Vignette:\n\nsetHeader(name, value)\ntoResponse() (hidden inputs: self$headers, self$body, self$status)\nsetCookie(name, value, path = NULL, expiration = FALSE, http = FALSE, secure = FALSE, same_site = FALSE)\n\nKinda documented in session_cookie() (and related docs), but it isn’t clear until you dig.\n\nremoveCookies(name, path = NULL, http = FALSE, secure = FALSE, same_site = FALSE, ...)\n\n... isn’t used\nSends a directive to expire the cookie “Thu, 01 Jan 1970 00:00:00 GMT”, which hopefully results in the cookie being deleted."
   }
 ]
