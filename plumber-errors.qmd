@@ -8,6 +8,11 @@
 
 After you read this chapter, you will be able to:
 
+-   Describe how {plumber} handles errors by default.
+-   Send different error messages to the server than to the client.
+-   Describe the possible responses from an endpoint.
+-   Return useful error responses from an endpoint.
+
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*

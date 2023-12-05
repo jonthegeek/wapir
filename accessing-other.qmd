@@ -8,7 +8,6 @@
 
 After you read this chapter, you will be able to:
 
--   Websocket
--   gRPC
--   graphQL here?
--   Anything else?
+-   Fetch data from GraphQL APIs.
+-   Fetch data from websocket APIs.
+-   Fetch data from gRPC APIs.

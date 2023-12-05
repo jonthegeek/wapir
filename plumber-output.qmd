@@ -8,6 +8,11 @@
 
 After you read this chapter, you will be able to:
 
+-   Return data from an endpoint.
+-   Return text from an endpoint.
+-   Return an image from an endpoint.
+-   Return something else from an endpoint.
+
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*

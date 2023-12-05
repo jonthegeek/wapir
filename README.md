@@ -4,8 +4,9 @@
 
 <!-- badges: end -->
 
-This repository contains the source of an in-progress book, [Web APIs with R](https://jonthegeek.github.io/wapir/).
-The book is being written in conjunction with the packages [{beekeeper}](https://jonthegeek.github.io/beekeeper/) and [{nectar}]([{beekeeper}](https://jonthegeek.github.io/beekeeper/).
+This repository contains the source of an in-progress book, [Web APIs with R](https://wapir.io).
+Please see the deployed book for the most up-to-date information about my writing process.
+I am writing this book in conjunction with the packages [{beekeeper}](https://beekeeper.api2r.org), [{nectar}](https://nectar.api2r.org), [{rapid}](https://rapi.api2r.org), and anything else I realize would be helpful along the way.
 
 I will eventually welcome suggestions, but right now I'm still working out the idea.
 

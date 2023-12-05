@@ -15,9 +15,10 @@ This book will be published as part of [The R Series from CRC Press](https://www
 ::: callout-warning
 This book is very much a work in progress.
 
-I'm using a ["backwards design" approach](https://www.cultofpedagogy.com/backward-design-basics/), through which I'm creating [book club slides](https://r4ds.io/wapir) for an eventual R4DS book club.
-Once the slides are refined to cover the salient points I want the reader to take away from the book, I will resume work on the actual book.
-I'm aiming to finish initial slides [by the end of November, 2023.](https://www.youtube.com/watch?v=zDBjqRj_bVQ)
+I'm using a ["backwards design" approach](https://www.cultofpedagogy.com/backward-design-basics/), through which I'm creating [book club slides](https://r4ds.io/wapir) for an eventual [https://r4ds.io](Data Science Learning Community) book club.
+I have completed the first draft of (most of) the slides!
+Next I plan to present the slides to learners to figure out whether I'm covering the right material to the right depth.
+Join us at the [Data Science Learning Community](https://r4ds.io) (find the #book_club-wapir channel) to participate!
 
 I'm not ready for PRs yet (despite what you might see in some of the boilerplate).
 However, if you have thoughts about what you'd like to see, please submit an issue!
@@ -34,9 +35,9 @@ The code contained in this book is simultaneously available under the [MIT licen
 I am writing this book in a GitHub repository.
 Follow the "Edit this page" or "Report an issue" links in the table of contents if you would like to help!
 
-## The R4DS Online Learning Community {.unnumbered}
+## The Data Science Learning Community {.unnumbered}
 
-If you would like to discuss the contents of this book (or any other R-related topic), join the [R4DS Online Learning Community Slack](https://r4ds.io/join).
+If you would like to discuss the contents of this book (or any other data-related topic), join the [Data Science Learning Community Slack](https://r4ds.io/join).
 
 ## Code of Conduct
 
