@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2023-12-04 17:20:04 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
+    "text": "Welcome\nLast updated: 2023-12-05 08:27:04 CST\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source."
   },
   {
     "objectID": "index.html#want-to-help",
@@ -14,11 +14,11 @@
     "text": "Want to help?\nI am writing this book in a GitHub repository. Follow the “Edit this page” or “Report an issue” links in the table of contents if you would like to help!"
   },
   {
-    "objectID": "index.html#the-r4ds-online-learning-community",
-    "href": "index.html#the-r4ds-online-learning-community",
+    "objectID": "index.html#the-data-science-learning-community",
+    "href": "index.html#the-data-science-learning-community",
     "title": "Web APIs with R",
-    "section": "The R4DS Online Learning Community",
-    "text": "The R4DS Online Learning Community\nIf you would like to discuss the contents of this book (or any other R-related topic), join the R4DS Online Learning Community Slack."
+    "section": "The Data Science Learning Community",
+    "text": "The Data Science Learning Community\nIf you would like to discuss the contents of this book (or any other data-related topic), join the Data Science Learning Community Slack."
   },
   {
     "objectID": "index.html#code-of-conduct",
@@ -95,35 +95,35 @@
     "href": "apis.html#introduction",
     "title": "2  How do computers communicate?",
     "section": "2.1 Introduction",
-    "text": "2.1 Introduction\n(introduction will be written ~last)\n\n2.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n2.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)\nTODO: SOMEWHERE I should include info on using tools::CRAN_package_db() to find API-wrapping packages. Ideally pretty early to prevent people from wasting time."
+    "text": "2.1 Introduction\n(introduction will be written ~last)\n\n2.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nExplain what an API is.\nIdentify the pieces of an HTTP request.\nDescribe how accessing a web page through a browser involves an HTTP request.\nCompare and contrast HTTP-based API frameworks.\nRecognize other web API protocols.\n\n\n\n2.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)\nTODO: SOMEWHERE I should include info on using tools::CRAN_package_db() to find API-wrapping packages. Ideally pretty early to prevent people from wasting time."
   },
   {
     "objectID": "httr2.html#introduction",
     "href": "httr2.html#introduction",
     "title": "3  How can I access APIs from R?",
     "section": "3.1 Introduction",
-    "text": "3.1 Introduction\n(introduction will be written ~last)\n\n3.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n3.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)\nTODO: Somewhere in here, include something along the line of “Principles.”\n\nMake as few separate requests as possible.\nOnly request what you need (make requests as small as possible)."
+    "text": "3.1 Introduction\n(introduction will be written ~last)\n\n3.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDescribe how {httr2} calls are structured.\nCreate and modify an {httr2} request.\nAccess an HTTP API with {httr2}.\n\n\n\n3.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)\nTODO: Somewhere in here, include something along the line of “Principles.”\n\nMake as few separate requests as possible.\nOnly request what you need (make requests as small as possible)."
   },
   {
     "objectID": "httr2-authentication.html#introduction",
     "href": "httr2-authentication.html#introduction",
     "title": "4  How do I tell the API who I am?",
     "section": "4.1 Introduction",
-    "text": "4.1 Introduction\n(introduction will be written ~last)\n\n4.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n4.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "4.1 Introduction\n(introduction will be written ~last)\n\n4.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nCompare and contrast authentication schemes.\nDescribe the dangers associated with “leaking” credentials.\nFind authentication information in API docs.\nAuthenticate a request with a username and password.\nAuthenticate a request with an API key.\nAuthenticate a request with the “OAuth dance.”\nRe-authenticate OAuth requests.\nAuthenticate with browser cookies.\nTODO: LOs about other schemes?\n\n\n\n4.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "httr2-responses.html#introduction",
     "href": "httr2-responses.html#introduction",
     "title": "5  How can I process API responses?",
     "section": "5.1 Introduction",
-    "text": "5.1 Introduction\n(introduction will be written ~last)\n\n5.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n5.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "5.1 Introduction\n(introduction will be written ~last)\n\n5.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nRecognize the types of API responses.\nRecognize JSON data structures.\nRecognize XML data structures.\nParse text responses.\nParse nested lists with the {tidyverse}.\nParse nested lists with {tibblify}.\nUse API docs to anticipate API responses.\nParse binary responses such as images and videos.\n\n\n\n5.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "httr2-perform.html#introduction",
     "href": "httr2-perform.html#introduction",
     "title": "6  How can I get a lot of data from an API?",
     "section": "6.1 Introduction",
-    "text": "6.1 Introduction\n(introduction will be written ~last)\n\n6.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n6.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "6.1 Introduction\n(introduction will be written ~last)\n\n6.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nControl the behavior of large requests.\nDeal with errors in api calls.\nRequest paginated data.\nPerform multiple requests.\nStream data from an API.\n\n\n\n6.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "apis-find.html#introduction",
@@ -137,14 +137,14 @@
     "href": "apis-packages.html#introduction",
     "title": "8  How can I find API-wrapping packages?",
     "section": "8.1 Introduction",
-    "text": "8.1 Introduction\n(introduction will be written ~last)\n\n8.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n8.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "8.1 Introduction\n(introduction will be written ~last)\n\n8.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nUse tools::CRAN_package_db() to search for packages.\nSearch the R-universe.\nUse {anyapi} to search for packages.\n\n\n\n8.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "accessing-other.html#introduction",
     "href": "accessing-other.html#introduction",
     "title": "9  How else can I communicate with APIs from R?",
     "section": "9.1 Introduction",
-    "text": "9.1 Introduction\n(introduction will be written ~last)\n\nLearning Objectives\nAfter you read this chapter, you will be able to:\n\nWebsocket\ngRPC\ngraphQL here?\nAnything else?"
+    "text": "9.1 Introduction\n(introduction will be written ~last)\n\nLearning Objectives\nAfter you read this chapter, you will be able to:\n\nFetch data from GraphQL APIs.\nFetch data from websocket APIs.\nFetch data from gRPC APIs."
   },
   {
     "objectID": "rvest.html#introduction",
@@ -214,49 +214,49 @@
     "href": "plumber-intro.html#introduction",
     "title": "12  How can I create my own APIs?",
     "section": "12.1 Introduction",
-    "text": "12.1 Introduction\n(introduction will be written ~last)\n\n12.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n12.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "12.1 Introduction\n(introduction will be written ~last)\n\n12.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nCreate an API with {plumber}.\nOrganize {plumber} API projects.\nDesign a RESTful API.\nImplement a RESTful API in {plumber}.\nUse {plumber} filters to process an API request.\nUse {plumber} hooks to modify an API.\nDebug a {plumber} API.\n\n\n\n12.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "plumber-input.html#introduction",
     "href": "plumber-input.html#introduction",
     "title": "13  How can I get inputs from API users?",
     "section": "13.1 Introduction",
-    "text": "13.1 Introduction\n(introduction will be written ~last)\n\n13.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n13.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "13.1 Introduction\n(introduction will be written ~last)\n\n13.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDecide whether API inputs should be passed in the path, query, body, header, or cookie.\nProcess API arguments directly from the request object.\nProcess API arguments specified in the path.\nProcess API arguments passed in the query string.\nProcess API arguments passed in the request body.\nProcess API arguments sent as a header.\nProcess API arguments stored in a cookie.\n\n\n\n13.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "plumber-output.html#introduction",
     "href": "plumber-output.html#introduction",
     "title": "14  How can I control API output?",
     "section": "14.1 Introduction",
-    "text": "14.1 Introduction\n(introduction will be written ~last)\n\n14.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n14.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "14.1 Introduction\n(introduction will be written ~last)\n\n14.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nReturn data from an endpoint.\nReturn text from an endpoint.\nReturn an image from an endpoint.\nReturn something else from an endpoint.\n\n\n\n14.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "plumber-errors.html#introduction",
     "href": "plumber-errors.html#introduction",
     "title": "15  How can I handle API errors?",
     "section": "15.1 Introduction",
-    "text": "15.1 Introduction\n(introduction will be written ~last)\n\n15.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n15.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "15.1 Introduction\n(introduction will be written ~last)\n\n15.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDescribe how {plumber} handles errors by default.\nSend different error messages to the server than to the client.\nDescribe the possible responses from an endpoint.\nReturn useful error responses from an endpoint.\n\n\n\n15.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "plumber-security.html#introduction",
     "href": "plumber-security.html#introduction",
     "title": "16  How can I secure my APIs?",
     "section": "16.1 Introduction",
-    "text": "16.1 Introduction\n(introduction will be written ~last)\n\n16.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n16.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "16.1 Introduction\n(introduction will be written ~last)\n\n16.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nImplement API keys for a plumber API.\nImplement OAuth2 authentication for a plumber API.\nUse cookies to save and restore API user state.\nSet and read encrypted cookies for API users.\n(Something about things like Posit Connect?)\n\n\n\n16.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "plumber-test.html#introduction",
     "href": "plumber-test.html#introduction",
     "title": "17  How can I test my plumber API?",
     "section": "17.1 Introduction",
-    "text": "17.1 Introduction\n(introduction will be written ~last)\n\n17.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n17.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "17.1 Introduction\n(introduction will be written ~last)\n\n17.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nMinimize API-specific code in your functions.\nWrap an API into an R package.\nTest functions with {testthat}.\nTest API-specific functions with req arguments.\nTest {plumber} routers.\n\n\n\n17.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
-    "objectID": "deploy.html#introduction",
-    "href": "deploy.html#introduction",
+    "objectID": "plumber-deploy.html#introduction",
+    "href": "plumber-deploy.html#introduction",
     "title": "18  How do I deploy my plumber API?",
     "section": "18.1 Introduction",
-    "text": "18.1 Introduction\n(introduction will be written ~last)\n\n18.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\n\n18.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
+    "text": "18.1 Introduction\n(introduction will be written ~last)\n\n18.1.1 Learning Objectives\nAfter you read this chapter, you will be able to:\n\nDeploy a {plumber} API to Posit Cloud.\nDeploy a {plumber} API to Posit Connect.\nDeploy a {plumber} API to DigitalOcean with {plumberDeploy}.\nRun a {plumber} API in a Docker container.\nManage a Dockerized {plumber} API with Kubernetes (K8s).\nDeploy a K8s {plumber} API to GCS.\nDeploy a K8s {plumber} API to AWS.\n\n\n\n18.1.2 Prerequisites\n(prerequisites will be filled in as I write, if I decide to keep this section)"
   },
   {
     "objectID": "creating-more.html#introduction",
@@ -270,7 +270,7 @@
     "href": "part_use-cases.html",
     "title": "What are some ways I can use web APIs?",
     "section": "",
-    "text": "This part will give concrete examples of using different APIs or families of APIs.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
+    "text": "This part will give concrete examples of using different APIs or families of APIs. This might just be an appendix pointing to examples throughout the chapters? I’m not sure yet.\nThese are the chapters, introduced with a phrase that encapsulates them:\n\nDescribe the chapter. Reference it with a tag.\nDescribe another chapter. Reference it with a tag.\n\nAnd then a sentence or paragraph about any leftovers."
   },
   {
     "objectID": "examples-toy.html#introduction",
