@@ -1,6 +1,8 @@
 # What are some ways I can use web APIs? {#sec-use-cases .unnumbered}
 
 This part will give concrete examples of using different APIs or families of APIs.
+This might just be an appendix pointing to examples throughout the chapters? 
+I'm not sure yet.
 
 These are the chapters, introduced with a phrase that encapsulates them:
 

@@ -48,7 +48,7 @@ book:
         - plumber-errors.qmd
         - plumber-security.qmd
         - plumber-test.qmd
-        - deploy.qmd
+        - plumber-deploy.qmd
         - creating-more.qmd
 
     - part: part_use-cases.qmd

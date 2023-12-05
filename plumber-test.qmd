@@ -8,6 +8,12 @@
 
 After you read this chapter, you will be able to:
 
+-   Minimize API-specific code in your functions.
+-   Wrap an API into an R package.
+-   Test functions with {testthat}.
+-   Test API-specific functions with `req` arguments.
+-   Test {plumber} routers.
+
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*

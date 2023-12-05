@@ -8,6 +8,15 @@
 
 After you read this chapter, you will be able to:
 
+-   Recognize the types of API responses.
+-   Recognize JSON data structures.
+-   Recognize XML data structures.
+-   Parse text responses.
+-   Parse nested lists with the {tidyverse}.
+-   Parse nested lists with {tibblify}.
+-   Use API docs to anticipate API responses.
+-   Parse binary responses such as images and videos.
+
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*

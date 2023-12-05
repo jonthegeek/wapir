@@ -8,6 +8,16 @@
 
 After you read this chapter, you will be able to:
 
+-   Compare and contrast authentication schemes.
+-   Describe the dangers associated with "leaking" credentials.
+-   Find authentication information in API docs.
+-   Authenticate a request with a username and password.
+-   Authenticate a request with an API key.
+-   Authenticate a request with the "OAuth dance."
+-   Re-authenticate OAuth requests.
+-   Authenticate with browser cookies.
+-   TODO: LOs about other schemes?
+
 ### Prerequisites
 
 *(prerequisites will be filled in as I write, if I decide to keep this section)*
