@@ -70,11 +70,11 @@ This file might contain one or a few lines.
 
 ```{js}
 #| eval: false
-#| filename: "https://jonthegeek.github.io/wapir/robots.txt"
+#| filename: "https://wapir.io/robots.txt"
 
 # TODO: Replace this with the final version for this book.
 
-Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml
+Sitemap: https://wapir.io/sitemap.xml
 ```
 
 *Things to put into this section:*
