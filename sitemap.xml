@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jonthegeek.github.io/wapir/index.html</loc>
-    <lastmod>2023-12-24T23:19:28.587Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.137Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/intro.html</loc>
-    <lastmod>2023-12-24T23:19:28.595Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.145Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/part_accessing.html</loc>
-    <lastmod>2023-12-24T23:19:28.599Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.149Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/apis.html</loc>
-    <lastmod>2023-12-24T23:19:28.603Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.153Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/httr2.html</loc>
-    <lastmod>2023-12-24T23:19:28.611Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.161Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/httr2-authentication.html</loc>
-    <lastmod>2023-12-24T23:19:28.615Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.165Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/httr2-responses.html</loc>
-    <lastmod>2023-12-24T23:19:28.623Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.173Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/httr2-perform.html</loc>
-    <lastmod>2023-12-24T23:19:28.627Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.177Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/apis-find.html</loc>
-    <lastmod>2023-12-24T23:19:28.631Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.181Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/apis-packages.html</loc>
-    <lastmod>2023-12-24T23:19:28.643Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.193Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/accessing-other.html</loc>
-    <lastmod>2023-12-24T23:19:28.647Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.197Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/rvest.html</loc>
-    <lastmod>2023-12-24T23:19:28.655Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.205Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/accessing-more.html</loc>
-    <lastmod>2023-12-24T23:19:28.663Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.209Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/part_creating.html</loc>
-    <lastmod>2023-12-24T23:19:28.667Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.213Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-intro.html</loc>
-    <lastmod>2023-12-24T23:19:28.671Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.221Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-input.html</loc>
-    <lastmod>2023-12-24T23:19:28.679Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.229Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-output.html</loc>
-    <lastmod>2023-12-24T23:19:28.683Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.237Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-errors.html</loc>
-    <lastmod>2023-12-24T23:19:28.691Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.241Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-security.html</loc>
-    <lastmod>2023-12-24T23:19:28.695Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.245Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-test.html</loc>
-    <lastmod>2023-12-24T23:19:28.699Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.249Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-deploy.html</loc>
-    <lastmod>2023-12-24T23:19:28.703Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.257Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/creating-more.html</loc>
-    <lastmod>2023-12-24T23:19:28.715Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.265Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/part_use-cases.html</loc>
-    <lastmod>2023-12-24T23:19:28.719Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.269Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/examples-toy.html</loc>
-    <lastmod>2023-12-24T23:19:28.723Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.273Z</lastmod>
   </url>
   <url>
     <loc>https://jonthegeek.github.io/wapir/plumber-missing-manual.html</loc>
-    <lastmod>2023-12-24T23:19:28.727Z</lastmod>
+    <lastmod>2023-12-25T23:19:31.277Z</lastmod>
   </url>
 </urlset>
