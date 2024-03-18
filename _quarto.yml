@@ -29,11 +29,13 @@ book:
 
     - part: part_accessing.qmd
       chapters:
-        - apis.qmd
+        - apis-start.qmd
+        - openapi.qmd
         - httr2.qmd
         - httr2-authentication.qmd
         - httr2-responses.qmd
         - httr2-perform.qmd
+        - httr2-methods.qmd
         - apis-find.qmd
         - apis-packages.qmd
         - accessing-other.qmd
@@ -50,8 +52,6 @@ book:
         - plumber-test.qmd
         - plumber-deploy.qmd
         - creating-more.qmd
-
-    - part: part_use-cases.qmd
 
   appendices:
     - examples-toy.qmd
