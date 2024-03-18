@@ -1,0 +1,16 @@
+# How can I get started with APIs? {#sec-apis-start}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+-   Fetch json-formatted data from the web.
+-   Parse nested lists with the {tidyverse}.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*

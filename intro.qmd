@@ -18,31 +18,34 @@ You could automate the things you do all the time, and find new things you didn'
 
 The goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.
 
-*Somewhere in here: Include the overall landscape of web-related packages: rvest, httr(2), plumber, but also RSelenium, chromote, curl, touch on some api-specific packages.*
-
-## Who should read this book?
-
-*This might overlap with the "What will I learn?" section. It feels like a good thing to have up front to entice people to read or buy the book, though.*
-
 ## What will I learn?
 
-*Describe the overall goals, and explain the learning objective hierarchy. Maybe this is before or instead of who should read?*
+*Somewhere in here: Include the overall landscape of web-related packages: rvest, httr(2), plumber, but also RSelenium, chromote, curl, touch on some api-specific packages.*
 
-*Maybe put the landscape here, and intro the structure of the book earlier. How will I learn? maybe?*
+### Who should read this book?
 
-## What won't I learn?
+### What does each chapter cover?
+
+### What won't I learn?
 
 I like the idea of this section, but I don't know if it will fit.
 
-## How is this book organized?
-
-I'd love to know!
-
-## What should I already know?
+### What should I already know?
 
 *Describe what we expect people to already know. Include references to other books: R4DS, AdvR, RPkgs, Do4DS, maybe MShiny. Note that each part and/or chapter will describe the prerequisites for that part. Most of those books will be places to find more info or to dive deeper into a topic.*
 
-## How do I run the code?
+## How will I learn?
+
+*Introduce the concept of LOs, and why this book is structured around them. Note that normally they'll be at the beginning of the chapter*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+-   Explain what an API is.
+-   Decide whether this book is for you.
+
+### How do I run the code?
 
 *Explain what code looks like here vs to the user. Give a disclaimer that open source software changes so things might change, and that we'll try to keep the online version up-to-date. Potentially link to additional resources, maybe a book package.*
 

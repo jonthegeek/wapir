@@ -1,0 +1,17 @@
+# How can I use an API description? {#sec-openapi}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+-   Use an API’s OpenAPI description to learn about the API.
+-   Parse nested lists with {tibblify}.
+-   Parse API responses with {tibblify} and the response description.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*
