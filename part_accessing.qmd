@@ -1,4 +1,4 @@
-# How can I get web data into R? {#sec-accessing-intro .unnumbered}
+# How can I interact with the web from R? {#sec-accessing-intro .unnumbered}
 
 This is an intro to a part.
 
