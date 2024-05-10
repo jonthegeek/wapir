@@ -131,7 +131,7 @@ Sitemap: https://wapir.io/sitemap.xml
 
 ## Another Exploration {.unnumbered}
 
-Suggested by Emir Bilim on R4DS, let them know when it's worked out!
+Suggested by Emir Bilim on DSLC, let them know when it's worked out!
 Also include a case like this in the Appendix!
 
 ```{r yahoo-finance, eval = FALSE}

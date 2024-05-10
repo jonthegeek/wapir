@@ -7,7 +7,7 @@ The online version of the book will continue to be freely available, and I'll ac
 
 To confirm that you're ok with assigned copyright to me for any contributions, please include the phrase "I assign the copyright of this contribution to Jon Harmon" in any pull requests.
 
-If you have any questions, please raise an issue, or contact me through email at jonthegeek\@gmail.com or on the [R4DS Online Learning Community Slack](https://r4ds.io/join).
+If you have any questions, please raise an issue, or contact me through email at jonthegeek\@gmail.com or on the [Data Science Learning Community Slack](https://DSLC.io/join).
 
 ## Fixing typos
 
