@@ -11,7 +11,7 @@ book:
   page-footer:
     left: |
       Web APIs with R is being written by Jon Harmon. Join the
-      <a href="https://r4ds.io/join">R4DS Community Slack</a> to
+      <a href="https://DSLC.io/join">Data Science Learning Community Slack</a> to
       discuss the book!
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
