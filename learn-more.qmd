@@ -1,4 +1,4 @@
-# How can I get a lot of data from an API? {#sec-httr2-perform}
+# Learn more about APIs {#sec-learn-more}
 
 ## Introduction
 
@@ -7,12 +7,6 @@
 ### Learning Objectives
 
 After you read this chapter, you will be able to:
-
--   Control the behavior of large requests.
--   Deal with errors in api calls.
--   Request paginated data.
--   Perform multiple requests.
--   Stream data from an API.
 
 ### Prerequisites
 

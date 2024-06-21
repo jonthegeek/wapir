@@ -1,4 +1,4 @@
-# How can I create my own APIs with R? {#sec-creating-intro .unnumbered}
+# Get started {#sec-get_started-intro .unnumbered}
 
 This is an intro to a part.
 

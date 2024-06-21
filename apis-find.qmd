@@ -1,4 +1,4 @@
-# How can I find APIs? {#sec-apis-find}
+# Find APIs {#sec-apis-find}
 
 ## Introduction
 
@@ -7,6 +7,10 @@
 ### Learning Objectives
 
 After you read this chapter, you will be able to:
+
+-   Search the web for APIs.
+-   Search for API-wrapping packages.
+-   Use browser developer tools to find undocumented APIs.
 
 ### Prerequisites
 

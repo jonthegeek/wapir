@@ -1,0 +1,19 @@
+# Do other things with APIs {#sec-httr2-other}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+-   Create new content through an API.
+-   Update existing content through an API.
+-   Delete existing content through an API.
+-   Perform multiple API requests.
+-   Learn more about making API requests with {httr2}.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*

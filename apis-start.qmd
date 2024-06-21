@@ -1,4 +1,4 @@
-# How can I get started with APIs? {#sec-apis-start}
+# Get started with APIs {#sec-apis_start}
 
 ## Introduction
 
