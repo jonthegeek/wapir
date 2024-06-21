@@ -18,7 +18,7 @@ book:
 
   cover-image: cover.png
   favicon: cover.png
-  site-url: https://jonthegeek.github.io/wapir/
+  site-url: https://wapir.io/
   repo-url: https://github.com/jonthegeek/wapir/
   repo-branch: main
   repo-actions: [edit, issue]
@@ -27,35 +27,28 @@ book:
     - index.qmd
     - intro.qmd
 
-    - part: part_accessing.qmd
+    - part: part-get_started.qmd
       chapters:
         - apis-start.qmd
-        - openapi.qmd
+        - schemas.qmd
         - httr2.qmd
-        - httr2-authentication.qmd
-        - httr2-responses.qmd
-        - httr2-perform.qmd
-        - httr2-methods.qmd
-        - apis-find.qmd
-        - apis-packages.qmd
-        - accessing-other.qmd
-        - rvest.qmd
-        - accessing-more.qmd
+        - authentication.qmd
 
-    - part: part_creating.qmd
+    - part: part-get_more_data.qmd
       chapters:
-        - plumber-intro.qmd
-        - plumber-input.qmd
-        - plumber-output.qmd
-        - plumber-errors.qmd
-        - plumber-security.qmd
-        - plumber-test.qmd
-        - plumber-deploy.qmd
-        - creating-more.qmd
+        - pagination.qmd
+        - rvest.qmd
+        - responses.qmd
+
+    - part: part-do_more.qmd
+      chapters:
+        - httr2-other.qmd
+        - apis-find.qmd
+        - accessing-other.qmd
+        - learn-more.qmd
 
   appendices:
     - examples-toy.qmd
-    - plumber-missing-manual.qmd
 
 format:
   html:

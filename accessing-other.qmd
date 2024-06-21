@@ -1,4 +1,4 @@
-# How else can I communicate with APIs from R? {#sec-accessing-other}
+# Communicate with other types of APIs {#sec-accessing-other}
 
 ## Introduction
 
@@ -11,3 +11,7 @@ After you read this chapter, you will be able to:
 -   Fetch data from GraphQL APIs.
 -   Fetch data from websocket APIs.
 -   Fetch data from gRPC APIs.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*

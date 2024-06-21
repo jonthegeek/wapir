@@ -1,4 +1,4 @@
-# How can I access APIs from R? {#sec-httr2}
+# Easily access APIs with httr2 {#sec-httr2}
 
 ## Introduction
 
@@ -8,9 +8,9 @@
 
 After you read this chapter, you will be able to:
 
--   Describe how {httr2} calls are structured.
--   Create and modify an {httr2} request.
--   Access an HTTP API with {httr2}.
+-   Use API docs to explore available endpoints.
+-   Fetch data from an API with {httr2}.
+-   Build a {httr2} request piece-by-piece.
 
 ### Prerequisites
 

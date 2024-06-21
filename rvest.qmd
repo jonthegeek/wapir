@@ -1,4 +1,9 @@
-# How can I get data from web pages? {#sec-rvest}
+# Scrape data from web pages {#sec-rvest}
+
+## TODO
+
+-   Strongly point to R4DS for basics.
+-   Reconcile chapter with new LOs.
 
 ## Introduction
 
@@ -8,17 +13,10 @@
 
 After you read this chapter, you will be able to:
 
--   Determine whether a website *allows you* to scrape data from it.
--   Determine whether you *should* scrape data from a web page.
--   Scrape tables from web pages.
--   Scrape more complex data structures from web pages.
-
-*(potential chapter break)*
-
--   Scrape data from websites that require you to log in.
+-   Decide whether to scrape data from a web page.
+-   Use {polite} to responsibly scrape web pages.
+-   Scrape complex data structures from web pages.
 -   Scrape content that requires interaction.
--   Automate web scraping processes.
--   Scrape data as part of a workflow.
 
 ### Prerequisites {.unnumbered}
 

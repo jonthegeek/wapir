@@ -1,4 +1,4 @@
-# How can I learn more about creating APIs? {#sec-creating-more}
+# Process other response types {#sec-httr2-responses}
 
 ## Introduction
 
@@ -7,6 +7,10 @@
 ### Learning Objectives
 
 After you read this chapter, you will be able to:
+
+-   Parse text responses.
+-   Parse binary responses such as images and videos.
+-   Handle HTTP error responses.
 
 ### Prerequisites
 

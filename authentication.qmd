@@ -1,0 +1,18 @@
+# Tell APIs who you are {#sec-httr2-authentication}
+
+## Introduction
+
+*(introduction will be written \~last)*
+
+### Learning Objectives
+
+After you read this chapter, you will be able to:
+
+-   Provide information in your request about how you're accessing the API. 
+-   Find authentication information in API docs.
+-   Authenticate a request with an API key.
+-   Authenticate a request with OAuth.
+
+### Prerequisites
+
+*(prerequisites will be filled in as I write, if I decide to keep this section)*

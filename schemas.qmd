@@ -1,4 +1,4 @@
-# How can I use an API description? {#sec-openapi}
+# Quickly parse API responses {#sec-schemas}
 
 ## Introduction
 
@@ -8,8 +8,8 @@
 
 After you read this chapter, you will be able to:
 
--   Use an API’s OpenAPI description to learn about the API.
 -   Parse nested lists with {tibblify}.
+-   Use an API's OpenAPI description to determine the expected format of responses.
 -   Parse API responses with {tibblify} and the response description.
 
 ### Prerequisites
