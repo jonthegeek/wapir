@@ -1,1 +1,1 @@
-Sitemap: https://jonthegeek.github.io/wapir/sitemap.xml
+Sitemap: https://wapir.io/sitemap.xml

@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Jon Harmon">
-<title>Web APIs with R - 12&nbsp; How can I get data from web pages?</title>
+<title>Web APIs with R - 7&nbsp; Scrape data from web pages</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,8 +61,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./accessing-more.html" rel="next">
-<link href="./accessing-other.html" rel="prev">
+<link href="./responses.html" rel="next">
+<link href="./pagination.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_accessing.html">How can I interact with the web from R?</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-get_more_data.html">Get more data</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scrape data from web pages</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -150,8 +150,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./part_accessing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How can I interact with the web from R?</span></a>
+            <a href="./part-get_started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get started</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -160,81 +160,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./apis-start.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How can I get started with APIs?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Get started with APIs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./openapi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How can I use an API description?</span></span></a>
+  <a href="./schemas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Quickly parse API responses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./httr2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">How can I access APIs from R?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Easily access APIs with httr2</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./httr2-authentication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">How do I tell the API who I am?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./httr2-responses.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">How can I process API responses?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./httr2-perform.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">How can I get a lot of data from an API?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./httr2-methods.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">How can I do other things with APIs?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./apis-find.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">How can I find APIs?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./apis-packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">How can I find API-wrapping packages?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./accessing-other.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">How else can I communicate with APIs from R?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./rvest.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./accessing-more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">How can I learn more about accessing web APIs?</span></span></a>
+  <a href="./authentication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Tell APIs who you are</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./part_creating.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How can I create my own APIs with R?</span></a>
+            <a href="./part-get_more_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get more data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -242,58 +194,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./plumber-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">How can I create my own APIs?</span></span></a>
+  <a href="./pagination.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Get a lot of data from APIs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./plumber-input.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">How can I get inputs from API users?</span></span></a>
+  <a href="./rvest.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scrape data from web pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./plumber-output.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">How can I control API output?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./plumber-errors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">How can I handle API errors?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./plumber-security.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">How can I secure my APIs?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./plumber-test.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">How can I test my plumber API?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./plumber-deploy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">How do I deploy my plumber API?</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./creating-more.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">How can I learn more about creating APIs?</span></span></a>
+  <a href="./responses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Process other response types</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
+            <a href="./part-do_more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Do more with APIs</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -301,14 +223,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./examples-toy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Toy Examples</span></span></a>
+  <a href="./httr2-other.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Do other things with APIs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./plumber-missing-manual.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">plumber: The Missing Manual</span></span></a>
+  <a href="./apis-find.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Find APIs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./accessing-other.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Communicate with other types of APIs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./learn-more.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Learn more about APIs</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./examples-toy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Toy Examples</span></span></a>
   </div>
 </li>
       </ul>
@@ -321,29 +272,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li>
-<a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">12.1</span> Introduction</a>
+<li><a href="#todo" id="toc-todo" class="nav-link active" data-scroll-target="#todo"><span class="header-section-number">7.1</span> TODO</a></li>
+  <li>
+<a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">7.2</span> Introduction</a>
   <ul class="collapse">
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   </ul>
 </li>
   <li>
-<a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">12.2</span> Should I scrape this data?</a>
+<a href="#should-i-scrape-this-data" id="toc-should-i-scrape-this-data" class="nav-link" data-scroll-target="#should-i-scrape-this-data"><span class="header-section-number">7.3</span> Should I scrape this data?</a>
   <ul class="collapse">
-<li><a href="#am-i-legally-allowed-to-scrape-this-data" id="toc-am-i-legally-allowed-to-scrape-this-data" class="nav-link" data-scroll-target="#am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">12.2.1</span> Am I legally allowed to scrape this data?</a></li>
-  <li><a href="#am-i-allowed-to-scrape-this-data-automatically" id="toc-am-i-allowed-to-scrape-this-data-automatically" class="nav-link" data-scroll-target="#am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">12.2.2</span> Am I allowed to scrape this data automatically?</a></li>
+<li><a href="#am-i-legally-allowed-to-scrape-this-data" id="toc-am-i-legally-allowed-to-scrape-this-data" class="nav-link" data-scroll-target="#am-i-legally-allowed-to-scrape-this-data"><span class="header-section-number">7.3.1</span> Am I legally allowed to scrape this data?</a></li>
+  <li><a href="#am-i-allowed-to-scrape-this-data-automatically" id="toc-am-i-allowed-to-scrape-this-data-automatically" class="nav-link" data-scroll-target="#am-i-allowed-to-scrape-this-data-automatically"><span class="header-section-number">7.3.2</span> Am I allowed to scrape this data automatically?</a></li>
   </ul>
 </li>
-  <li><a href="#how-can-i-scrape-a-table-of-data-from-a-web-page" id="toc-how-can-i-scrape-a-table-of-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">12.3</span> How can I scrape a table of data from a web page?</a></li>
-  <li><a href="#how-can-i-scrape-more-complex-data-from-a-web-page" id="toc-how-can-i-scrape-more-complex-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">12.4</span> How can I scrape more complex data from a web page?</a></li>
+  <li><a href="#how-can-i-scrape-a-table-of-data-from-a-web-page" id="toc-how-can-i-scrape-a-table-of-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-a-table-of-data-from-a-web-page"><span class="header-section-number">7.4</span> How can I scrape a table of data from a web page?</a></li>
+  <li><a href="#how-can-i-scrape-more-complex-data-from-a-web-page" id="toc-how-can-i-scrape-more-complex-data-from-a-web-page" class="nav-link" data-scroll-target="#how-can-i-scrape-more-complex-data-from-a-web-page"><span class="header-section-number">7.5</span> How can I scrape more complex data from a web page?</a></li>
   <li><a href="#ideas-to-cover" id="toc-ideas-to-cover" class="nav-link" data-scroll-target="#ideas-to-cover">Ideas to cover</a></li>
   <li><a href="#another-exploration" id="toc-another-exploration" class="nav-link" data-scroll-target="#another-exploration">Another Exploration</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/jonthegeek/wapir/edit/main/rvest.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jonthegeek/wapir/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part_accessing.html">How can I interact with the web from R?</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title"><span id="sec-rvest" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">How can I get data from web pages?</span></span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-get_more_data.html">Get more data</a></li><li class="breadcrumb-item"><a href="./rvest.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scrape data from web pages</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span id="sec-rvest" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Scrape data from web pages</span></span></h1>
 </div>
 
 
@@ -357,35 +309,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="introduction" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="introduction">
-<span class="header-section-number">12.1</span> Introduction</h2>
+</header><section id="todo" class="level2" data-number="7.1"><h2 data-number="7.1" class="anchored" data-anchor-id="todo">
+<span class="header-section-number">7.1</span> TODO</h2>
+<ul>
+<li>Strongly point to R4DS for basics.</li>
+<li>Reconcile chapter with new LOs.</li>
+</ul></section><section id="introduction" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">7.2</span> Introduction</h2>
 <p><em>(introduction will be written ~last)</em></p>
 <section id="learning-objectives" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
 <p>After you read this chapter, you will be able to:</p>
 <ul>
-<li>Determine whether a website <em>allows you</em> to scrape data from it.</li>
-<li>Determine whether you <em>should</em> scrape data from a web page.</li>
-<li>Scrape tables from web pages.</li>
-<li>Scrape more complex data structures from web pages.</li>
-</ul>
-<p><em>(potential chapter break)</em></p>
-<ul>
-<li>Scrape data from websites that require you to log in.</li>
+<li>Decide whether to scrape data from a web page.</li>
+<li>Use {polite} to responsibly scrape web pages.</li>
+<li>Scrape complex data structures from web pages.</li>
 <li>Scrape content that requires interaction.</li>
-<li>Automate web scraping processes.</li>
-<li>Scrape data as part of a workflow.</li>
 </ul></section><section id="prerequisites" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <p><em>(prerequisites will be filled in as I write, if I decide to keep this section)</em></p>
-</section></section><section id="should-i-scrape-this-data" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="should-i-scrape-this-data">
-<span class="header-section-number">12.2</span> Should I scrape this data?</h2>
+</section></section><section id="should-i-scrape-this-data" class="level2" data-number="7.3"><h2 data-number="7.3" class="anchored" data-anchor-id="should-i-scrape-this-data">
+<span class="header-section-number">7.3</span> Should I scrape this data?</h2>
 <p>When you see data online that you think you could use, stop to answer these three questions:</p>
 <ul>
 <li>Am I legally allowed to scrape this data?</li>
 <li>Am I allowed to scrape this data automatically?</li>
 <li>Do I need to scrape this data with code?</li>
 </ul>
-<section id="am-i-legally-allowed-to-scrape-this-data" class="level3" data-number="12.2.1"><h3 data-number="12.2.1" class="anchored" data-anchor-id="am-i-legally-allowed-to-scrape-this-data">
-<span class="header-section-number">12.2.1</span> Am I legally allowed to scrape this data?</h3>
+<section id="am-i-legally-allowed-to-scrape-this-data" class="level3" data-number="7.3.1"><h3 data-number="7.3.1" class="anchored" data-anchor-id="am-i-legally-allowed-to-scrape-this-data">
+<span class="header-section-number">7.3.1</span> Am I legally allowed to scrape this data?</h3>
 <p>I am an R developer, not a lawyer, and none of this should be construed as legal advice. If you’re going to use the data in a commercial product, you may want to consult a lawyer. That said, these guidelines should get you started in most cases.</p>
 <p>If you’re using the data for your own exploration or for nonprofit educational purposes, you’re almost definitely free to use the data however you like. Copyright cases tend to involve either making money off of the work, or making it harder for the owner of the work to use it to make money.</p>
 <p>Also check the site for legal disclaimers. These are usually located at the bottom of the page, or possibly somewhere on the first page of the site. Look for words or phrases like “Legal,” “License,” “Code of Conduct”, “Usage”, or “Disclaimers.” Sometimes the site explicitly grants the right to use the data, which will generally supersede any general legal protection.</p>
@@ -394,8 +344,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>“These choices as to selection and arrangement, so long as they are made independently by the compiler and entail a minimal degree of creativity, are sufficiently original that Congress may protect such compilations through the copyright laws”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 </blockquote>
 <p>Outside the U.S., protections may be stronger or weaker. For example, the European Union established specific legal protections for databases in a <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31996L0009:EN:HTML">directive on the legal protection of databases</a>. If you’re going to publish the data, investigate legal requirements in your location.</p>
-</section><section id="am-i-allowed-to-scrape-this-data-automatically" class="level3" data-number="12.2.2"><h3 data-number="12.2.2" class="anchored" data-anchor-id="am-i-allowed-to-scrape-this-data-automatically">
-<span class="header-section-number">12.2.2</span> Am I allowed to scrape this data automatically?</h3>
+</section><section id="am-i-allowed-to-scrape-this-data-automatically" class="level3" data-number="7.3.2"><h3 data-number="7.3.2" class="anchored" data-anchor-id="am-i-allowed-to-scrape-this-data-automatically">
+<span class="header-section-number">7.3.2</span> Am I allowed to scrape this data automatically?</h3>
 <p>Even if it is <em>legal</em> for you to use the data, it might not be <em>polite</em> to do so. For example, the site might have preferences about which pages can be accessed by code, or specific protections or guidelines about certain pages. Most websites list these preference in a <code>robots.txt</code> file at the root of the site. For example, the <code>robots.txt</code> file for the online version of this book is available at <a href="https://jonthegeek.github.io/wapir/robots.txt" class="uri">https://jonthegeek.github.io/wapir/robots.txt</a>. This file might contain one or a few lines.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -416,8 +366,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Look for an API to use instead of scraping. Just introduce the idea then point to that chapter.</li>
 <li>Even when robots.txt allows scraping, give tips on how to be a good citizen.</li>
 <li>{<a href="https://dmi3kno.github.io/polite/index.html">polite</a>} package? I think <em>probably</em> focus more on learning to read robots.txt and how to implement things in rvest (and later httr2), but I should at least mention {polite}.</li>
-</ul></section></section><section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page">
-<span class="header-section-number">12.3</span> How can I scrape a table of data from a web page?</h2>
+</ul></section></section><section id="how-can-i-scrape-a-table-of-data-from-a-web-page" class="level2" data-number="7.4"><h2 data-number="7.4" class="anchored" data-anchor-id="how-can-i-scrape-a-table-of-data-from-a-web-page">
+<span class="header-section-number">7.4</span> How can I scrape a table of data from a web page?</h2>
 <ul>
 <li>Basic intro to {rvest}.
 <ul>
@@ -426,8 +376,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Show an example with multiple tables &amp; how to deal with that (pre-SelectorGadget).</li>
 </ul>
 </li>
-</ul></section><section id="how-can-i-scrape-more-complex-data-from-a-web-page" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="how-can-i-scrape-more-complex-data-from-a-web-page">
-<span class="header-section-number">12.4</span> How can I scrape more complex data from a web page?</h2>
+</ul></section><section id="how-can-i-scrape-more-complex-data-from-a-web-page" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="how-can-i-scrape-more-complex-data-from-a-web-page">
+<span class="header-section-number">7.5</span> How can I scrape more complex data from a web page?</h2>
 <ul>
 <li>Using SelectorGadget.
 <ul>
@@ -604,7 +554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jonthegeek\.github\.io\/wapir\/");
+      var filterRegex = new RegExp("https:\/\/wapir\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -932,13 +882,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./accessing-other.html" class="pagination-link" aria-label="How else can I communicate with APIs from R?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">How else can I communicate with APIs from R?</span></span>
+      <a href="./pagination.html" class="pagination-link" aria-label="Get a lot of data from APIs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Get a lot of data from APIs</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./accessing-more.html" class="pagination-link" aria-label="How can I learn more about accessing web APIs?">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">How can I learn more about accessing web APIs?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./responses.html" class="pagination-link" aria-label="Process other response types">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Process other response types</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
