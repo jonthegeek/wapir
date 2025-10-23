@@ -15,7 +15,7 @@ This book will be published as part of [The R Series from CRC Press](https://www
 ::: callout-warning
 This book is very much a work in progress.
 
-I'm using a ["backwards design" approach](https://www.cultofpedagogy.com/backward-design-basics/), through which I created [book club slides](https://DSLC/wapir) for a [https://DSLC.io](Data Science Learning Community) book club.
+I'm using a ["backwards design" approach](https://www.cultofpedagogy.com/backward-design-basics/), through which I created [book club slides](https://DSLC.io/wapir) for a [https://DSLC.io](Data Science Learning Community) book club.
 I have finished creating & presenting the slides for the first cohort of the club!
 Now I'll go back through the slide decks, reconciling the decks with feedback received from the club, and writing exercises to check learner understanding.
 Join us at the [Data Science Learning Community](https://DSLC.io) (find the [#book_club-wapir channel](https://dslcio.slack.com/archives/C05MYSD1PEV)) to participate!
