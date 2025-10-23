@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Web APIs with R",
     "section": "",
-    "text": "Welcome\nLast updated: 2024-06-21 09:06:25 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source.",
+    "text": "Welcome\nLast updated: 2025-10-23 14:24:59 CDT\nThis is the website for the work-in-progress book, Web APIs with R. This book will teach you how to work with the web from your R session. This book will be published as part of The R Series from CRC Press.\nThis website is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThe code contained in this book is simultaneously available under the MIT license; this means that you are free to use it in your own packages, as long as you cite the source.",
     "crumbs": [
       "Welcome"
     ]
@@ -44,7 +44,7 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "1.1 What will I learn?\nSomewhere in here: Include the overall landscape of web-related packages: rvest, httr(2), plumber, but also RSelenium, chromote, curl, touch on some api-specific packages.",
+    "text": "1.1 What will I learn?\nThe modern internet is full of web APIs1: services that enable communication between computer programs. Whether or not you realize it, you likely use web APIs every day, when you\nIt’s equally likely that you could be using web APIs to help you with more things. You could automatically update a dashboard with information from your work issue tracker, or enrich datasets by adding additional context for places or dates. You could connect your favorite recipe site to your calendar and grocery list for weekly meal planning, or add tasks to your to-do list from your R console while you work. You could automate the things you do all the time, and find new things you didn’t know were possible.\nThe goal of Web APIs with R is to teach you how to unlock the power of APIs in your R code.\nSomewhere in here: Include the overall landscape of web-related packages: rvest, httr(2), plumber, but also RSelenium, chromote, curl, touch on some api-specific packages.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
